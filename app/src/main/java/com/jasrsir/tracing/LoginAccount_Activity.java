@@ -3,11 +3,11 @@ package com.jasrsir.tracing;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class SelectorUser_Activity extends AppCompatActivity {
+public class LoginAccount_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_selector_user);
+        setContentView(R.layout.activity_login_account);
     }
 }

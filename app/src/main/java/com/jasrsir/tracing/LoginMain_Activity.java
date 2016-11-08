@@ -18,6 +18,10 @@ public class LoginMain_Activity extends AppCompatActivity {
         if (view.getId() == R.id.txvNoAccount) {
             intent = new Intent(LoginMain_Activity.this, SelectorUser_Activity.class);
             startActivity(intent);
+        } else {
+            intent = new Intent(LoginMain_Activity.this, LoginAccount_Activity.class);
+            startActivity(intent);
         }
+
     }
 }

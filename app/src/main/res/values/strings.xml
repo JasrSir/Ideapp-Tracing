@@ -10,4 +10,7 @@
     <string name="txvLoginProfessional">Soy un Profesional</string>
     <string name="txvChooseAccount">Elige tu tipo de cuenta</string>
     <string name="txvLoginUser">Soy un Usuario</string>
+    <string name="txvLoginAccount">Inicia sesión en Tracing</string>
+    <string name="messagePasswordLogin">Introduce la contraseña</string>
+    <string name="messageUserLogin">Introduce tu correo electrónico</string>
 </resources>
