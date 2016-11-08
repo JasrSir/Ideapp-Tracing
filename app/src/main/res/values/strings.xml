@@ -6,4 +6,8 @@
     <string name="txvNoAccount">¿Aún no estás registrado?</string>
     <string name="txvYesAccount">Ya tengo cuenta, Iniciar Sesión</string>
     <string name="txvWelcOr">ó</string>
+    <string name="txvLoginBusiness">Soy una Empresa</string>
+    <string name="txvLoginProfessional">Soy un Profesional</string>
+    <string name="txvChooseAccount">Elige tu tipo de cuenta</string>
+    <string name="txvLoginUser">Soy un Usuario</string>
 </resources>

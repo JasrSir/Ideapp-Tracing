@@ -17,18 +17,18 @@
             android:orientation="vertical" >
 
             <TextView
-                android:text="@string/txvWelcome"
-                android:paddingBottom="15dp"
-                android:textSize="30dp"
-                android:textAlignment="center"
+                android:id="@+id/txvWelcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/txvWelcome" />
+                android:paddingBottom="15dp"
+                android:text="@string/txvWelcome"
+                android:textAlignment="center"
+                android:textSize="30dp" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
-                app:srcCompat="@drawable/TracingLogo"
+                app:srcCompat="@drawable/tracinglogo"
                 android:id="@+id/imgLogo" />
 
             <TextView
@@ -50,6 +50,7 @@
                 android:textColor="@color/colorAccentText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClickRegister"
                 android:id="@+id/txvNoAccount" />
 
             <TextView
@@ -72,6 +73,7 @@
                 android:textColor="@color/colorAccentText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="onClickRegister"
                 android:id="@+id/txvYesAccount" />
         </LinearLayout>
 
