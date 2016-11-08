@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tracing</string>
+    <string name="txvWelcome">Bienvenido a Tracing</string>
+    <string name="btnLoginBusiness">Empresa</string>
+    <string name="txvWelcReadme">Tu app para el seguimiento diario empresarial, profesional y particular</string>
+    <string name="txvNoAccount">¿Aún no estás registrado?</string>
+    <string name="txvYesAccount">Ya tengo cuenta, Iniciar Sesión</string>
+    <string name="txvWelcOr">ó</string>
+</resources>
