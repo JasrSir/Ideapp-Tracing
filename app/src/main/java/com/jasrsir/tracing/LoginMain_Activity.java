@@ -15,7 +15,7 @@ public class LoginMain_Activity extends AppCompatActivity {
 
     public void onClickRegister(View view) {
         Intent intent;
-        if (view.getId() == R.id.txvNoAccount) {
+        if (view.getId() == R.id.cardAccountBusiness) {
             intent = new Intent(LoginMain_Activity.this, SelectorUser_Activity.class);
             startActivity(intent);
         } else if (view.getId() == R.id.txvYesAccount){
