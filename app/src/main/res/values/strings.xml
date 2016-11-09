@@ -5,7 +5,7 @@
     <string name="txvWelcReadme">Tu app para el seguimiento diario empresarial, profesional y particular</string>
     <string name="txvNoAccount">¿Aún no estás registrado?</string>
     <string name="txvYesAccount">Ya tengo cuenta, Iniciar Sesión</string>
-    <string name="txvWelcOr">ó</string>
+    <string name="txvWelcOr">--------- o ----------</string>
     <string name="txvLoginBusiness">Soy una Empresa</string>
     <string name="txvLoginProfessional">Soy un Profesional</string>
     <string name="txvChooseAccount">Elige tu tipo de cuenta</string>
@@ -13,4 +13,5 @@
     <string name="txvLoginAccount">Inicia sesión en Tracing</string>
     <string name="messagePasswordLogin">Introduce la contraseña</string>
     <string name="messageUserLogin">Introduce tu correo electrónico</string>
+    <string name="kbRemember">Recordar usuario</string>
 </resources>
