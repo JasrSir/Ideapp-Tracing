@@ -19,4 +19,5 @@
     <string name="edtSignInSurname">Apellidos</string>
     <string name="txvLostUC">No recuerdo el Código Único</string>
     <string name="messageUMail">Introduce tu correo electrónico</string>
+
 </resources>
