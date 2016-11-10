@@ -23,48 +23,49 @@
 
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardAccountBusiness"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:id="@+id/cardAccountBusiness"
+        android:layout_below="@+id/txvChooseAccount"
         android:layout_marginBottom="20dp"
-
-        android:layout_below="@+id/txvChooseAccount">
+        android:onClick="onClickSelectAccount">
 
         <ImageView
+            android:id="@+id/imgBusiness"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingStart="10dp"
             android:paddingEnd="25dp"
-            app:srcCompat="@mipmap/ic_business_black_48dp"
-            android:id="@+id/imgBusiness" />
+            android:paddingStart="10dp"
+            app:srcCompat="@mipmap/ic_business_black_48dp" />
 
         <TextView
             android:id="@+id/txvLoginBusiness"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="20dp"
-            android:paddingTop="20dp"
             android:paddingStart="90dp"
+            android:paddingTop="20dp"
             android:text="@string/txvLoginBusiness"
             android:textSize="25dp" />
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardAccountProfessional"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/cardAccountBusiness"
         android:layout_marginBottom="20dp"
-        android:id="@+id/cardAccountProfessional"
-        android:layout_below="@+id/cardAccountBusiness">
+        android:onClick="onClickSelectAccount">
 
         <ImageView
+            android:id="@+id/imgProfessional"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingStart="10dp"
             android:paddingEnd="25dp"
-            app:srcCompat="@mipmap/ic_supervisor_account_black_48dp"
-            android:id="@+id/imgProfessional" />
+            android:paddingStart="10dp"
+            app:srcCompat="@mipmap/ic_supervisor_account_black_48dp" />
 
         <TextView
             android:id="@+id/txvLoginProfessional"
@@ -78,28 +79,30 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardAccountUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:id="@+id/cardAccountUser"
-        android:layout_below="@+id/cardAccountProfessional">
+        android:layout_below="@+id/cardAccountProfessional"
+        android:layout_marginBottom="20dp"
+        android:onClick="onClickSelectAccount">
 
         <ImageView
+            android:id="@+id/imgUser"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:paddingStart="10dp"
             android:paddingEnd="25dp"
-            app:srcCompat="@mipmap/ic_person_black_48dp"
-            android:id="@+id/imgUser" />
+            android:paddingStart="10dp"
+            app:srcCompat="@mipmap/ic_person_black_48dp" />
 
         <TextView
             android:id="@+id/txvLoginUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingBottom="20dp"
+            android:paddingStart="90dp"
             android:paddingTop="20dp"
             android:text="@string/txvLoginUser"
-            android:paddingStart="90dp"
             android:textSize="25dp" />
     </android.support.v7.widget.CardView>
 
