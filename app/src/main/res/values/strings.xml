@@ -11,13 +11,15 @@
     <string name="txvChooseAccount">Elige tu tipo de perfil</string>
     <string name="txvLoginUser">Soy un Usuario</string>
     <string name="txvLoginAccount">Inicia sesión en Tracing</string>
-    <string name="messagePasswordLogin">Introduce la contraseña</string>
-    <string name="messageUserLogin">Introduce tu correo electrónico</string>
+    <string name="edtSignUpPass">Introduce la contraseña</string>
+    <string name="edtSignUpMail">Introduce tu correo electrónico</string>
     <string name="kbRemember">Recordar usuario</string>
     <string name="btnLogin">Iniciar Sesión</string>
-    <string name="AccountName">Nombre</string>
-    <string name="edtSignInSurname">Apellidos</string>
+    <string name="edtSignUpName">Nombre</string>
+    <string name="edtSignUpSurname">Apellidos</string>
+    <string name="edtSignInName">Introduce el correo o email</string>
+    <string name="edtSignInPass">Introduce la contraseña</string>
     <string name="txvLostUC">No recuerdo el Código Único</string>
-    <string name="messageUMail">Introduce tu correo electrónico</string>
+    <string name="edtSignUpPhone">Teléfono de cotacto</string>
 
 </resources>
