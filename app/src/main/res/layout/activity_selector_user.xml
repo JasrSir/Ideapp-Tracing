@@ -16,7 +16,7 @@
         android:id="@+id/txvChooseAccount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:text="@string/txvChooseAccount"
         android:textAlignment="center"
         android:textSize="25dp" />
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txvChooseAccount"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="onClickSelectAccount">
 
         <ImageView
@@ -43,9 +43,9 @@
             android:id="@+id/txvLoginBusiness"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingStart="90dp"
-            android:paddingTop="20dp"
+            android:paddingTop="@dimen/activity_vertical_margin"
             android:text="@string/txvLoginBusiness"
             android:textSize="25dp" />
     </android.support.v7.widget.CardView>
@@ -56,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/cardAccountBusiness"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="onClickSelectAccount">
 
         <ImageView
@@ -71,9 +71,9 @@
             android:id="@+id/txvLoginProfessional"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingStart="90dp"
-            android:paddingTop="20dp"
+            android:paddingTop="@dimen/activity_vertical_margin"
             android:text="@string/txvLoginProfessional"
             android:textSize="25dp" />
     </android.support.v7.widget.CardView>
@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/cardAccountProfessional"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="onClickSelectAccount">
 
         <ImageView
@@ -99,9 +99,9 @@
             android:id="@+id/txvLoginUser"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="20dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingStart="90dp"
-            android:paddingTop="20dp"
+            android:paddingTop="@dimen/activity_vertical_margin"
             android:text="@string/txvLoginUser"
             android:textSize="25dp" />
     </android.support.v7.widget.CardView>

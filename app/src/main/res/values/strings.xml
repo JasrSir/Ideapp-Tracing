@@ -11,7 +11,7 @@
     <string name="txvChooseAccount">Elige tu tipo de perfil</string>
     <string name="txvLoginUser">Soy un Usuario</string>
     <string name="txvLoginAccount">Inicia sesión en Tracing</string>
-    <string name="messagePasswordLogin">Introduce el Código Único</string>
+    <string name="messagePasswordLogin">Introduce la contraseña</string>
     <string name="messageUserLogin">Introduce tu correo electrónico</string>
     <string name="kbRemember">Recordar usuario</string>
     <string name="btnLogin">Iniciar Sesión</string>
