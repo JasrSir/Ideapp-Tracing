@@ -6,19 +6,25 @@ import android.os.Bundle;
 
 public class SignUp_Activity extends AppCompatActivity {
 
+    //region variables
     private Intent mIntent;
     private Bundle mBundle;
+    //endregion
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        mIntent = this.getIntent();
-        mBundle = mIntent.getExtras();
+
 
     }
+    /**
+     * Method to show different data  in different users
+     */
+    private void putSpecialData() {
 
-    private void actualizar() {
+        mIntent = this.getIntent();
+        mBundle = mIntent.getExtras();
 
         switch (mBundle.getString("ACCOUNT")) {
             case "business":

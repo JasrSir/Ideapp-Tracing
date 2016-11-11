@@ -14,8 +14,10 @@ public class SelectorUser_Activity extends AppCompatActivity {
     }
 
     /**
-     * Method that Log in the user or launch (Lost Unique Code)
-     * @param view Widget clicked
+     * Method onClick in CardView for start:
+     *  - Sign Up Activity (user type)
+     *  - Lost Password
+     * @param view CardView clicked
      */
     public void onClickSelectAccount (View view) {
         Intent intent;

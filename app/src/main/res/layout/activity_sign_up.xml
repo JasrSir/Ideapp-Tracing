@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:padding="@dimen/activity_vertical_margin">
 
-
+        <!-- Name label & icon -->
         <ImageView
             android:layout_width="36dp"
             android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             android:paddingRight="5dp"
             android:layout_alignBaseline="@+id/tilSignUpName"
             android:id="@+id/imgSignUpName" />
-        <!-- Name Label -->
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSignUpName"
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
                 android:inputType="textPersonName" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Surname Label -->
+        <!-- Surname label -->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSignUpSurname"
             android:layout_width="match_parent"
@@ -46,7 +46,6 @@
             android:layout_alignLeft="@+id/tilSignUpName"
             app:counterMaxLength="20"
             app:errorEnabled="true">
-
 
             <EditText
                 android:id="@+id/edtSignUpSurname"
@@ -57,6 +56,7 @@
                 android:inputType="textPersonName" />
         </android.support.design.widget.TextInputLayout>
 
+        <!-- Email label & icon -->
         <ImageView
             android:layout_width="36dp"
             android:layout_height="wrap_content"
@@ -66,7 +66,6 @@
             android:layout_alignBaseline="@+id/tilSignUpMail"
             android:id="@+id/imgSignUpMail" />
 
-        <!-- Email Label -->
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSignUpMail"
             android:layout_width="match_parent"
@@ -83,7 +82,8 @@
                 android:hint="@string/edtSignUpMail"
                 android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
-        <!-- Phone Label -->
+
+        <!-- Phone label & icon-->
         <ImageView
             android:layout_width="36dp"
             android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                 android:inputType="phone" />
         </android.support.design.widget.TextInputLayout>
 
-        <!-- Phone Label -->
+        <!-- Adress label & icon -->
         <ImageView
             android:layout_width="36dp"
             android:layout_height="wrap_content"
@@ -124,7 +124,6 @@
             android:id="@+id/tilSignUpAdress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:layout_below="@+id/tilSignUpPhone"
             android:layout_toRightOf="@+id/imgSignUpAdress"
             app:errorEnabled="true">
@@ -137,5 +136,7 @@
                 android:hint="Dirección"
                 android:inputType="textPostalAddress" />
         </android.support.design.widget.TextInputLayout>
+
+        
     </RelativeLayout>
 </ScrollView>

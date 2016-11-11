@@ -13,6 +13,12 @@ public class LoginMain_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_login_main);
     }
 
+    /**
+     * Method onClick in TextView for start:
+     *  - Sign In Activity
+     *  - Selector User Activity
+     * @param view Textview clicked
+     */
     public void onClickRegister(View view) {
         Intent intent;
 
