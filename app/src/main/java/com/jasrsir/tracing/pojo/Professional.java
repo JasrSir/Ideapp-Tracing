@@ -37,12 +37,13 @@ public class Professional extends UserPojo {
      * @param name professional name
      * @param surname professional surname
      * @param email professional email
+     * @param pass User password
      * @param phone professional phone number
      * @param profession professional profession
      * @param zone professional area services
      */
-    public Professional(String codeUnique, String name, String surname, String email, String phone, String profession, String zone) {
-        super(codeUnique, name, surname, email, phone);
+    public Professional(String codeUnique, String name, String surname, String email, String pass, String phone, String profession, String zone) {
+        super(codeUnique, name, surname, email,pass, phone);
         this.profession = profession;
         this.zone = zone;
     }

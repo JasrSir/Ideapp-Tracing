@@ -55,14 +55,15 @@ public class Business extends UserPojo {
      * @param name business CEO name
      * @param surname business CEO surname
      * @param email business email
+     * @param pass User password
      * @param phone business phone number
      * @param nameBusiness business namework
      * @param adress business adress
      * @param cif business cif number
      * @param zone business area services
      */
-    public Business(String codeUnique, String name, String surname, String email, String phone, String nameBusiness, String adress, String cif, String zone) {
-        super(codeUnique, name, surname, email, phone);
+    public Business(String codeUnique, String name, String surname, String email,String pass, String phone, String nameBusiness, String adress, String cif, String zone) {
+        super(codeUnique, name, surname, email, pass, phone);
         this.nameBusiness = nameBusiness;
         this.adress = adress;
         this.cif = cif;

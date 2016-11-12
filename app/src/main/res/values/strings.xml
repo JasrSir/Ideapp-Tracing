@@ -21,5 +21,6 @@
     <string name="edtSignInPass">Introduce la contraseña</string>
     <string name="txvLostUC">No recuerdo la contraseña</string>
     <string name="edtSignUpPhone">Teléfono de contacto</string>
+    <string name="btnSignUpRegister">Registrarse</string>
 
 </resources>

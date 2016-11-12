@@ -13,10 +13,11 @@ public class User extends UserPojo {
      * @param name       User name
      * @param surname    User surname
      * @param email      User email
+     * @param pass       User password
      * @param phone      User phone number
      */
-    public User(String codeUnique, String name, String surname, String email, String phone) {
-        super(codeUnique, name, surname, email, phone);
+    public User(String codeUnique, String name, String surname, String email, String pass, String phone) {
+        super(codeUnique, name, surname, email, pass, phone);
 
     }
     //endregion

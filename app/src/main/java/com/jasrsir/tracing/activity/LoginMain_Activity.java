@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.preferences.AccountPreferences;
 
 public class LoginMain_Activity extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class LoginMain_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main);
+
     }
 
     /**

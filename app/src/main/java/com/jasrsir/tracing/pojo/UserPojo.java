@@ -14,6 +14,7 @@ public class UserPojo {
     private String name;
     private String surname;
     private String email;
+    private String password;
     private String phone;
     private Image photoB;
     private Image photoP;
@@ -52,6 +53,14 @@ public class UserPojo {
         this.email = email;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getPhone() {
         return phone;
     }
@@ -85,13 +94,15 @@ public class UserPojo {
      * @param name User name
      * @param surname User surname
      * @param email User email
+     * @param pass User password
      * @param phone User phone number
      */
-    public UserPojo(String codeUnique, String name, String surname, String email, String phone) {
+    public UserPojo(String codeUnique, String name, String surname, String email, String pass, String phone) {
         this.codeUnique = codeUnique;
         this.name = name;
         this.surname = surname;
         this.email = email;
+        this.password = pass;
         this.phone = phone;
         this.photoB = null;
         this.photoP = null;
