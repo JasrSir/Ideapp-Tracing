@@ -19,7 +19,7 @@
     <string name="edtSignUpSurname">Apellidos</string>
     <string name="edtSignInName">Introduce el correo o email</string>
     <string name="edtSignInPass">Introduce la contraseña</string>
-    <string name="txvLostUC">No recuerdo el Código Único</string>
+    <string name="txvLostUC">No recuerdo la contraseña</string>
     <string name="edtSignUpPhone">Teléfono de contacto</string>
 
 </resources>
