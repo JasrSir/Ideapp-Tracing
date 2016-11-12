@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.jasrsir.tracing.activity.About_Activity">
+
+    <!-- Title About -->
+    <TextView
+        android:id="@+id/txvAboutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/txvAboutTitle"
+        android:textSize="16dp"
+        android:textColor="@color/colorAccentText" />
+
+    <!-- Version Title -->
+    <TextView
+        android:id="@+id/txvAboutVersionTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutTitle"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorTextBlack"
+        android:text="@string/txvAboutVersionTitle" />
+
+    <!-- Version Summary -->
+    <TextView
+        android:id="@+id/txvAboutVersionSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutVersionTitle"
+        android:layout_alignLeft="@+id/txvAboutVersionTitle"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40sp"
+        android:paddingTop="5dp"
+        android:text="@string/txvAboutVersionSummary" />
+
+    <!-- Author Title -->
+    <TextView
+        android:id="@+id/txvAboutAuthorTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutVersionSummary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorTextBlack"
+        android:text="@string/txvAboutAuthorTitle" />
+
+    <!-- Author Summary -->
+    <TextView
+        android:id="@+id/txvAboutAuthorSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutAuthorTitle"
+        android:layout_alignLeft="@+id/txvAboutAuthorTitle"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40sp"
+        android:paddingTop="5dp"
+        android:text="@string/txvAboutAuthorSummary" />
+
+    <!-- Licence Title -->
+    <TextView
+        android:id="@+id/txvAboutLicenceTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutAuthorSummary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorTextBlack"
+        android:text="@string/txvAboutLicenceTitle" />
+
+    <!-- Licence Summary -->
+    <TextView
+        android:id="@+id/txvAboutLicenceSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutLicenceTitle"
+        android:layout_alignLeft="@+id/txvAboutLicenceTitle"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40sp"
+        android:paddingTop="5dp"
+        android:text="@string/txvAboutLicenceSummary" />
+
+    <!-- Contact Title -->
+    <TextView
+        android:id="@+id/txvAboutContactTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutLicenceSummary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorTextBlack"
+        android:text="@string/txvAboutContactTitle" />
+
+    <!-- Contact Summary -->
+    <TextView
+        android:id="@+id/txvAboutContactSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutContactTitle"
+        android:layout_alignLeft="@+id/txvAboutContactTitle"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40sp"
+        android:paddingTop="5dp"
+        android:text="@string/txvAboutContactSummary" />
+
+    <!-- Terms Title -->
+    <TextView
+        android:id="@+id/txvAboutTermsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutContactSummary"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="10dp"
+        android:textSize="20dp"
+        android:textColor="@color/colorTextBlack"
+        android:text="@string/txvAboutTermsTitle" />
+
+    <!-- Terms Summary -->
+    <TextView
+        android:id="@+id/txvAboutTermsSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvAboutTermsTitle"
+        android:layout_alignLeft="@+id/txvAboutContactTitle"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40sp"
+        android:paddingTop="5dp"
+        android:text="@string/txvAboutTermsSummary" />
+</RelativeLayout>

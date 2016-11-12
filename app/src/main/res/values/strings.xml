@@ -31,5 +31,16 @@
     <string name="txvSignLostPassword">¿Has olvidado la contraseña? \n Envíate la contraseña a tu correo para volver a iniciar sesión en Tracing</string>
     <string name="edtSignLostPassword">Introduce el correo electrónico</string>
     <string name="btnSignLostSentPass">Envíame la contraseña</string>
+    <string name="txvAboutTitle">Acerca de ...</string>
+    <string name="txvAboutVersionTitle">Versión de la aplicación</string>
+    <string name="txvAboutAuthorTitle">Autor, diseñador y programador</string>
+    <string name="txvAboutVersionSummary">1.0.0 alpha</string>
+    <string name="txvAboutAuthorSummary">Juan Anonio Suárez Rosa (JasrSir)</string>
+    <string name="txvAboutLicenceTitle">Licencia</string>
+    <string name="txvAboutLicenceSummary">GNU código abierto</string>
+    <string name="txvAboutContactTitle">Contacto</string>
+    <string name="txvAboutContactSummary">Para contactar con el autor puedes enviar un email a la dirección jasrsir@gmail.com</string>
+    <string name="txvAboutTermsTitle">Condiciones y términos de uso</string>
+    <string name="txvAboutTermsSummary">Lea nuestras condiciones y términos de uso para usar la aplicación</string>
 
 </resources>

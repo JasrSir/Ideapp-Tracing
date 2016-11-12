@@ -2,6 +2,7 @@ package com.jasrsir.tracing.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -21,6 +22,7 @@ public class SignLost_Activity extends AppCompatActivity {
         setAccountPreferences();
     }
 
+    //region functions
     /**
      * inflate variables with views
      */
@@ -37,4 +39,9 @@ public class SignLost_Activity extends AppCompatActivity {
             mEdtSignLostPass.setText(mAccountPreferences.getKeyUserEmail());
         }
     }
+
+    public void onClickSignLostPassword(View view) {
+
+    }
+    //endregion
 }

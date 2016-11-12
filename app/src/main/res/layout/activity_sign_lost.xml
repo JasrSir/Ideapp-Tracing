@@ -27,7 +27,7 @@
         android:inputType="textEmailAddress"
         tools:textSize="20sp" />
 
-    <!-- SignIn UserPojo -->
+    <!-- SignLost UserPojo -->
     <Button
         android:id="@+id/btnSignLostPassword"
         android:layout_width="match_parent"
@@ -35,7 +35,7 @@
         android:layout_below="@id/edtSignLostPassword"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:background="@drawable/btn_login"
-        android:onClick="onClickLogin_LostPassword"
+        android:onClick="onClickSignLostPassword"
         android:text="@string/btnSignLostSentPass"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:textColor="@color/colorAccent"

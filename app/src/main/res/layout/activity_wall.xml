@@ -10,9 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
 
-    <android.support.design.widget.NavigationView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:id="@+id/introPreNaviDraw"
+        android:text="Ejemplo del menú pero va dentro de un navigation drawer que ya envía a otras activityes y lo hace todo very good, pero ahora solo te puedo enseñar esto...
+        esto es el perfil principal, por ahora solo se ven los botones de las distintas opciones del NAVIGATION DRAWER."/>
 
-    </android.support.design.widget.NavigationView>
+
 </RelativeLayout>

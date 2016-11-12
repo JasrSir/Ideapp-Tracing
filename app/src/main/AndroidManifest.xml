@@ -20,7 +20,8 @@
         <activity android:name=".activity.SignIn_Activity" />
         <activity android:name=".activity.SignUp_Activity" />
         <activity android:name=".activity.Wall_Activity" />
-        <activity android:name=".activity.SignLost_Activity"></activity>
+        <activity android:name=".activity.SignLost_Activity" />
+        <activity android:name=".activity.About_Activity"></activity>
     </application>
 
 </manifest>
