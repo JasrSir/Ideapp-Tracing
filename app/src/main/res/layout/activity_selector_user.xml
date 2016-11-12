@@ -76,7 +76,7 @@
             android:textSize="25dp" />
     </android.support.v7.widget.CardView>
 
-    <!-- Card User -->
+    <!-- Card UserPojo -->
     <android.support.v7.widget.CardView
         android:id="@+id/cardAccountUser"
         android:layout_width="match_parent"

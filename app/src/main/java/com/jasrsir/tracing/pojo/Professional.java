@@ -1,0 +1,50 @@
+package com.jasrsir.tracing.pojo;
+
+/**
+ * this class create a new professional user
+ */
+public class Professional extends UserPojo {
+
+    //region variables
+    private String profession;
+    private String zone;
+    //endregion
+
+    //region getter & setter
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public String getZone() {
+        return zone;
+    }
+
+    public void setZone(String zone) {
+        this.zone = zone;
+    }
+
+    //endregion
+
+    //region constructor
+    /**
+     * Constructor super to create a professional user
+     * @param codeUnique Auto code unique for professional id
+     * @param name professional name
+     * @param surname professional surname
+     * @param email professional email
+     * @param phone professional phone number
+     * @param profession professional profession
+     * @param zone professional area services
+     */
+    public Professional(String codeUnique, String name, String surname, String email, String phone, String profession, String zone) {
+        super(codeUnique, name, surname, email, phone);
+        this.profession = profession;
+        this.zone = zone;
+    }
+    //endregion
+}

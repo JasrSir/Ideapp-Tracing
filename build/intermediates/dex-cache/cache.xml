@@ -12,6 +12,213 @@
     </item>
     <item
         is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.0.0_144ddaaf056940a23226f962cd020e0f188da860/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="665d21a8a069c96b4d9e8b434f5096d865b4e261">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_e6795aa5c4c7cbfeaf49c11b49baca3e354cc1f1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.0_c131ebf9ed34e6cd213cf1a56d4b0e015ead806d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_17e3ce0a2a1fda3a8f11b3de62916d01ca5bf174/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="75b1f366ff0bbc78f8b1f7cf0dc82e7c53afef6a">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.0.0_68fc8b68f7fe040c168c95db8698e33dbea7ca6a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5e497d60f0cb6ce87c458ac5420a46d0fed49bd0">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.0.0_6c475438d70c7601847b179ea530dc370c2ecae6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_a86dc870b61c134e6cd0f7d753630d3b4eb0bd76/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_9f12bc715b3175e1f25fd56e08ae8f04bb6a1c62/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_dbe468478f13c3b90b7b57a4c58e484c21a41bda/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="53a420cd4f49274db6bd43475f8006ba67ef6bbd">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.0.0_7b86365c2848bac1568de77912d1f01edc6d5993/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v13/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67355078cd30daae43f62ba47a4663ee6edb976e">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_df32f9649debce4d52f6dadda1da9c65043ee4e0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_17c56e3144f51c8d0300e2a31ee76a1de8034bc4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.0_4b90bb319ab5c1a7bab88d156bfe70e0aeb91985/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_b0da3a3e40aeb59dda3c0d55445150abbb134d60/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_33b7d55bd92c1eb8c8bef64e9f6db5591e6d3696/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_518ff38140a2f185591d6e31a05dcee18bc4feb8/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="10cb141ad5913b4d7fc62e88faeaa0184ff77539">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d6b8c5e943d718f4f2c9b32be4c8cdfdb080623b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a372c4191f80489770a231f7be4820b204b886a">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.0.0_a915197b9c0599fca35950c8e9ca1ce11c4286d4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="69fb3f9d06feccce24f372c55a29ba0ec82da8a5">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7930c8958d50a349269d79070c8ab456951c14fb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v13/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="67355078cd30daae43f62ba47a4663ee6edb976e">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_69ce27cc49aec4cdd822a60e3eeeb10e72154975/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d29714cc76b38157e3cbd034c66e1ec808eb4c19">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.0.0_c5b4fda351bb9c0cfc1b0ede4f696151c5adac5a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="76fb65a4b41ea42dab8a1310ed772a2420c96b52">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.0.0_59f5df95cec6092ddde44453c1a3a44ff825ceb3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_1933a5b2a624249810542a89efb681cdf7765c70/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -30,12 +237,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.0/jars/classes.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="8a372c4191f80489770a231f7be4820b204b886a">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-25.0.0_144ddaaf056940a23226f962cd020e0f188da860/classes.dex" />
+        sha1="75c00a542c24c0fdbe0e2a736787e323cf9b22ff">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cf07b9d572771854ad492b2fb05cbf6d717a7947/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -48,21 +255,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v13/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f2e3b9bc1ec25f652e8007ce7774c991e38f6a00">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_17e3ce0a2a1fda3a8f11b3de62916d01ca5bf174/classes.dex" />
+        sha1="6ac094121e75b4b87432beb9305d70c68ec6dcab">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-25.0.0_2a9724716ead7a3b622f0d1abc6141ab76851aa4/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_a86dc870b61c134e6cd0f7d753630d3b4eb0bd76/classes.dex" />
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_9fe21b4182bcc609fc772380070d92c6a1dcde81/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -93,6 +300,24 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bc45ce1f63d1a391fd38b32a201be5a42f9c95d">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.0.0_47689f25ed918bbb8e0563df79ffb2a3a13f9be7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_2be6ce47ad436ca843a6a0204edfafaa4eddb300/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -102,39 +327,30 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/jasrsir/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.0/support-annotations-25.0.0.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a22d2cc94da87b254451fa8ed28afc30b4653773">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.0.0_dbe468478f13c3b90b7b57a4c58e484c21a41bda/classes.dex" />
+        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_c56d0888fd4d91d96a2106cb0df19f6801df146b/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v13/25.0.0/jars/libs/internal_impl-25.0.0.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/libs/internal_impl-25.0.0.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="67355078cd30daae43f62ba47a4663ee6edb976e">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_df32f9649debce4d52f6dadda1da9c65043ee4e0/classes.dex" />
+        sha1="3b61a70884adaf0be3fc06c70c801e3e6df13133">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_1a42c829ea1ecb03fde33de1be0162054ee9fcdc/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/design/25.0.0/jars/classes.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="26384be22ddc74cfe197ebda9edbc7d1fd8bd537">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.0.0_4b90bb319ab5c1a7bab88d156bfe70e0aeb91985/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="26674000177e45447a0326a6ad84612761199a13">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_b0da3a3e40aeb59dda3c0d55445150abbb134d60/classes.dex" />
+        sha1="07daa0b6e1d455c82a38422ffe287c18823d339a">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.0.0_7b20968d765b21518b5ec2174c9791d05081fc90/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -156,24 +372,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.0.0_33b7d55bd92c1eb8c8bef64e9f6db5591e6d3696/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.0/jars/libs/internal_impl-25.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="ee5faf4dee5b6a4364bf51587871047dde7c703a">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-25.0.0_518ff38140a2f185591d6e31a05dcee18bc4feb8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -183,12 +381,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="10cb141ad5913b4d7fc62e88faeaa0184ff77539">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d6b8c5e943d718f4f2c9b32be4c8cdfdb080623b/classes.dex" />
+        sha1="26674000177e45447a0326a6ad84612761199a13">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.0.0_fbde966b8ebe880a8b6b85da53c847e6a496e50c/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -201,12 +399,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.0/jars/classes.jar"
+        jar="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/exploded-aar/com.android.support/transition/25.0.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="4ccbcda5c72027c7f7c14be9ff8640d9cb0d8da0">
-        <dex dex="/media/jasrsir/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.0.0_1933a5b2a624249810542a89efb681cdf7765c70/classes.dex" />
+        sha1="0c6d948e6cb9ea6f535d175fb61ba2930719c0e9">
+        <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.0.0_44c3928b031b39639e2c53bdaa90296bc9815575/classes.dex" />
     </item>
 
 </items>

@@ -16,7 +16,7 @@ public class LoginMain_Activity extends AppCompatActivity {
     /**
      * Method onClick in TextView for start:
      *  - Sign In Activity
-     *  - Selector User Activity
+     *  - Selector UserPojo Activity
      * @param view Textview clicked
      */
     public void onClickRegister(View view) {

@@ -20,6 +20,6 @@
     <string name="edtSignInName">Introduce el correo o email</string>
     <string name="edtSignInPass">Introduce la contraseña</string>
     <string name="txvLostUC">No recuerdo el Código Único</string>
-    <string name="edtSignUpPhone">Teléfono de cotacto</string>
+    <string name="edtSignUpPhone">Teléfono de contacto</string>
 
 </resources>
