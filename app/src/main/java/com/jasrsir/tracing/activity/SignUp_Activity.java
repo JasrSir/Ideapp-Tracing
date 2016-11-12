@@ -17,8 +17,6 @@ public class SignUp_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
-
     }
     /**
      * Method to show different data  in different users
