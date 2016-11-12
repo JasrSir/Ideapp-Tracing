@@ -5,7 +5,7 @@
     android:id="@+id/activity_login_account"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jasrsir.tracing.SignIn_Activity">
+    tools:context="com.jasrsir.tracing.activity.SignIn_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
