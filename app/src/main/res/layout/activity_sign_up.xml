@@ -100,13 +100,12 @@
             app:errorTextAppearance="@style/error">
 
             <EditText
-                android:id="@+id/edtPassword"
+                android:id="@+id/edtSignUpPass"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/edtSignInPass"
-                android:inputType="textPassword"
-                android:textStyle="bold" />
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
         <!-- Phone label & icon-->
         <ImageView

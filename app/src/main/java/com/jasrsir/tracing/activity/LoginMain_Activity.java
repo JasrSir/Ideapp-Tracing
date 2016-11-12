@@ -28,10 +28,10 @@ public class LoginMain_Activity extends AppCompatActivity {
 
         if (view.getId() == R.id.txvYesAccount)
             intent = new Intent(LoginMain_Activity.this, SignIn_Activity.class);
-        else //if (view.getId() == R.id.txvNoAccount)
+        else {//if (view.getId() == R.id.txvNoAccount)
             intent = new Intent(LoginMain_Activity.this, SelectorUser_Activity.class);
 
-
+        }
         startActivity(intent);
     }
 }

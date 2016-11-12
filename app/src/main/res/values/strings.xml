@@ -22,5 +22,14 @@
     <string name="txvLostUC">No recuerdo la contraseña</string>
     <string name="edtSignUpPhone">Teléfono de contacto</string>
     <string name="btnSignUpRegister">Registrarse</string>
+    <string name="title_activity_wall">Wall</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="txvSignLostPassword">¿Has olvidado la contraseña? \n Envíate la contraseña a tu correo para volver a iniciar sesión en Tracing</string>
+    <string name="edtSignLostPassword">Introduce el correo electrónico</string>
+    <string name="btnSignLostSentPass">Envíame la contraseña</string>
 
 </resources>

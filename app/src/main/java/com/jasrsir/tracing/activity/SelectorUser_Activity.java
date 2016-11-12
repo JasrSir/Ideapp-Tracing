@@ -35,5 +35,6 @@ public class SelectorUser_Activity extends AppCompatActivity {
         intent = new Intent(SelectorUser_Activity.this, SignUp_Activity.class);
         intent.putExtras(bundle);
         startActivity(intent);
+        finish();
     }
 }
