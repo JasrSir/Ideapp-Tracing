@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_wall"
     android:layout_width="match_parent"
@@ -10,12 +10,74 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/introPreNaviDraw"
-        android:text="Ejemplo del menú pero va dentro de un navigation drawer que ya envía a otras activityes y lo hace todo very good, pero ahora solo te puedo enseñar esto...
-        esto es el perfil principal, por ahora solo se ven los botones de las distintas opciones del NAVIGATION DRAWER."/>
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/introPreNaviDraw"
+            android:text="Ejemplo del menú pero va dentro de un navigation drawer que ya envía a otras activityes y lo hace todo very good, pero ahora solo te puedo enseñar esto...
+        esto es el perfil principal, por ahora solo se ven los botones de las distintas opciones del NAVIGATION DRAWER.
+        Acerca de y las preferencias SI son medio definitivas, logicamente el perdil que es esto..no..."/>
+
+        <!-- Ejemp ListView -->
+        <Button
+            android:id="@+id/btnPruebaListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/introPreNaviDraw"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_login"
+            android:onClick="onClickPrueba"
+            android:text="Prueba List View"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <!-- Ejemp Recycler View -->
+        <Button
+            android:id="@+id/btnPruebaRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPruebaListView"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_login"
+            android:onClick="onClickPrueba"
+            android:text="Prueba Recycler View"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <!-- Ejemp Settings -->
+        <Button
+            android:id="@+id/btnPruebaSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPruebaRecyclerView"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_login"
+            android:onClick="onClickPrueba"
+            android:text="Ajustes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <!-- Ejemp About -->
+        <Button
+            android:id="@+id/btnPruebaAbout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPruebaSettings"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_login"
+            android:onClick="onClickPrueba"
+            android:text="Acerca de ...."
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+    </RelativeLayout>
 
 
-</RelativeLayout>
+</ScrollView>

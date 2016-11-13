@@ -9,6 +9,7 @@ import com.jasrsir.tracing.R;
 
 public class SelectorUser_Activity extends AppCompatActivity {
 
+    static Bundle bundleAccount = new Bundle();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,17 +24,17 @@ public class SelectorUser_Activity extends AppCompatActivity {
      */
     public void onClickSelectAccount (View view) {
         Intent intent;
-        Bundle bundle = new Bundle();
+
 
         if (view.getId() == R.id.cardAccountBusiness)
-            bundle.putString("ACCOUNT", "business");
+            bundleAccount.putString("ACCOUNT", "business");
         else if (view.getId() == R.id.cardAccountProfessional)
-            bundle.putString("ACCOUNT", "professional");
+            bundleAccount.putString("ACCOUNT", "professional");
         else //if (view.getId() == R.id.cardAccountUser)
-            bundle.putString("ACCOUNT", "user");
+            bundleAccount.putString("ACCOUNT", "user");
 
         intent = new Intent(SelectorUser_Activity.this, SignUp_Activity.class);
-        intent.putExtras(bundle);
+        intent.putExtras(bundleAccount);
         startActivity(intent);
         finish();
     }

@@ -7,6 +7,7 @@ public class Business extends UserPojo {
 
     //region variables
     private String nameBusiness;
+    private String profession;
     private String adress;
     private String cif;
     private String zone;
@@ -20,6 +21,14 @@ public class Business extends UserPojo {
 
     public void setNameBusiness(String nameBusiness) {
         this.nameBusiness = nameBusiness;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
     }
 
     public String getAdress() {
@@ -58,13 +67,15 @@ public class Business extends UserPojo {
      * @param pass User password
      * @param phone business phone number
      * @param nameBusiness business namework
+     * @param profession professional profession
      * @param adress business adress
      * @param cif business cif number
      * @param zone business area services
      */
-    public Business(String codeUnique, String name, String surname, String email,String pass, String phone, String nameBusiness, String adress, String cif, String zone) {
+    public Business(String codeUnique, String name, String surname, String email,String pass, String phone, String nameBusiness, String profession, String adress, String cif, String zone) {
         super(codeUnique, name, surname, email, pass, phone);
         this.nameBusiness = nameBusiness;
+        this.profession = profession;
         this.adress = adress;
         this.cif = cif;
         this.zone = zone;

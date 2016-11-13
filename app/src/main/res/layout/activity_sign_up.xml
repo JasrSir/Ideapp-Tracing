@@ -19,6 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tilSignUpName"
             android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
             app:srcCompat="@drawable/ic_perm_identity_black_48dp" />
 
         <android.support.design.widget.TextInputLayout
@@ -66,6 +67,7 @@
             android:layout_alignBaseline="@+id/tilSignUpMail"
             android:layout_below="@+id/tilSignUpSurname"
             android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
             app:srcCompat="@drawable/ic_mail_outline_black_48dp" />
 
         <android.support.design.widget.TextInputLayout
@@ -88,6 +90,16 @@
         </android.support.design.widget.TextInputLayout>
 
         <!-- Layout Password -->
+        <ImageView
+            android:id="@+id/imgSignUpPass"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tilSignUpPass"
+            android:layout_below="@+id/tilSignUpMail"
+            android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
+            app:srcCompat="@drawable/ic_vpn_key_black_48dp" />
+
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSignUpPass"
             android:layout_width="match_parent"
@@ -107,6 +119,7 @@
                 android:hint="@string/edtSignInPass"
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
+
         <!-- Phone label & icon-->
         <ImageView
             android:id="@+id/imgSignUpPhone"
@@ -115,6 +128,7 @@
             android:layout_alignBaseline="@+id/tilSignUpPhone"
             android:layout_below="@+id/tilSignUpPass"
             android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
             app:srcCompat="@drawable/ic_phone_black_48dp" />
 
         <android.support.design.widget.TextInputLayout
@@ -135,22 +149,87 @@
                 android:inputType="phone" />
         </android.support.design.widget.TextInputLayout>
 
+        <!-- Work label & icon -->
+        <ImageView
+            android:id="@+id/imgSignUpWork"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tilSignUpWork"
+            android:layout_below="@+id/tilSignUpPhone"
+            android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_work_black_48dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSignUpWork"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tilSignUpPhone"
+            android:layout_toRightOf="@+id/imgSignUpWork"
+            android:visibility="gone"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <EditText
+                android:id="@+id/edtSignUpWork"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/edtSignUpWork"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!-- Cif label & icon-->
+        <ImageView
+            android:id="@+id/imgSignUpCif"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tilSignUpCif"
+            android:layout_below="@+id/tilSignUpWork"
+            android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ic_account_balance_black_48dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/tilSignUpCif"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tilSignUpWork"
+            android:layout_toRightOf="@+id/imgSignUpCif"
+            android:visibility="gone"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error">
+
+            <EditText
+                android:id="@+id/edtSignUpCif"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/edtSignUpCif"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
         <!-- Adress label & icon -->
         <ImageView
             android:id="@+id/imgSignUpAdress"
             android:layout_width="36dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/tilSignUpAdress"
-            android:layout_below="@+id/tilSignUpPhone"
+            android:layout_below="@+id/tilSignUpCif"
             android:paddingRight="5dp"
+            android:tint="@color/colorTextBlack"
+            android:visibility="gone"
             app:srcCompat="@drawable/ic_place_black_48dp" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/tilSignUpAdress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/tilSignUpPhone"
+            android:layout_below="@+id/tilSignUpCif"
             android:layout_toRightOf="@+id/imgSignUpAdress"
+            android:visibility="gone"
             app:errorEnabled="true"
             app:errorTextAppearance="@style/error">
 

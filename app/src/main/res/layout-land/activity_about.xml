@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:layout="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_about"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -46,7 +45,7 @@
             android:layout_below="@+id/txvAboutVersionTitle"
             android:layout_alignLeft="@+id/txvAboutVersionTitle"
             android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
+            android:paddingLeft="200sp"
             android:paddingTop="5dp"
             android:text="@string/txvAboutVersionSummary" />
 
@@ -70,7 +69,7 @@
             android:layout_below="@+id/txvAboutAuthorTitle"
             android:layout_alignLeft="@+id/txvAboutAuthorTitle"
             android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
+            android:paddingLeft="200sp"
             android:paddingTop="5dp"
             android:text="@string/txvAboutAuthorSummary" />
 
@@ -94,7 +93,7 @@
             android:layout_below="@+id/txvAboutLicenceTitle"
             android:layout_alignLeft="@+id/txvAboutLicenceTitle"
             android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
+            android:paddingLeft="200sp"
             android:paddingTop="5dp"
             android:text="@string/txvAboutLicenceSummary" />
 
@@ -118,7 +117,7 @@
             android:layout_below="@+id/txvAboutContactTitle"
             android:layout_alignLeft="@+id/txvAboutContactTitle"
             android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
+            android:paddingLeft="200sp"
             android:paddingTop="5dp"
             android:text="@string/txvAboutContactSummary" />
 
@@ -142,7 +141,7 @@
             android:layout_below="@+id/txvAboutTermsTitle"
             android:layout_alignLeft="@+id/txvAboutContactTitle"
             android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
+            android:paddingLeft="200sp"
             android:paddingTop="5dp"
             android:text="@string/txvAboutTermsSummary" />
     </RelativeLayout>

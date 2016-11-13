@@ -2,6 +2,8 @@ package com.jasrsir.tracing.pojo;
 
 import android.media.Image;
 
+import com.jasrsir.tracing.preferences.AccountPreferences;
+
 import java.util.Date;
 
 /**
@@ -10,6 +12,7 @@ import java.util.Date;
 public class UserPojo {
 
     //region variables
+    public AccountPreferences mAccountPreferences;
     private String codeUnique;
     private String name;
     private String surname;

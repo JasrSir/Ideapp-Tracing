@@ -43,6 +43,7 @@ public class SignIn_Activity extends AppCompatActivity {
         if (mAccountPreferences.getKeyUserName() != null) {
             mEdtMail.setText(mAccountPreferences.getKeyUserEmail());
             mEdtPass.setText(mAccountPreferences.getKeyUserPass());
+            mCkbRemember.setChecked(mAccountPreferences.getKeyUserRemember());
         }
     }
 
