@@ -19,7 +19,6 @@ import com.jasrsir.tracing.preferences.AccountPreferences;
 public class SignUp_Activity extends AppCompatActivity {
 
     //region variables
-    public static AccountPreferences mAccountPreferences;
     public static UserPojo mUser;
 
     private EditText mEdtName;
@@ -49,10 +48,11 @@ public class SignUp_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         getWidgets();
-        if (mAccountPreferences == null)
-            mAccountPreferences = AccountPreferences.getInstance(getApplicationContext());
-        else
+        if (AccountPreferences.accountPreference == null)
+            AccountPreferences.accountPreference = AccountPreferences.getInstance(getApplicationContext());
+        else if (mUser != null)
             loadUserData();
+
         putSpecialData();
     }
 
@@ -108,25 +108,20 @@ public class SignUp_Activity extends AppCompatActivity {
      */
     private void putSpecialData() {
 
-        switch (SelectorUser_Activity.bundleAccount.getString("ACCOUNT")) {
-            case "business":
-                mImgProfession.setVisibility(View.VISIBLE);
-                mTilProfession.setVisibility(View.VISIBLE);
-                mImgAdress.setVisibility(View.VISIBLE);
-                mTilAdress.setVisibility(View.VISIBLE);
-                mTilCif.setVisibility(View.VISIBLE);
-                mImgCif.setVisibility(View.VISIBLE);
-                //Falta area prof
-                break;
-            case "professional":
-                mImgProfession.setVisibility(View.VISIBLE);
-                mTilProfession.setVisibility(View.VISIBLE);
-                //fata area prof
-                break;
-            case "user":
-                //all OK
-                break;
-        }
+        if ( mUser != null && mUser instanceof Business) {
+            mImgProfession.setVisibility(View.VISIBLE);
+            mTilProfession.setVisibility(View.VISIBLE);
+            mImgAdress.setVisibility(View.VISIBLE);
+            mTilAdress.setVisibility(View.VISIBLE);
+            mTilCif.setVisibility(View.VISIBLE);
+            mImgCif.setVisibility(View.VISIBLE);
+            //Falta area prof
+        } else if ( mUser != null && mUser instanceof Professional) {
+            mImgProfession.setVisibility(View.VISIBLE);
+            mTilProfession.setVisibility(View.VISIBLE);
+            //fata area prof
+        }// User all ok
+
     }
 
     /**
@@ -134,89 +129,120 @@ public class SignUp_Activity extends AppCompatActivity {
      * @param view only has 1 button
      */
     public void onClickSignUp(View view){
-        mAccountPreferences.setKeyUserName(mEdtName.getText().toString());
-        mAccountPreferences.setKeyUserSurname(mEdtSurname.getText().toString());
-        mAccountPreferences.setKeyUserEmail(mEdtEmail.getText().toString());
-        mAccountPreferences.setKeyUserPhone(mEdtPhone.getText().toString());
-        mAccountPreferences.setKeyUserPass(mEdtPass.getText().toString());
-        mAccountPreferences.setKeyUserUniquecode("CODEPRUEBA");
-        mAccountPreferences.setKeyUserRemember(true);
+        setAccountPreferences(SelectorUser_Activity.bundleAccount.getString("ACCOUNT"));
 
-        switch (SelectorUser_Activity.bundleAccount.getString("ACCOUNT")) {
+        if (mUser == null)
+            createUser(SelectorUser_Activity.bundleAccount.getString("ACCOUNT"));
+        else
+            modifyUser(SelectorUser_Activity.bundleAccount.getString("ACCOUNT"));
+
+        finish();
+    }
+
+    /**
+     * Create a new type user
+     * @param usertype User, Professional or Business
+     */
+    private void createUser(String usertype) {
+        switch (usertype) {
+            case "user":
+                mUser = new User(AccountPreferences.accountPreference.getKeyUserUniquecode(),
+                        AccountPreferences.accountPreference.getKeyUserName(),
+                        AccountPreferences.accountPreference.getKeyUserSurname(),
+                        AccountPreferences.accountPreference.getKeyUserEmail(),
+                        AccountPreferences.accountPreference.getKeyUserPass(),
+                        AccountPreferences.accountPreference.getKeyUserPhone());
+                break;
+            case "professional":
+                mUser = new Professional(AccountPreferences.accountPreference.getKeyUserUniquecode(),
+                        AccountPreferences.accountPreference.getKeyUserName(),
+                        AccountPreferences.accountPreference.getKeyUserSurname(),
+                        AccountPreferences.accountPreference.getKeyUserEmail(),
+                        AccountPreferences.accountPreference.getKeyUserPass(),
+                        AccountPreferences.accountPreference.getKeyUserPhone(),
+                        AccountPreferences.accountPreference.getKeyUserProfession(),
+                        AccountPreferences.accountPreference.getKeyUserZone());
+                break;
+            case "business":
+                mUser = new Business(AccountPreferences.accountPreference.getKeyUserUniquecode(),
+                        AccountPreferences.accountPreference.getKeyUserName(),
+                        AccountPreferences.accountPreference.getKeyUserSurname(),
+                        AccountPreferences.accountPreference.getKeyUserEmail(),
+                        AccountPreferences.accountPreference.getKeyUserPass(),
+                        AccountPreferences.accountPreference.getKeyUserPhone(),
+                        AccountPreferences.accountPreference.getKeyUserName(),
+                        AccountPreferences.accountPreference.getKeyUserProfession(),
+                        AccountPreferences.accountPreference.getKeyBusinessAdress(),
+                        AccountPreferences.accountPreference.getKeyBusinessCif(),
+                        AccountPreferences.accountPreference.getKeyUserZone());
+                break;
+        }
+    }
+
+    /**
+     * Modify a user
+     * @param usertype User, Professional or Business
+     */
+    private void modifyUser(String usertype) {
+        switch (usertype) {
+            case "user":
+                mUser.setName(AccountPreferences.accountPreference.getKeyUserName());
+                mUser.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
+                mUser.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
+                mUser.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
+                mUser.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
+                break;
+            case "professional":
+                mUser.setName(AccountPreferences.accountPreference.getKeyUserName());
+                mUser.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
+                mUser.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
+                mUser.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
+                mUser.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
+                ((Professional)mUser).setProfession(AccountPreferences.accountPreference.getKeyUserProfession());
+                ((Professional)mUser).setZone(AccountPreferences.accountPreference.getKeyUserZone());
+                break;
+            case "business":
+                mUser.setName(AccountPreferences.accountPreference.getKeyUserName());
+                mUser.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
+                mUser.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
+                mUser.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
+                mUser.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
+                ((Business)mUser).setNameBusiness(AccountPreferences.accountPreference.getKeyUserName());
+                ((Business)mUser).setProfession(AccountPreferences.accountPreference.getKeyUserProfession());
+                ((Business)mUser).setAdress(AccountPreferences.accountPreference.getKeyBusinessAdress());
+                ((Business)mUser).setCif(AccountPreferences.accountPreference.getKeyBusinessCif());
+                ((Business)mUser).setZone(AccountPreferences.accountPreference.getKeyUserZone());
+                break;
+        }
+    }
+
+    /**
+     * Set account preferences in file
+     * @param usertype User, Professional or Business
+     */
+    private void setAccountPreferences(String usertype) {
+        AccountPreferences.accountPreference.setKeyUserName(mEdtName.getText().toString());
+        AccountPreferences.accountPreference.setKeyUserSurname(mEdtSurname.getText().toString());
+        AccountPreferences.accountPreference.setKeyUserEmail(mEdtEmail.getText().toString());
+        AccountPreferences.accountPreference.setKeyUserPhone(mEdtPhone.getText().toString());
+        AccountPreferences.accountPreference.setKeyUserPass(mEdtPass.getText().toString());
+        AccountPreferences.accountPreference.setKeyUserUniquecode("CODEPRUEBA");
+        AccountPreferences.accountPreference.setKeyUserRemember(false);
+
+        switch (usertype) {
 
             case "business":
-                mAccountPreferences.setKeyUserProfession(mEdtProfession.getText().toString());
-                mAccountPreferences.setKeyBusinessAdress(mEdtAdress.getText().toString());
-                mAccountPreferences.setKeyBusinessCif(mEdtCif.getText().toString());
-                mAccountPreferences.setKeyUserZone("NULA");
-                if (mUser == null)
-                    mUser = new Business(mAccountPreferences.getKeyUserUniquecode(),
-                            mAccountPreferences.getKeyUserName(),
-                            mAccountPreferences.getKeyUserSurname(),
-                            mAccountPreferences.getKeyUserEmail(),
-                            mAccountPreferences.getKeyUserPass(),
-                            mAccountPreferences.getKeyUserPhone(),
-                            mAccountPreferences.getKeyUserName(),
-                            mAccountPreferences.getKeyUserProfession(),
-                            mAccountPreferences.getKeyBusinessAdress(),
-                            mAccountPreferences.getKeyBusinessCif(),
-                            mAccountPreferences.getKeyUserZone());
-                else {
-                    mUser.setName(mAccountPreferences.getKeyUserName());
-                    mUser.setSurname(mAccountPreferences.getKeyUserSurname());
-                    mUser.setEmail(mAccountPreferences.getKeyUserEmail());
-                    mUser.setPassword(mAccountPreferences.getKeyUserPass());
-                    mUser.setPhone(mAccountPreferences.getKeyUserPhone());
-                    ((Business)mUser).setNameBusiness(mAccountPreferences.getKeyUserName());
-                    ((Business)mUser).setProfession(mAccountPreferences.getKeyUserProfession());
-                    ((Business)mUser).setAdress(mAccountPreferences.getKeyBusinessAdress());
-                    ((Business)mUser).setCif(mAccountPreferences.getKeyBusinessCif());
-                    ((Business)mUser).setZone(mAccountPreferences.getKeyUserZone());
-                }
+                AccountPreferences.accountPreference.setKeyUserProfession(mEdtProfession.getText().toString());
+                AccountPreferences.accountPreference.setKeyBusinessAdress(mEdtAdress.getText().toString());
+                AccountPreferences.accountPreference.setKeyBusinessCif(mEdtCif.getText().toString());
+                AccountPreferences.accountPreference.setKeyUserZone("NULA");
                 break;
 
             case "professional":
-                mAccountPreferences.setKeyUserProfession(mEdtProfession.getText().toString());
-                mAccountPreferences.setKeyUserZone("NULA");
-                if (mUser == null)
-                    mUser = new Professional(mAccountPreferences.getKeyUserUniquecode(),
-                            mAccountPreferences.getKeyUserName(),
-                            mAccountPreferences.getKeyUserSurname(),
-                            mAccountPreferences.getKeyUserEmail(),
-                            mAccountPreferences.getKeyUserPass(),
-                            mAccountPreferences.getKeyUserPhone(),
-                            mAccountPreferences.getKeyUserProfession(),
-                            mAccountPreferences.getKeyUserZone());
-                else {
-                    mUser.setName(mAccountPreferences.getKeyUserName());
-                    mUser.setSurname(mAccountPreferences.getKeyUserSurname());
-                    mUser.setEmail(mAccountPreferences.getKeyUserEmail());
-                    mUser.setPassword(mAccountPreferences.getKeyUserPass());
-                    mUser.setPhone(mAccountPreferences.getKeyUserPhone());
-                    ((Professional)mUser).setProfession(mAccountPreferences.getKeyUserProfession());
-                    ((Professional)mUser).setZone(mAccountPreferences.getKeyUserZone());
-                }
-                break;
-
-            case "user":
-                if (mUser == null)
-                    mUser = new User(mAccountPreferences.getKeyUserUniquecode(),
-                            mAccountPreferences.getKeyUserName(),
-                            mAccountPreferences.getKeyUserSurname(),
-                            mAccountPreferences.getKeyUserEmail(),
-                            mAccountPreferences.getKeyUserPass(),
-                            mAccountPreferences.getKeyUserPhone());
-                else {
-                    mUser.setName(mAccountPreferences.getKeyUserName());
-                    mUser.setSurname(mAccountPreferences.getKeyUserSurname());
-                    mUser.setEmail(mAccountPreferences.getKeyUserEmail());
-                    mUser.setPassword(mAccountPreferences.getKeyUserPass());
-                    mUser.setPhone(mAccountPreferences.getKeyUserPhone());
-                }
+                AccountPreferences.accountPreference.setKeyUserProfession(mEdtProfession.getText().toString());
+                AccountPreferences.accountPreference.setKeyUserZone("NULA");
                 break;
         }
-
-        finish();
     }
     //endregion
 

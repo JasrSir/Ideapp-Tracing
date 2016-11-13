@@ -12,7 +12,7 @@ import com.jasrsir.tracing.preferences.AccountPreferences;
 
 public class SignIn_Activity extends AppCompatActivity {
 
-    private AccountPreferences mAccountPreferences;
+
     private EditText mEdtMail;
     private EditText mEdtPass;
     private CheckBox mCkbRemember;
@@ -39,11 +39,10 @@ public class SignIn_Activity extends AppCompatActivity {
      * set user preferences if sign up first
      */
     private void setAccountPreferences() {
-        mAccountPreferences = AccountPreferences.getInstance(getApplicationContext());
-        if (mAccountPreferences.getKeyUserName() != null) {
-            mEdtMail.setText(mAccountPreferences.getKeyUserEmail());
-            mEdtPass.setText(mAccountPreferences.getKeyUserPass());
-            mCkbRemember.setChecked(mAccountPreferences.getKeyUserRemember());
+        if (AccountPreferences.accountPreference != null) {
+            mEdtMail.setText(AccountPreferences.accountPreference.getKeyUserEmail());
+            mEdtPass.setText(AccountPreferences.accountPreference.getKeyUserPass());
+            mCkbRemember.setChecked(AccountPreferences.accountPreference.getKeyUserRemember());
         }
     }
 
@@ -57,7 +56,8 @@ public class SignIn_Activity extends AppCompatActivity {
         Intent intent;
         if (view.getId() == R.id.btnLogin) {
             //Validar los datos
-            mAccountPreferences.setKeyUserRemember(mCkbRemember.isChecked());
+            if (AccountPreferences.accountPreference != null)
+                AccountPreferences.accountPreference.setKeyUserRemember(mCkbRemember.isChecked());
             intent = new Intent(SignIn_Activity.this, Wall_Activity.class);
 
         } else //if (view.getId() == R.id.txvLostUC){

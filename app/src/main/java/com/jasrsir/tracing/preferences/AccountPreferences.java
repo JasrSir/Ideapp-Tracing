@@ -11,9 +11,10 @@ public class AccountPreferences {
     //region variables
     //Private mode to make the file. (Common preferences)
     private int MODEPRIVATE = Context.MODE_PRIVATE;
-    private static AccountPreferences accountPreference;
+    public static AccountPreferences accountPreference;
     private SharedPreferences sharedPreferences;
     private Context context;
+    private boolean remember;
     private static final String ACCOUNT_PREFERENCES_FILE = "com.jasrsir.tracing_preferences";
 
     //KEY-VALUE for Sign up USERPOJO
@@ -113,11 +114,12 @@ public class AccountPreferences {
     }
 
     public void setKeyUserRemember(boolean userRemember) {
-        getEditor().putBoolean(KEY_USER_REMEMBER, userRemember).apply();
+        this.remember = userRemember;
+        getEditor().putBoolean(KEY_USER_REMEMBER, this.remember).apply();
     }
 
     public boolean getKeyUserRemember() {
-        return sharedPreferences.getBoolean(KEY_USER_REMEMBER, false);
+        return sharedPreferences.getBoolean(KEY_USER_REMEMBER, remember);
     }
 
     //KEY-VALUE for Sign up business

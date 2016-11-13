@@ -10,11 +10,22 @@ import com.jasrsir.tracing.preferences.AccountPreferences;
 
 public class LoginMain_Activity extends AppCompatActivity {
 
+    private Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_main);
+        AccountPreferences.accountPreference = AccountPreferences.getInstance(getApplicationContext());
+        //mAccountPreferences = AccountPreferences.getInstance(getApplicationContext());
+        //if (mAccountPreferences != null && mAccountPreferences.getKeyUserRemember()) {
+            //intent = new Intent(LoginMain_Activity.this, Wall_Activity.class);
+            //startActivity(intent);
+            //finish();
+        //}else{
 
+            //setContentView(R.layout.activity_login_main);
+       // }
     }
 
     /**
@@ -24,7 +35,7 @@ public class LoginMain_Activity extends AppCompatActivity {
      * @param view Textview clicked
      */
     public void onClickRegister(View view) {
-        Intent intent;
+
 
         if (view.getId() == R.id.txvYesAccount)
             intent = new Intent(LoginMain_Activity.this, SignIn_Activity.class);

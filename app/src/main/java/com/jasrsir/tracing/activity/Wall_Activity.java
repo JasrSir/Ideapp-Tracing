@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.viewlistRecicler.ListView_Activity;
+import com.jasrsir.tracing.viewlistRecicler.RecyclerView_Activity;
 
 public class Wall_Activity extends AppCompatActivity {
 
@@ -20,10 +22,10 @@ public class Wall_Activity extends AppCompatActivity {
         Intent intent = null;
         switch (view.getId()){
             case R.id.btnPruebaListView:
-                intent = new Intent(Wall_Activity.this, About_Activity.class);
+                intent = new Intent(Wall_Activity.this, ListView_Activity.class);
                 break;
             case R.id.btnPruebaRecyclerView:
-                intent = new Intent(Wall_Activity.this, About_Activity.class);
+                intent = new Intent(Wall_Activity.this, RecyclerView_Activity.class);
                 break;
             case R.id.btnPruebaSettings:
                 intent = new Intent(Wall_Activity.this, About_Activity.class);
