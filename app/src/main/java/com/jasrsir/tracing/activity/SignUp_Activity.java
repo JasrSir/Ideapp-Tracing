@@ -5,6 +5,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
@@ -18,8 +19,8 @@ import com.jasrsir.tracing.preferences.AccountPreferences;
 public class SignUp_Activity extends AppCompatActivity {
 
     //region variables
-    private AccountPreferences mAccountPreferences;
-    public UserPojo mUser = null;
+    public static AccountPreferences mAccountPreferences;
+    public static UserPojo mUser;
 
     private EditText mEdtName;
     private EditText mEdtSurname;
@@ -40,7 +41,7 @@ public class SignUp_Activity extends AppCompatActivity {
     private EditText mEdtProfession;
     private ImageView mImgProfession;
 
-
+    private Button mBtnSaveChanges;
     //endregion
 
     @Override
@@ -55,8 +56,13 @@ public class SignUp_Activity extends AppCompatActivity {
         putSpecialData();
     }
 
-
+    /**
+     * Load user data for changes
+     */
     private void loadUserData() {
+
+        mBtnSaveChanges = (Button) findViewById(R.id.btnSignUpRegister);
+        mBtnSaveChanges.setText(R.string.textSaveChanges);
         mEdtName.setText(mUser.getName());
         mEdtSurname.setText(mUser.getSurname());
         mEdtEmail.setText(mUser.getEmail());

@@ -45,5 +45,6 @@
     <string name="txvAboutTermsSummary">Lea nuestras condiciones y términos de uso para usar la aplicación</string>
     <string name="edtSignUpWork">Profesión</string>
     <string name="edtSignUpCif">Introduce el CIF</string>
+    <string name="textSaveChanges">Guardar cambios</string>
 
 </resources>

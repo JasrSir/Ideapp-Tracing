@@ -77,6 +77,20 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Caption"
             android:textColor="@color/colorAccent"
             android:textSize="20sp" />
+
+        <!-- Ejemp About -->
+        <Button
+            android:id="@+id/btnPruebaPrefModPerf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnPruebaAbout"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:background="@drawable/btn_login"
+            android:onClick="onClickPrueba"
+            android:text="Preferencias: modificar peril"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
     </RelativeLayout>
 
 

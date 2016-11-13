@@ -31,6 +31,9 @@ public class Wall_Activity extends AppCompatActivity {
             case R.id.btnPruebaAbout:
                 intent = new Intent(Wall_Activity.this, About_Activity.class);
                 break;
+            case R.id.btnPruebaPrefModPerf:
+                intent = new Intent(Wall_Activity.this, SignUp_Activity.class);
+                break;
         }
         startActivity(intent);
     }
