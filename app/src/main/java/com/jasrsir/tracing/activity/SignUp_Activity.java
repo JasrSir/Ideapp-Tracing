@@ -19,9 +19,6 @@ public class SignUp_Activity extends AppCompatActivity {
 
     //region variables
     private AccountPreferences mAccountPreferences;
-
-    private Intent mIntent;
-    private Bundle mBundle;
     public UserPojo mUser = null;
 
     private EditText mEdtName;
@@ -139,7 +136,7 @@ public class SignUp_Activity extends AppCompatActivity {
         mAccountPreferences.setKeyUserUniquecode("CODEPRUEBA");
         mAccountPreferences.setKeyUserRemember(true);
 
-        switch (mBundle.getString("ACCOUNT")) {
+        switch (SelectorUser_Activity.bundleAccount.getString("ACCOUNT")) {
 
             case "business":
                 mAccountPreferences.setKeyUserProfession(mEdtProfession.getText().toString());

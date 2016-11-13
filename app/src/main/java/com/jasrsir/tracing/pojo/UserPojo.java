@@ -12,7 +12,6 @@ import java.util.Date;
 public class UserPojo {
 
     //region variables
-    public AccountPreferences mAccountPreferences;
     private String codeUnique;
     private String name;
     private String surname;
