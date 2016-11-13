@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Tracing</string>
+    <string name="txvWelcome">Welcome to Tracing</string>
+    <string name="btnLoginBusiness">Business</string>
+    <string name="txvWelcReadme">Your app for budiness, professional and particular daily tracing</string>
+    <string name="txvNoAccount">Haven\'t an account yet?</string>
+    <string name="txvYesAccount">I have account, Sign in</string>
+    <string name="txvWelcOr">or</string>
+    <string name="txvLoginBusiness">I\'m a Business</string>
+    <string name="txvLoginProfessional">I\'m a Professional</string>
+    <string name="txvChooseAccount">Choose your user perfile</string>
+    <string name="txvLoginUser">I\'m a User</string>
+    <string name="txvLoginAccount">Log in to Tracing</string>
+    <string name="edtSignUpPass">Input password</string>
+    <string name="edtSignUpMail">Input your email</string>
+    <string name="kbRemember">Remember user</string>
+    <string name="btnLogin">Sign in</string>
+    <string name="edtSignUpName">Name</string>
+    <string name="edtSignUpSurname">Surname</string>
+    <string name="edtSignInName">Input  email</string>
+    <string name="edtSignInPass">Input password</string>
+    <string name="txvLostUC">I don\'t remember my password</string>
+    <string name="edtSignUpPhone">Phone number</string>
+    <string name="btnSignUpRegister">Sign up</string>
+    <string name="title_activity_wall">Wall</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="txvSignLostPassword">¿Don\'t remember your password? \nSend you your password to log in Tracing</string>
+    <string name="edtSignLostPassword">Input your email</string>
+    <string name="btnSignLostSentPass">Send me my password</string>
+
+    <string name="txvAboutTitle">About ...</string>
+    <string name="txvAboutVersionTitle">Version</string>
+    <string name="txvAboutAuthorTitle">Alpha\'s author</string>
+    <string name="txvAboutVersionSummary">0.0.0.0.0.0,1 super_mega_hiper_pre_alpha</string>
+    <string name="txvAboutAuthorSummary">Juan Antonio Suárez Rosa (JasrSir) \n (Thanks to) Lourdes Rodríguez</string>
+    <string name="txvAboutLicenceTitle">Licence</string>
+    <string name="txvAboutLicenceSummary">GNU open source</string>
+    <string name="txvAboutContactTitle">Contact</string>
+    <string name="txvAboutContactSummary">To contact with author, send email to jasrsir@gmail.com</string>
+    <string name="txvAboutTermsTitle">Conditions and user terms</string>
+    <string name="txvAboutTermsSummary">Read our conditions and user terms</string>
+    <string name="edtSignUpWork">Profession</string>
+    <string name="edtSignUpCif">Input CIF</string>
+    <string name="textSaveChanges">Save changes</string>
+
+</resources>
