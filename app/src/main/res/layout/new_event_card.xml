@@ -35,7 +35,6 @@
             android:text="Recordatorio de papeles en la próxima cita"
             android:textStyle="bold" />
 
-
         <!-- summary event -->
         <TextView
             android:id="@+id/txvEventSummary"

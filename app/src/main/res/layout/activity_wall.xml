@@ -1,177 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_wall"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_vertical_margin"
-    android:paddingRight="@dimen/activity_vertical_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
 
-    <RelativeLayout
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/btnWallMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:menu_animationDelayPerItem="55"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/colorPrimary"
+        app:menu_colorRipple="@color/colorPrimary"
+        app:menu_fab_label=""
+        app:menu_fab_size="normal"
+        app:menu_icon="@drawable/fab_add"
+        app:menu_labels_colorNormal="#888"
+        app:menu_labels_colorPressed="#555"
+        app:menu_labels_colorRipple="#66efecec"
+        app:menu_labels_cornerRadius="5dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="#f2f1f1"
+        app:menu_labels_textSize="15sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="#66bc98f1"
+        app:menu_shadowRadius="4dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="4dp"
+        app:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickWall"
+            android:src="@drawable/ic_event_note_white_48dp"
+            app:fab_label="Nueva Cita"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickWall"
+            android:src="@drawable/ic_attach_file_white_48dp"
+            app:fab_label="Nuevo Enlace"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickWall"
+            android:src="@drawable/ic_content_paste_white_48dp"
+            app:fab_label="Nueva Anotación"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickWall"
+            android:src="@drawable/ic_create_white_48dp"
+            app:fab_label="Nueva Acción"
+            app:fab_size="normal" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-        <com.github.clans.fab.FloatingActionMenu
-            android:id="@+id/home_btnMenu"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu_animationDelayPerItem="55"
-            app:menu_buttonSpacing="0dp"
-            app:menu_colorNormal="@color/colorAccent"
-            app:menu_colorPressed="@color/colorPrimary"
-            app:menu_colorRipple="#999"
-            app:menu_fab_label=""
-            app:menu_fab_size="normal"
-            app:menu_icon="@drawable/fab_add"
-            app:menu_labels_colorNormal="#888"
-            app:menu_labels_colorPressed="#555"
-            app:menu_labels_colorRipple="#66efecec"
-            app:menu_labels_cornerRadius="5dp"
-            app:menu_labels_ellipsize="none"
-            app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
-            app:menu_labels_margin="0dp"
-            app:menu_labels_maxLines="-1"
-            app:menu_labels_padding="8dp"
-            app:menu_labels_position="left"
-            app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
-            app:menu_labels_showShadow="true"
-            app:menu_labels_singleLine="false"
-            app:menu_labels_textColor="#f2f1f1"
-            app:menu_labels_textSize="15sp"
-            app:menu_openDirection="up"
-            app:menu_shadowColor="#66bc98f1"
-            app:menu_shadowRadius="4dp"
-            app:menu_shadowXOffset="1dp"
-            app:menu_shadowYOffset="4dp"
-            app:menu_showShadow="true"
-            android:layout_alignTop="@+id/btnPruebaListView"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true">
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
 
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/home_btnMenu_Document"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/introPreNaviDraw"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="getOnClickHome"
-                android:src="@drawable/ic_event_note_white_48dp"
-                app:fab_label="Nueva Cita"
-                app:fab_size="normal" />
+                android:text="Ejemplo del menú pero va dentro de un navigation drawer que ya envía a otras activityes y lo hace todo very good, pero ahora solo te puedo enseñar esto...
+            esto es el perfil principal, por ahora solo se ven los botones de las distintas opciones del NAVIGATION DRAWER.
+            Acerca de y las preferencias SI son medio definitivas, logicamente el perdil que es esto..no..." />
 
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/home_btnMenu_BoardCommunity"
-                android:layout_width="wrap_content"
+            <!-- Ejemp ListView -->
+            <Button
+                android:id="@+id/btnPruebaListView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="getOnClickWall"
-                android:src="@drawable/ic_attach_file_white_48dp"
+                android:layout_below="@id/introPreNaviDraw"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login"
+                android:onClick="onClickPrueba"
+                android:text="Prueba List View"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
-                app:fab_label="Nuevo Enlace"
-                app:fab_size="normal" />
-
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/home_btnMenu_Board"
-                android:layout_width="wrap_content"
+            <!-- Ejemp Recycler View -->
+            <Button
+                android:id="@+id/btnPruebaRecyclerView"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="getOnClickWall"
-                android:src="@drawable/ic_content_paste_white_48dp"
-                app:fab_label="Nueva Anotación"
-                app:fab_size="normal" />
+                android:layout_below="@id/btnPruebaListView"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login"
+                android:onClick="onClickPrueba"
+                android:text="Prueba Recycler View"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
-            <com.github.clans.fab.FloatingActionButton
-                android:id="@+id/home_btnMenu_Diary"
-                android:layout_width="wrap_content"
+            <!-- Ejemp Settings -->
+            <Button
+                android:id="@+id/btnPruebaSettings"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="getOnClickWall"
-                android:src="@drawable/ic_create_white_48dp"
-                app:fab_label="Nueva Acción"
-                app:fab_size="normal" />
+                android:layout_below="@id/btnPruebaRecyclerView"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login"
+                android:onClick="onClickPrueba"
+                android:text="Ajustes"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
-        </com.github.clans.fab.FloatingActionMenu>
+            <!-- Ejemp About -->
+            <Button
+                android:id="@+id/btnPruebaAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnPruebaSettings"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login"
+                android:onClick="onClickPrueba"
+                android:text="Acerca de ...."
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
+            <!-- Ejemp About -->
+            <Button
+                android:id="@+id/btnPruebaPrefModPerf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnPruebaAbout"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:background="@drawable/btn_login"
+                android:onClick="onClickPrueba"
+                android:text="Preferencias: modificar peril"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
 
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/introPreNaviDraw"
-            android:text="Ejemplo del menú pero va dentro de un navigation drawer que ya envía a otras activityes y lo hace todo very good, pero ahora solo te puedo enseñar esto...
-        esto es el perfil principal, por ahora solo se ven los botones de las distintas opciones del NAVIGATION DRAWER.
-        Acerca de y las preferencias SI son medio definitivas, logicamente el perdil que es esto..no..."/>
-
-        <!-- Ejemp ListView -->
-        <Button
-            android:id="@+id/btnPruebaListView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/introPreNaviDraw"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn_login"
-            android:onClick="onClickPrueba"
-            android:text="Prueba List View"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <!-- Ejemp Recycler View -->
-        <Button
-            android:id="@+id/btnPruebaRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnPruebaListView"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn_login"
-            android:onClick="onClickPrueba"
-            android:text="Prueba Recycler View"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <!-- Ejemp Settings -->
-        <Button
-            android:id="@+id/btnPruebaSettings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnPruebaRecyclerView"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn_login"
-            android:onClick="onClickPrueba"
-            android:text="Ajustes"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <!-- Ejemp About -->
-        <Button
-            android:id="@+id/btnPruebaAbout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnPruebaSettings"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn_login"
-            android:onClick="onClickPrueba"
-            android:text="Acerca de ...."
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-        <!-- Ejemp About -->
-        <Button
-            android:id="@+id/btnPruebaPrefModPerf"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/btnPruebaAbout"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:background="@drawable/btn_login"
-            android:onClick="onClickPrueba"
-            android:text="Preferencias: modificar peril"
-            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
-            android:textColor="@color/colorAccent"
-            android:textSize="20sp" />
-
-    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
 
 
-</ScrollView>
+</RelativeLayout>
