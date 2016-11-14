@@ -56,6 +56,7 @@ public class SignUp_Activity extends AppCompatActivity {
         putSpecialData();
     }
 
+    //region functions
     /**
      * Load user data for changes
      */
@@ -78,9 +79,6 @@ public class SignUp_Activity extends AppCompatActivity {
             //Falta zona
         }
     }
-
-
-    //region functions
 
     /**
      * inflate variables with views
@@ -108,7 +106,7 @@ public class SignUp_Activity extends AppCompatActivity {
      */
     private void putSpecialData() {
 
-        if ( mUser != null && mUser instanceof Business) {
+        if ( SelectorUser_Activity.bundleAccount.getString("ACCOUNT") == "business") {
             mImgProfession.setVisibility(View.VISIBLE);
             mTilProfession.setVisibility(View.VISIBLE);
             mImgAdress.setVisibility(View.VISIBLE);
@@ -116,7 +114,7 @@ public class SignUp_Activity extends AppCompatActivity {
             mTilCif.setVisibility(View.VISIBLE);
             mImgCif.setVisibility(View.VISIBLE);
             //Falta area prof
-        } else if ( mUser != null && mUser instanceof Professional) {
+        } else if ( SelectorUser_Activity.bundleAccount.getString("ACCOUNT") == "professional") {
             mImgProfession.setVisibility(View.VISIBLE);
             mTilProfession.setVisibility(View.VISIBLE);
             //fata area prof
