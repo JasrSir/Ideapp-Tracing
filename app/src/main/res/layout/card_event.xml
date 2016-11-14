@@ -3,18 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/activity_vertical_margin">
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="12dp"
+    android:padding="@dimen/activity_vertical_margin"
+    android:layout_margin="@dimen/activity_vertical_margin">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/activity_vertical_margin">
+        android:layout_height="match_parent">
 
         <!-- Profile image sender -->
         <ImageView
             android:id="@+id/imgEventPhotoSender"
             android:layout_width="wrap_content"
-            android:layout_height="56dp"
+            android:layout_height="wrap_content"
 
             android:background="@color/colorAccent"
             app:srcCompat="@drawable/ic_bug_report_black_48dp" />
@@ -27,7 +29,7 @@
             android:layout_toEndOf="@+id/imgEventPhotoSender"
             android:layout_toRightOf="@+id/imgEventPhotoSender"
             android:background="@color/colorAccent"
-            android:padding="@dimen/activity_vertical_margin"
+            android:padding="13dp"
             android:text="Juan Martín"
             android:textColor="@color/colorText"
             android:textSize="18dp"
@@ -39,7 +41,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/txvEventNameSender"
-            android:padding="@dimen/activity_vertical_margin"
+            android:padding="10dp"
+            android:background="@color/cardview_shadow_start_color"
             android:text="Recordatorio de papeles en la próxima cita"
             android:textStyle="bold" />
 
@@ -49,9 +52,10 @@
             android:id="@+id/txvEventSummary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#EEE"
             android:layout_below="@+id/txvEventTitle"
-            android:padding="@dimen/activity_vertical_margin"
-            android:text="Recordatorio de papeles en la próxima cita" />
+            android:padding="12dp"
+            android:text="En la próxima cita traete papel del culo que el mercadona me ha cerrao niña" />
 
     </RelativeLayout>
 
