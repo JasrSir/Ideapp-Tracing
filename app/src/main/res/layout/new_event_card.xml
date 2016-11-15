@@ -25,7 +25,7 @@
                 android:hint="Título del evento"
                 android:inputType="text" />
         </android.support.design.widget.TextInputLayout>
-
+        
         <TextView
             android:id="@+id/txvEventTitle"
             android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txvEventTitle"
             android:padding="@dimen/activity_vertical_margin"
-            android:text="Recordatorio de papeles en la próxima cita" />
+            android:text="Este sería el cuerpo del evento, esto tendrá mas campos según el evento pulsado, (In progress)" />
 
     </RelativeLayout>
 

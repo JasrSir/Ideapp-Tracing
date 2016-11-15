@@ -1,6 +1,7 @@
 package com.jasrsir.tracing.activity;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,7 @@ public class Wall_Activity extends AppCompatActivity {
                 intent = new Intent(Wall_Activity.this, RecyclerView_Activity.class);
                 break;
             case R.id.btnPruebaSettings:
-                intent = new Intent(Wall_Activity.this, About_Activity.class);
+                Snackbar.make(view,"Caraterística NO disponible",Snackbar.LENGTH_SHORT).show();
                 break;
             case R.id.btnPruebaAbout:
                 intent = new Intent(Wall_Activity.this, About_Activity.class);
@@ -38,5 +39,9 @@ public class Wall_Activity extends AppCompatActivity {
                 break;
         }
         startActivity(intent);
+    }
+
+    public void OnClickWall(View view) {
+        startActivity(new Intent(Wall_Activity.this, NewEvent_Activity.class));
     }
 }
