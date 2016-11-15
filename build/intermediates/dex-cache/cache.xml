@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="ec6503d8cc199cfd7882b9f7287a1c24818dc34f">
+        sha1="af701902675bcaa848bfa2da3ffd86a61a0f28fa">
         <dex dex="/media/usuario/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_5c695af126e0c7f39ce4ae9db2ffce387212283c/classes.dex" />
     </item>
     <item
@@ -187,7 +187,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="2aac58544ba572611b8bcab403305aee8aca54d3">
+        sha1="d58ed83135b37ba7bb961f5d7b0e08a7c78e2f81">
         <dex dex="/media/usuario/JASRSIR/FP.DAM2/Proyecto Integrado/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b9506b5b2bcbe76b60e2030bd6c081344240542c/classes.dex" />
     </item>
     <item

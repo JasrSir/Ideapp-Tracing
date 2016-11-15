@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,24 +20,29 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
                 android:id="@+id/linLayName">
 
                 <ImageView
                     android:id="@+id/imgEventPhotoSender"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAccent"
-                    app:srcCompat="@drawable/ic_bug_report_black_48dp" />
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/image_circle"
+                    app:srcCompat="@drawable/ic_bug_report_black_48dp"
+                    android:cropToPadding="false"
+                    android:adjustViewBounds="false" />
 
                 <!-- Name sender -->
                 <TextView
                     android:id="@+id/txvEventNameSender"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_toEndOf="@+id/imgEventPhotoSender"
                     android:layout_toRightOf="@+id/imgEventPhotoSender"
                     android:background="@color/colorAccent"
-                    android:padding="13dp"
+                    android:gravity=""
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:text="Juan Martín"
                     android:textColor="@color/colorText"
                     android:textSize="18dp"
