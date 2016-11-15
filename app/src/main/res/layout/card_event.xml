@@ -41,7 +41,7 @@
                     android:layout_toEndOf="@+id/imgEventPhotoSender"
                     android:layout_toRightOf="@+id/imgEventPhotoSender"
                     android:background="@color/colorAccent"
-                    android:gravity=""
+                    android:gravity="center_vertical"
                     android:paddingLeft="@dimen/activity_horizontal_margin"
                     android:text="Juan Martín"
                     android:textColor="@color/colorText"
