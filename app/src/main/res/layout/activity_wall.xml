@@ -7,81 +7,6 @@
     android:layout_height="match_parent"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
 
-    <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/btnWallMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        app:menu_animationDelayPerItem="55"
-        app:menu_buttonSpacing="0dp"
-        app:menu_colorNormal="@color/colorAccent"
-        app:menu_colorPressed="@color/colorPrimary"
-        app:menu_colorRipple="@color/colorPrimary"
-        app:menu_fab_label=""
-        app:menu_fab_size="normal"
-        app:menu_icon="@drawable/fab_add"
-        app:menu_labels_colorNormal="#888"
-        app:menu_labels_colorPressed="#555"
-        app:menu_labels_colorRipple="#66efecec"
-        app:menu_labels_cornerRadius="5dp"
-        app:menu_labels_ellipsize="none"
-        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
-        app:menu_labels_margin="0dp"
-        app:menu_labels_maxLines="-1"
-        app:menu_labels_padding="8dp"
-        app:menu_labels_position="left"
-        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
-        app:menu_labels_showShadow="true"
-        app:menu_labels_singleLine="false"
-        app:menu_labels_textColor="#f2f1f1"
-        app:menu_labels_textSize="15sp"
-        app:menu_openDirection="up"
-        app:menu_shadowColor="@color/cardview_shadow_start_color"
-        app:menu_shadowRadius="2dp"
-        app:menu_shadowXOffset="1dp"
-        app:menu_shadowYOffset="1dp"
-        app:menu_showShadow="true">
-
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallDate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="getOnClickWall"
-            android:src="@drawable/ic_event_note_white_48dp"
-            app:fab_label="Nueva Cita"
-            app:fab_size="normal" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallLink"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="getOnClickWall"
-            android:src="@drawable/ic_attach_file_white_48dp"
-            app:fab_label="Nuevo Enlace"
-            app:fab_size="normal" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallPost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="getOnClickWall"
-            android:src="@drawable/ic_content_paste_white_48dp"
-            app:fab_label="Nueva Anotación"
-            app:fab_size="normal" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallAction"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="getOnClickWall"
-            android:src="@drawable/ic_create_white_48dp"
-            app:fab_label="Nueva Acción"
-            app:fab_size="normal" />
-
-    </com.github.clans.fab.FloatingActionMenu>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -174,5 +99,87 @@
         </RelativeLayout>
     </ScrollView>
 
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/btnWallMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:menu_animationDelayPerItem="55"
+        app:menu_buttonSpacing="0dp"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/colorPrimary"
+        app:menu_colorRipple="@color/colorPrimary"
+        app:menu_fab_label=""
+        app:menu_fab_size="normal"
+        app:menu_icon="@drawable/fab_add"
+        app:menu_labels_colorNormal="#888"
+        app:menu_labels_colorPressed="#555"
+        app:menu_labels_colorRipple="#66efecec"
+        app:menu_labels_cornerRadius="5dp"
+        app:menu_labels_ellipsize="none"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_margin="0dp"
+        app:menu_labels_maxLines="-1"
+        app:menu_labels_padding="8dp"
+        app:menu_labels_position="left"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_showShadow="true"
+        app:menu_labels_singleLine="false"
+        app:menu_labels_textColor="@color/colorText"
+        app:menu_labels_textSize="16sp"
+        app:menu_openDirection="up"
+        app:menu_shadowColor="@color/cardview_shadow_start_color"
+        app:menu_shadowRadius="2dp"
+        app:menu_shadowXOffset="1dp"
+        app:menu_shadowYOffset="1dp"
+        app:menu_showShadow="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickWall"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_colorNormal="@color/colorAccent"
+            android:src="@drawable/ic_event_white_36dp"
+            app:fab_label="Nueva Cita"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:onClick="getOnClickWall"
+            app:fab_colorNormal="@color/colorAccent"
+            android:src="@drawable/ic_create_white_36dp"
+            app:fab_label="Nueva Acción"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="getOnClickWall"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_colorNormal="@color/colorAccent"
+            android:src="@drawable/ic_link_white_36dp"
+            app:fab_label="Nuevo Enlace"
+            app:fab_size="normal" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/btnWallPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorPressed="@color/colorPrimary"
+            app:fab_colorNormal="@color/colorAccent"
+            android:onClick="getOnClickWall"
+            android:src="@drawable/ic_content_paste_white_36dp"
+            app:fab_label="Nueva Anotación"
+            app:fab_size="normal" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 </RelativeLayout>
