@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_new_event"
     android:layout_width="match_parent"
@@ -10,6 +10,74 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.jasrsir.tracing.activity.NewEvent_Activity">
 
-    <include layout="@layout/new_event_card"/>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin">
 
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin">
+
+            <!-- title event -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilNewEventTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/edtNewEventTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:textStyle="bold"
+                    android:hint="Título del evento"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- date event -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilNewEventDate"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/tilNewEventTitle"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/edtNewEventDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:textStyle="bold"
+                    android:hint="Fecha, tiempo u hora según acción"
+                    android:inputType="text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- date event -->
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tilNewEventBody"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/tilNewEventDate"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/activity_vertical_margin"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/edtNewEventBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="Cuerpo del evento"
+                    android:inputType="text"
+                    android:maxLines="10" />
+            </android.support.design.widget.TextInputLayout>
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</ScrollView>
