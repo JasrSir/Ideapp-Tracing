@@ -11,6 +11,7 @@ import com.jasrsir.tracing.R;
 public class NewEvent_Activity extends AppCompatActivity {
 
     private View view;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,4 +23,7 @@ public class NewEvent_Activity extends AppCompatActivity {
     private void setWidgets() {
     }
 
+    public void onClickAddEvent(View view) {
+
+    }
 }

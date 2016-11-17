@@ -43,5 +43,11 @@
     <string name="edtSignUpWork">Profesión</string>
     <string name="edtSignUpCif">Introduce el CIF</string>
     <string name="textSaveChanges">Guardar cambios</string>
+    <string name="edtNewEventLink">Link</string>
+    <string name="edtNewEventSummary">Cuerpo del evento</string>
+    <string name="edtNewEventTitle">Título del evento</string>
+    <string name="txvNewEventDate">Selecciona el día de la cita</string>
+    <string name="txvNewEventHourEnd">Fin</string>
+    <string name="txvNewEventHourStart">Inicio</string>
 
 </resources>
