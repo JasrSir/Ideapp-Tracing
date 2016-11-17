@@ -43,5 +43,10 @@
     <string name="edtSignUpWork">Profession</string>
     <string name="edtSignUpCif">Input CIF</string>
     <string name="textSaveChanges">Save changes</string>
-
+    <string name="edtNewEventLink">Link</string>
+    <string name="edtNewEventSummary">Summary</string>
+    <string name="edtNewEventTitle">Title</string>
+    <string name="txvNewEventDate">Select day</string>
+    <string name="txvNewEventHourEnd">END</string>
+    <string name="txvNewEventHourStart">START</string>
 </resources>

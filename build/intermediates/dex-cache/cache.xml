@@ -124,7 +124,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="4ee6df4f226f94aa96204779d80e2325fadf571a">
+        sha1="d8e8015ee10c16145bfdbd89d71042c792ae7b34">
         <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7930c8958d50a349269d79070c8ab456951c14fb/classes.dex" />
     </item>
     <item
@@ -214,7 +214,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="340bb4b508cee0faa5fdbf3ec0c18e0aea325789">
+        sha1="b5ac29734c2d1a55414f07266c0595fa21d07eb5">
         <dex dex="/home/jasrsir/AndroidStudioProjects/Tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_cf07b9d572771854ad492b2fb05cbf6d717a7947/classes.dex" />
     </item>
 

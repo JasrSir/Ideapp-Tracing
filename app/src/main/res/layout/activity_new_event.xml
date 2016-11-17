@@ -32,7 +32,11 @@
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="21dp">
+            android:paddingBottom="80dp"
+            android:layout_marginBottom="80dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginRight="21dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -43,6 +47,8 @@
                     android:id="@+id/tilNewEventTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
                     android:visibility="visible">
 
                     <EditText
@@ -51,7 +57,7 @@
                         android:background="@android:color/transparent"
                         android:padding="@dimen/activity_vertical_margin"
                         android:layout_height="match_parent"
-                        android:ems="10"
+                        android:ems="20"
                         android:textStyle="bold"
                         android:hint="@string/edtNewEventTitle"
                         android:inputType="text" />
@@ -62,6 +68,7 @@
                     android:id="@+id/tilNewEventSummary"
                     android:layout_width="match_parent"
                     android:layout_below="@+id/tilNewEventTitle"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:layout_height="wrap_content"
                     android:paddingLeft="@dimen/activity_vertical_margin"
                     android:visibility="visible">
@@ -72,7 +79,7 @@
                         android:layout_height="match_parent"
                         android:padding="@dimen/activity_vertical_margin"
                         android:background="@android:color/transparent"
-                        android:ems="10"
+                        android:ems="20"
                         android:hint="@string/edtNewEventSummary"
                         android:inputType="textMultiLine"
                         android:maxLines="10" />
@@ -84,6 +91,7 @@
                     android:layout_width="match_parent"
                     android:layout_below="@+id/tilNewEventSummary"
                     android:layout_height="wrap_content"
+                    app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:visibility="visible">
 
                     <EditText
@@ -92,7 +100,7 @@
                         android:padding="@dimen/activity_vertical_margin"
                         android:layout_height="match_parent"
                         android:background="@android:color/transparent"
-                        android:ems="10"
+                        android:ems="20"
                         android:textStyle="bold"
                         android:hint="@string/edtNewEventLink"
                         android:inputType="textWebEditText" />
@@ -103,6 +111,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:visibility="visible"
+                    android:textSize="16dp"
                     android:id="@+id/txvNewEventDate"
                     android:text="@string/txvNewEventDate"
                     android:padding="@dimen/activity_vertical_margin"
@@ -129,6 +138,7 @@
                         android:layout_height="wrap_content"
                         android:visibility="visible"
                         android:layout_gravity="center"
+                        android:textSize="16dp"
                         android:id="@+id/txvNewEventHourStart"
                         android:text="@string/txvNewEventHourStart"
                         android:padding="@dimen/activity_vertical_margin"
@@ -140,6 +150,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:visibility="visible"
+                        android:textSize="16dp"
                         android:layout_gravity="center"
                         android:id="@+id/txvNewEventHourEnd"
                         android:text="@string/txvNewEventHourEnd"
@@ -154,7 +165,12 @@
 
         </android.support.v7.widget.CardView>
 
+
     </ScrollView>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/fabNewEventAdd"/>
 
 </RelativeLayout>

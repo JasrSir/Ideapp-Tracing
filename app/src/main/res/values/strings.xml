@@ -47,7 +47,7 @@
     <string name="edtNewEventSummary">Cuerpo del evento</string>
     <string name="edtNewEventTitle">Título del evento</string>
     <string name="txvNewEventDate">Selecciona el día de la cita</string>
-    <string name="txvNewEventHourEnd">Fin</string>
-    <string name="txvNewEventHourStart">Inicio</string>
+    <string name="txvNewEventHourEnd">FIN</string>
+    <string name="txvNewEventHourStart">INICIO</string>
 
 </resources>
