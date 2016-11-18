@@ -1,6 +1,7 @@
 package com.jasrsir.tracing.activity;
 
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +41,7 @@ public class SignUp_Activity extends AppCompatActivity {
     private EditText mEdtProfession;
     private ImageView mImgProfession;
 
-    private Button mBtnSaveChanges;
+    private FloatingActionButton mBtnSaveChanges;
     //endregion
 
     @Override
@@ -62,8 +63,7 @@ public class SignUp_Activity extends AppCompatActivity {
      */
     private void loadUserData() {
 
-        mBtnSaveChanges = (Button) findViewById(R.id.btnSignUpRegister);
-        mBtnSaveChanges.setText(R.string.textSaveChanges);
+        mBtnSaveChanges = (FloatingActionButton) findViewById(R.id.fabSignUp);
         mEdtName.setText(mUser.getName());
         mEdtSurname.setText(mUser.getSurname());
         mEdtEmail.setText(mUser.getEmail());
