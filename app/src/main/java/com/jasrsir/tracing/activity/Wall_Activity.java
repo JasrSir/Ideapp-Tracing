@@ -12,6 +12,7 @@ import com.jasrsir.tracing.viewlistRecicler.RecyclerView_Activity;
 
 public class Wall_Activity extends AppCompatActivity {
 
+    static Bundle bundleEvent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +42,30 @@ public class Wall_Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Method that iniciate a new event
+     * @param view
+     */
     public void OnClickWall(View view) {
-        startActivity(new Intent(Wall_Activity.this, NewEvent_Activity.class));
+        Intent intent;
+        bundleEvent = new Bundle();
+        switch (view.getId()){
+            case R.id.fabWallDate:
+                bundleEvent.putString("EVENT", "date");
+                break;
+            case R.id.fabWallAction:
+                bundleEvent.putString("EVENT", "action");
+                break;
+            case R.id.fabWallLink:
+                bundleEvent.putString("EVENT", "link");
+                break;
+            case R.id.fabWallPost:
+                bundleEvent.putString("EVENT", "post");
+                break;
+        }
+        intent = new Intent(Wall_Activity.this, NewEvent_Activity.class);
+        intent.putExtras(bundleEvent);
+        startActivity(intent);
+
     }
 }

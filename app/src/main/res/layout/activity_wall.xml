@@ -99,8 +99,9 @@
         </RelativeLayout>
     </ScrollView>
 
+
     <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/btnWallMenu"
+        android:id="@+id/fabWallMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -137,7 +138,7 @@
 
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallDate"
+            android:id="@+id/fabWallDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="OnClickWall"
@@ -148,7 +149,7 @@
             app:fab_size="normal" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallAction"
+            android:id="@+id/fabWallAction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_colorPressed="@color/colorPrimary"
@@ -159,7 +160,7 @@
             app:fab_size="normal" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallLink"
+            android:id="@+id/fabWallLink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="OnClickWall"
@@ -170,7 +171,7 @@
             app:fab_size="normal" />
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/btnWallPost"
+            android:id="@+id/fabWallPost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:fab_colorPressed="@color/colorPrimary"
@@ -181,5 +182,7 @@
             app:fab_size="normal" />
 
     </com.github.clans.fab.FloatingActionMenu>
+
+
 
 </RelativeLayout>

@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:clickable="true"
         android:onClick="onClickSignUp"
@@ -39,6 +40,7 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:focusableInTouchMode="true"
                     android:layout_height="match_parent"
                     android:padding="@dimen/activity_horizontal_margin">
 
@@ -46,6 +48,7 @@
                     <ImageView
                         android:id="@+id/imgSignUpName"
                         android:layout_width="36dp"
+                        android:focusableInTouchMode="true"
                         android:layout_height="wrap_content"
                         android:layout_alignBaseline="@+id/tilSignUpName"
                         android:paddingRight="5dp"
