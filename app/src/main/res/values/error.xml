@@ -7,4 +7,5 @@
     <string name="email_invalid">Email no válido</string>
     <string name="phone_invalid">Teléfono no válido</string>
     <string name="cif_invalid">Cif no válido</string>
+    <string name="signin">Usuario o contraseña no coinciden</string>
 </resources>

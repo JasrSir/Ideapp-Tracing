@@ -1,6 +1,8 @@
 package com.jasrsir.tracing.activity;
 
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,19 +10,27 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.interfaces.IValidateUser;
+import com.jasrsir.tracing.pojo.Error;
 import com.jasrsir.tracing.preferences.AccountPreferences;
+import com.jasrsir.tracing.presenter.SignIn_Presenter;
 
-public class SignIn_Activity extends AppCompatActivity {
+import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
 
+public class SignIn_Activity extends AppCompatActivity implements IValidateUser.View {
 
+    private TextInputLayout mTilMail;
+    private TextInputLayout mTilPass;
     private EditText mEdtMail;
     private EditText mEdtPass;
     private CheckBox mCkbRemember;
+    private SignIn_Presenter mPresenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
+        mPresenter = new SignIn_Presenter(this);
         getWidgets();
         setAccountPreferences();
 
@@ -30,6 +40,9 @@ public class SignIn_Activity extends AppCompatActivity {
      * inflate variables with views
      */
     private void getWidgets() {
+
+        mTilMail = (TextInputLayout) findViewById(R.id.tilUser);
+        mTilPass = (TextInputLayout) findViewById(R.id.tilPass);
         mEdtMail = (EditText) findViewById(R.id.edtEmail);
         mEdtPass = (EditText) findViewById(R.id.edtPassword);
         mCkbRemember = (CheckBox) findViewById(R.id.ckbRemember);
@@ -55,14 +68,44 @@ public class SignIn_Activity extends AppCompatActivity {
     public void onClickLogin_LostUC(View view) {
         Intent intent;
         if (view.getId() == R.id.btnLogin) {
+
             //Validar los datos
-            if (AccountPreferences.accountPreference != null)
+            if (AccountPreferences.accountPreference != null && mUser != null) {
                 AccountPreferences.accountPreference.setKeyUserRemember(mCkbRemember.isChecked());
-            intent = new Intent(SignIn_Activity.this, Wall_Activity.class);
 
-        } else //if (view.getId() == R.id.txvLostUC){
+                if (mPresenter.validateCredentialsEmail(mEdtMail.getText().toString()) == Error.OK &&
+                        mPresenter.validateCredentialsPassword(mEdtPass.getText().toString()) == Error.OK) {
+
+                    if (mPresenter.validateSignIn(mEdtMail.getText().toString(), mEdtPass.getText().toString()) == Error.OK) {
+                        intent = new Intent(SignIn_Activity.this, Wall_Activity.class);
+
+                        startActivity(intent);
+                    } else
+                        Snackbar.make(findViewById(R.id.tilPass), R.string.noEquals, Snackbar.LENGTH_LONG).show();
+                }
+            } else
+                Snackbar.make(findViewById(R.id.tilPass), R.string.makeAccountFirst, Snackbar.LENGTH_LONG).show();
+
+        } else {//if (view.getId() == R.id.txvLostUC){
             intent = new Intent(SignIn_Activity.this, SignLost_Activity.class);
+            startActivity(intent);
+        }
+    }
 
-        startActivity(intent);
+
+
+
+    @Override
+    public void setMessageError(String messageError, int idView) {
+        String message = getResources().getString(getResources().getIdentifier(messageError, "string", getPackageName()));
+
+        switch (idView) {
+            case R.id.tilUser:
+                mTilMail.setError(message);
+                break;
+            case R.id.tilPass:
+                mTilPass.setError(message);
+                break;
+        }
     }
 }

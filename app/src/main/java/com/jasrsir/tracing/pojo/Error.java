@@ -13,6 +13,7 @@ public class Error {
     public static final int EMAIL_INVALID = 14;
     public static final int PHONE_INVALID = 15;
     public static final int CIF_INVALID = 16;
+    public static final int SIGNIN = 17;
     public static int code;
     public static String message;
     // Inicializar valores static

@@ -56,4 +56,7 @@
     <string name="password_digit">Must contains at least one digit</string>
     <string name="password_length">Must contains at least 8 charaters</string>
     <string name="phone_invalid">Phone invalid</string>
+    <string name="makeAccountFirst">Must sign up first</string>
+    <string name="noEquals">Email or password aren\'t equals</string>
+    <string name="signin">User or password aren\'t equals</string>
 </resources>

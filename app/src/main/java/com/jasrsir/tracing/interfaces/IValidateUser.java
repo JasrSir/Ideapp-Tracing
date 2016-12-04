@@ -12,8 +12,8 @@ public interface IValidateUser {
 
     interface Presenter {
         int validateCredentialsEmail(String email);
-
         int validateCredentialsPassword(String password);
+        int validateSignIn(String email, String password);
     }
 
 }
