@@ -8,7 +8,6 @@ public interface IValidateUser {
 
     interface View{
         void setMessageError(String messageError, int idView);
-        void startActivity();
     }
 
     interface Presenter {

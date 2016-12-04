@@ -5,5 +5,7 @@
     <entry key="12">password_case</entry>
     <entry key="13">password_length</entry>
     <entry key="14">email_invalid</entry>
+    <entry key="15">phone_invalid</entry>
+    <entry key="16">cif_invalid</entry>
 
 </map>

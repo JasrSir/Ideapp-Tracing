@@ -49,4 +49,11 @@
     <string name="txvNewEventDate">Select day</string>
     <string name="txvNewEventHourEnd">END</string>
     <string name="txvNewEventHourStart">START</string>
+    <string name="cif_invalid">Cif Invalid</string>
+    <string name="data_empty">You should introduce a valor</string>
+    <string name="email_invalid">Email invalid</string>
+    <string name="password_case">Must contains a character at upper/lower case</string>
+    <string name="password_digit">Must contains at least one digit</string>
+    <string name="password_length">Must contains at least 8 charaters</string>
+    <string name="phone_invalid">Phone invalid</string>
 </resources>

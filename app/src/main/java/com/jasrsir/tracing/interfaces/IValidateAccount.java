@@ -1,62 +1,32 @@
 package com.jasrsir.tracing.interfaces;
 
 /**
- * Created by Jasrsir on 04/12/2016.
+ * Interface to validate the Sign up
  */
 
 public interface IValidateAccount {
 
-
+    /**
+     * View
+     */
     interface View{
         void setMessageError(String messageError, int idView);
 
     }
 
+    /**
+     * Presenter
+     */
     interface Presenter{
         int validateCredentialsName(String name);
         int validateCredentialsSurname(String surname);
         int validateCredentialsPhone(String phone);
         int validateCredentialsEmail(String email);
         int validateCredentialsPass(String password);
-        int validateCredentialsNameBusiness(String nameBusiness);
         int validateCredentialsProfession(String profession);
         int validateCredentialsCif(String cif);
+        int validateCredentialsAdress(String adress);
         int validateCredentialsZone(String zone);
-
-
-
-      /*  public static int validateCredentialsUser(String user) {
-            boolean validate = true;
-            String msgError = "";
-            int idError = 0;
-            if (TextUtils.isEmpty(user)) {
-                return Error.DATA_EMPTY;
-            }
-            return Error.OK;
-        }
-
-
-        public static int validateCredentialsPassword(String password) {
-            boolean validate = false;
-            String msgError = "";
-            int idError = R.id.edtPassword;
-
-            if (TextUtils.isEmpty(password)) {
-                idError = Error.DATA_EMPTY;
-            } else if (!password.matches("^.{0,}([0-9])+.{0,}$")) {
-                idError = Error.PASSWORD_CASE;
-            } else if (!password.matches("^.+[a-zA-Z]+.+$")) {
-                idError = Error.PASSWORD_DIGIT;
-            } else if (password.length() < 8) {
-                idError = Error.PASSWORD_LENGTH;
-            }
-            else {
-                idError = Error.OK;
-            }
-            // Throw the error
-            // If wasn't found any error it sends the code for the good login
-            return idError;
-        }*/
 
     }
 
