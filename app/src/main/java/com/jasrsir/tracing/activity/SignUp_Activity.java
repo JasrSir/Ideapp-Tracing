@@ -1,30 +1,26 @@
 package com.jasrsir.tracing.activity;
 
-import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.interfaces.IValidateAccount;
-import com.jasrsir.tracing.interfaces.IValidateUser;
 import com.jasrsir.tracing.pojo.Business;
 import com.jasrsir.tracing.pojo.Error;
 import com.jasrsir.tracing.pojo.Professional;
-import com.jasrsir.tracing.pojo.User;
 import com.jasrsir.tracing.pojo.UserPojo;
 import com.jasrsir.tracing.preferences.AccountPreferences;
 import com.jasrsir.tracing.presenter.SignUp_Presenter;
 
 public class SignUp_Activity extends AppCompatActivity implements IValidateAccount.View {
 
-    //region variables
+    //region Variables
     public static UserPojo mUser;
     private SignUp_Presenter mPresenter;
 
@@ -56,6 +52,8 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
     private FloatingActionButton mBtnSaveChanges;
     //endregion
 
+    //region Functions
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,8 +67,6 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
 
         putSpecialData();
     }
-
-    //region functions
 
     /**
      * Load user data for changes
@@ -144,7 +140,6 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
 
     /**
      * Save new user preferences and create correct user
-     *
      * @param view only has 1 button
      */
     public void onClickSignUp(View view) {
@@ -160,6 +155,9 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
             Snackbar.make(this.findViewById(R.id.tilSignUpName), "Datos erróneos", Snackbar.LENGTH_LONG).show();
     }
 
+    /**
+     * Function to restars the TextInputLayouts
+     */
     private void restartTils() {
         mTilName.setError(null);
         mTilSurname.setError(null);
@@ -220,8 +218,6 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
             return Error.OK;
         } else
             return -1;
-
-
     }
 
     @Override

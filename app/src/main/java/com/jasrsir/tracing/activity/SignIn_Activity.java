@@ -19,13 +19,16 @@ import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
 
 public class SignIn_Activity extends AppCompatActivity implements IValidateUser.View {
 
+    //region Variables
     private TextInputLayout mTilMail;
     private TextInputLayout mTilPass;
     private EditText mEdtMail;
     private EditText mEdtPass;
     private CheckBox mCkbRemember;
     private SignIn_Presenter mPresenter;
+    //endregion
 
+    //region Functions
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,7 +62,6 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         }
     }
 
-
     /**
      * Method that Log in the user or launch (Lost Unique Code)
      *
@@ -92,9 +94,6 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         }
     }
 
-
-
-
     @Override
     public void setMessageError(String messageError, int idView) {
         String message = getResources().getString(getResources().getIdentifier(messageError, "string", getPackageName()));
@@ -108,4 +107,5 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
                 break;
         }
     }
+    //endregion
 }

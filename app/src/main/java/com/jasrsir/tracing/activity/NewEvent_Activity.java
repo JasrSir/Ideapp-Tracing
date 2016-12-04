@@ -31,6 +31,8 @@ public class NewEvent_Activity extends AppCompatActivity {
     private NumberPicker mNumPickEndMin;
     //endregion
 
+    //region Functions
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,4 +85,6 @@ public class NewEvent_Activity extends AppCompatActivity {
     public void onClickAddEvent(View view) {
 
     }
+
+    //endregion
 }

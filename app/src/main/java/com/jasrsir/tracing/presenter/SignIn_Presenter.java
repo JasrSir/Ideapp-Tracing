@@ -5,34 +5,31 @@ import android.text.TextUtils;
 import android.util.Patterns;
 
 import com.jasrsir.tracing.R;
-import com.jasrsir.tracing.interfaces.IValidateAccount;
 import com.jasrsir.tracing.interfaces.IValidateUser;
 import com.jasrsir.tracing.pojo.Error;
-import com.jasrsir.tracing.preferences.AccountPreferences;
 import com.jasrsir.tracing.utils.ErrorMapUtils;
 
 import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
 
 /**
- * Created by jasrsir on 4/12/16.
+ * Class Sign In Presenter to validate the Log In
  */
-
 public class SignIn_Presenter implements IValidateUser.Presenter {
 
-    //Variables
+    //region Variables
     private IValidateUser.View view;
     private Context context;
+    //endregion
 
+    //region Functions
     /**
      * Constructor to presenter
-     *
      * @param view IValidateAccount.View to validate
      */
     public SignIn_Presenter(IValidateUser.View view) {
         this.view = view;
         this.context = (Context) view;
     }
-
 
     @Override
     public int validateCredentialsEmail(String email) {
@@ -82,7 +79,7 @@ public class SignIn_Presenter implements IValidateUser.Presenter {
         else
             idError = Error.SIGNIN;
 
-
         return idError;
     }
+    //endregion
 }

@@ -20,10 +20,12 @@ import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
  */
 public class SignUp_Presenter implements IValidateAccount.Presenter {
 
-    //Variables
+    //region Variables
     private IValidateAccount.View view;
     private Context context;
+    //endregion
 
+    //region Functions
     /**
      * Constructor to presenter
      *
@@ -113,12 +115,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         }
     }
 
-    /**
-     * Method to validate the user name
-     *
-     * @param name String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsName(String name) {
         int idError = Error.OK;
@@ -132,12 +128,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the user surname
-     *
-     * @param surname String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsSurname(String surname) {
         int idError = Error.OK;
@@ -151,12 +141,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the user phone
-     *
-     * @param phone String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsPhone(String phone) {
         int idError = Error.OK;
@@ -174,12 +158,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
 
     }
 
-    /**
-     * Method to validate the user email
-     *
-     * @param email String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsEmail(String email) {
         int idError = Error.OK;
@@ -195,12 +173,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the user password
-     *
-     * @param password String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsPass(String password) {
         int idError;
@@ -225,12 +197,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the uprofessional or business work / profession
-     *
-     * @param profession String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsProfession(String profession) {
         int idError = Error.OK;
@@ -244,12 +210,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the business cif
-     *
-     * @param cif String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsCif(String cif) {
         int idError = Error.OK;
@@ -263,12 +223,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the business adress
-     *
-     * @param adress String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsAdress(String adress) {
         int idError = Error.OK;
@@ -282,12 +236,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         return idError;
     }
 
-    /**
-     * Method to validate the uprofessionl or business
-     *
-     * @param zone String to validate
-     * @return 0 = OK, otherwise error
-     */
     @Override
     public int validateCredentialsZone(String zone) {
         int idError = Error.OK;
@@ -300,4 +248,5 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         }*/
         return idError;
     }
+    //endregion
 }
