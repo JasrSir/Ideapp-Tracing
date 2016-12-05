@@ -4,6 +4,8 @@
     android:id="@+id/activity_list_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ece9e9"
+
     tools:context="com.jasrsir.tracing.viewlistRecicler.ListView_Activity">
 
     <ListView

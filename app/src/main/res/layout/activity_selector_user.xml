@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/activity_vertical_margin"
+    android:background="#ece9e9"
     tools:context="com.jasrsir.tracing.activity.SelectorUser_Activity">
 
     <!--Text choise -->
@@ -16,6 +17,7 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:text="@string/txvChooseAccount"
         android:textAlignment="center"
+        android:textStyle="bold"
         android:textSize="25sp" />
 
     <!-- Card Business -->
