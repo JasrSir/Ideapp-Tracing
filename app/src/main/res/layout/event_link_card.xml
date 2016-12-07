@@ -14,9 +14,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="12sp"
+            android:textColor="@color/cardview_dark_background"
             android:textSize="18sp"
             android:text="Title"
-            android:textStyle="bold"
             android:visibility="visible"/>
 
         
@@ -26,8 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txvLinkTitle"
             android:padding="12sp"
-            android:text="Summary"
-            android:textStyle="bold" />
+            android:text="Summary" />
 
         <!-- summary event -->
         <TextView

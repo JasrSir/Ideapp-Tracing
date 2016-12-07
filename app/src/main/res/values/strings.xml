@@ -51,5 +51,8 @@
     <string name="txvNewEventHourStart">INICIO</string>
     <string name="makeAccountFirst">Debes registrarte primero</string>
     <string name="noEquals">Email o password NO coinciden</string>
+    <string name="txvDateFHourEnd">A</string>
+    <string name="txvDateFHourStart">De</string>
+    <string name="txvDateFDaySelect">Dia de la cita</string>
 
 </resources>
