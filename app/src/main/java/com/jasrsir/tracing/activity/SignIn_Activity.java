@@ -15,7 +15,6 @@ import com.jasrsir.tracing.pojo.Error;
 import com.jasrsir.tracing.preferences.AccountPreferences;
 import com.jasrsir.tracing.presenter.SignIn_Presenter;
 
-import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
 
 public class SignIn_Activity extends AppCompatActivity implements IValidateUser.View {
 
@@ -72,7 +71,7 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         if (view.getId() == R.id.btnLogin) {
 
             //Validar los datos
-            if (AccountPreferences.accountPreference != null && mUser != null) {
+            if (AccountPreferences.accountPreference != null && AccountPreferences.getUser() != null) {
                 AccountPreferences.accountPreference.setKeyUserRemember(mCkbRemember.isChecked());
 
                 if (mPresenter.validateCredentialsEmail(mEdtMail.getText().toString()) == Error.OK &&

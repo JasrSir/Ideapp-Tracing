@@ -7,9 +7,9 @@ import android.util.Patterns;
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.interfaces.IValidateUser;
 import com.jasrsir.tracing.pojo.Error;
+import com.jasrsir.tracing.preferences.AccountPreferences;
 import com.jasrsir.tracing.utils.ErrorMapUtils;
 
-import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
 
 /**
  * Class Sign In Presenter to validate the Log In
@@ -74,7 +74,7 @@ public class SignIn_Presenter implements IValidateUser.Presenter {
     public int validateSignIn(String email, String password) {
         int idError;
 
-        if (email.equals( mUser.getEmail()) && password.equals(mUser.getPassword()))
+        if (email.equals( AccountPreferences.userPojo.getEmail()) && password.equals(AccountPreferences.userPojo.getPassword()))
             idError = Error.OK;
         else
             idError = Error.SIGNIN;

@@ -3,7 +3,7 @@ package com.jasrsir.tracing.pojo;
 /**
  * this class create a new Business user
  */
-public class Business extends UserPojo {
+public class Business extends User {
 
     //region variables
     private String nameBusiness;
@@ -80,5 +80,6 @@ public class Business extends UserPojo {
         this.cif = cif;
         this.zone = zone;
     }
+    public Business(){}
     //endregion
 }

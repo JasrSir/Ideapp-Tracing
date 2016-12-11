@@ -3,6 +3,11 @@ package com.jasrsir.tracing.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import com.jasrsir.tracing.pojo.Business;
+import com.jasrsir.tracing.pojo.Professional;
+import com.jasrsir.tracing.pojo.User;
+import com.jasrsir.tracing.pojo.UserPojo;
+
 /**
  * Account preferencer to save vital information for uer
  */
@@ -12,12 +17,14 @@ public class AccountPreferences {
     //Private mode to make the file. (Common preferences)
     private int MODEPRIVATE = Context.MODE_PRIVATE;
     public static AccountPreferences accountPreference;
+    public static User userPojo;
     private SharedPreferences sharedPreferences;
     private Context context;
     private boolean remember;
     private static final String ACCOUNT_PREFERENCES_FILE = "com.jasrsir.tracing_preferences";
 
     //KEY-VALUE for Sign up USERPOJO
+
     private static final String KEY_USER_UNIQUECODE = "user_unique_code";
     private static final String KEY_USER_NAME = "user_name";
     private static final String KEY_USER_SURNAME = "user_surname";
@@ -50,9 +57,30 @@ public class AccountPreferences {
     public static AccountPreferences getInstance(Context context) {
         if (accountPreference == null) {
             accountPreference = new AccountPreferences(context);
+
         }
         return accountPreference;
     }
+
+    /**
+     * Obtain the context to create Account Preferences
+     *
+     * @return an instance of userPojo
+     */
+    public static void setUser(String type) {
+        if (userPojo == null && type == "user") {
+            userPojo = new User();
+        }else if (userPojo == null && type == "professional") {
+            userPojo = new Professional();
+        }else if (userPojo == null && type == "business") {
+            userPojo = new Business();
+        }
+    }
+
+    public static User getUser(){
+        return userPojo;
+    }
+
 
     private SharedPreferences.Editor getEditor() {
         return sharedPreferences.edit();

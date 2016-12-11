@@ -20,6 +20,8 @@ public class User extends UserPojo {
         super(codeUnique, name, surname, email, pass, phone);
 
     }
+
+    public User(){}
     //endregion
 
 

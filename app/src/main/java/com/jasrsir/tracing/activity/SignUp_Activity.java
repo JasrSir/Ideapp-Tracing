@@ -21,7 +21,6 @@ import com.jasrsir.tracing.presenter.SignUp_Presenter;
 public class SignUp_Activity extends AppCompatActivity implements IValidateAccount.View {
 
     //region Variables
-    public static UserPojo mUser;
     private SignUp_Presenter mPresenter;
 
     //Common variables
@@ -62,7 +61,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
         getWidgets();
         if (AccountPreferences.accountPreference == null)
             AccountPreferences.accountPreference = AccountPreferences.getInstance(getApplicationContext());
-        else if (mUser != null)
+        else if (AccountPreferences.userPojo != null)
             loadUserData();
 
         putSpecialData();
@@ -74,18 +73,18 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
     private void loadUserData() {
 
         mBtnSaveChanges = (FloatingActionButton) findViewById(R.id.fabSignUp);
-        mEdtName.setText(mUser.getName());
-        mEdtSurname.setText(mUser.getSurname());
-        mEdtEmail.setText(mUser.getEmail());
-        mEdtPhone.setText(mUser.getPhone());
-        mEdtPass.setText(mUser.getPassword());
+        mEdtName.setText(AccountPreferences.userPojo.getName());
+        mEdtSurname.setText(AccountPreferences.userPojo.getSurname());
+        mEdtEmail.setText(AccountPreferences.userPojo.getEmail());
+        mEdtPhone.setText(AccountPreferences.userPojo.getPhone());
+        mEdtPass.setText(AccountPreferences.userPojo.getPassword());
         if (SelectorUser_Activity.bundleAccount.getString("ACCOUNT").equals("business")) {
-            mEdtCif.setText(((Business) mUser).getCif());
-            mEdtAdress.setText(((Business) mUser).getAdress());
-            mEdtProfession.setText(((Business) mUser).getProfession());
+            mEdtCif.setText(((Business) AccountPreferences.userPojo).getCif());
+            mEdtAdress.setText(((Business) AccountPreferences.userPojo).getAdress());
+            mEdtProfession.setText(((Business) AccountPreferences.userPojo).getProfession());
             //Falta zona
         } else if (SelectorUser_Activity.bundleAccount.getString("ACCOUNT").equals("professional")) {
-            mEdtProfession.setText(((Professional) mUser).getProfession());
+            mEdtProfession.setText(((Professional) AccountPreferences.userPojo).getProfession());
             //Falta zona
         }
     }
@@ -145,9 +144,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
     public void onClickSignUp(View view) {
         restartTils();
         if (setAccountPreferences(SelectorUser_Activity.bundleAccount.getString("ACCOUNT")) == Error.OK) {
-            if (mUser == null)
-                mPresenter.createUser(SelectorUser_Activity.bundleAccount.getString("ACCOUNT"));
-            else
+            if (AccountPreferences.userPojo != null)
                 mPresenter.modifyUser(SelectorUser_Activity.bundleAccount.getString("ACCOUNT"));
 
             finish();
@@ -190,7 +187,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
             AccountPreferences.accountPreference.setKeyUserPass(mEdtPass.getText().toString());
             AccountPreferences.accountPreference.setKeyUserUniquecode("CODEPRUEBA");
             AccountPreferences.accountPreference.setKeyUserRemember(false);
-
+            AccountPreferences.setUser(usertype);
             switch (usertype) {
 
                 case "business":

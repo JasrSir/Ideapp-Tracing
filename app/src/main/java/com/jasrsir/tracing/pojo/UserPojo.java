@@ -109,5 +109,9 @@ public class UserPojo {
         this.photoB = null;
         this.photoP = null;
     }
+
+    public UserPojo() {
+
+    }
     //endregion
 }

@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:design="http://schema.android.com/apk/res/android.support.design"
     android:id="@+id/activity_wall"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -97,8 +97,17 @@
                 android:textSize="20sp" />
 
         </RelativeLayout>
-    </ScrollView>
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="start"
+        design:menu="@menu/wall_actions"
+        design:itemIconTint="@color/colorAccent"
+        design:itemTextColor="@color/colorAccent"
+        android:id="@+id/bnvMenuWall">
 
+    </android.support.design.widget.BottomNavigationView>
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/fabWallMenu"
@@ -182,7 +191,6 @@
             app:fab_size="normal" />
 
     </com.github.clans.fab.FloatingActionMenu>
-
 
 
 </RelativeLayout>

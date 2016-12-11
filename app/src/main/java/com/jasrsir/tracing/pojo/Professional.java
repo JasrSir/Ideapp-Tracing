@@ -1,9 +1,11 @@
 package com.jasrsir.tracing.pojo;
 
+import com.jasrsir.tracing.interfaces.IValidateUser;
+
 /**
  * this class create a new professional user
  */
-public class Professional extends UserPojo {
+public class Professional extends User {
 
     //region variables
     private String profession;
@@ -47,5 +49,6 @@ public class Professional extends UserPojo {
         this.profession = profession;
         this.zone = zone;
     }
+    public Professional(){}
     //endregion
 }

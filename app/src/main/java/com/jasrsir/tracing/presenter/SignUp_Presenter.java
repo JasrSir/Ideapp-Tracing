@@ -13,7 +13,6 @@ import com.jasrsir.tracing.pojo.User;
 import com.jasrsir.tracing.preferences.AccountPreferences;
 import com.jasrsir.tracing.utils.ErrorMapUtils;
 
-import static com.jasrsir.tracing.activity.SignUp_Activity.mUser;
 
 /**
  * Class Sign Up Presenter to validate a new user, create or modify an existing user in AccountPreferences
@@ -36,46 +35,6 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
         this.context = (Context) view;
     }
 
-    /**
-     * Create a new type user
-     *
-     * @param usertype User, Professional or Business
-     */
-    public void createUser(String usertype) {
-        switch (usertype) {
-            case "user":
-                mUser = new User(AccountPreferences.accountPreference.getKeyUserUniquecode(),
-                        AccountPreferences.accountPreference.getKeyUserName(),
-                        AccountPreferences.accountPreference.getKeyUserSurname(),
-                        AccountPreferences.accountPreference.getKeyUserEmail(),
-                        AccountPreferences.accountPreference.getKeyUserPass(),
-                        AccountPreferences.accountPreference.getKeyUserPhone());
-                break;
-            case "professional":
-                mUser = new Professional(AccountPreferences.accountPreference.getKeyUserUniquecode(),
-                        AccountPreferences.accountPreference.getKeyUserName(),
-                        AccountPreferences.accountPreference.getKeyUserSurname(),
-                        AccountPreferences.accountPreference.getKeyUserEmail(),
-                        AccountPreferences.accountPreference.getKeyUserPass(),
-                        AccountPreferences.accountPreference.getKeyUserPhone(),
-                        AccountPreferences.accountPreference.getKeyUserProfession(),
-                        AccountPreferences.accountPreference.getKeyUserZone());
-                break;
-            case "business":
-                mUser = new Business(AccountPreferences.accountPreference.getKeyUserUniquecode(),
-                        AccountPreferences.accountPreference.getKeyUserName(),
-                        AccountPreferences.accountPreference.getKeyUserSurname(),
-                        AccountPreferences.accountPreference.getKeyUserEmail(),
-                        AccountPreferences.accountPreference.getKeyUserPass(),
-                        AccountPreferences.accountPreference.getKeyUserPhone(),
-                        AccountPreferences.accountPreference.getKeyUserName(),
-                        AccountPreferences.accountPreference.getKeyUserProfession(),
-                        AccountPreferences.accountPreference.getKeyBusinessAdress(),
-                        AccountPreferences.accountPreference.getKeyBusinessCif(),
-                        AccountPreferences.accountPreference.getKeyUserZone());
-                break;
-        }
-    }
 
     /**
      * Modify a user
@@ -85,32 +44,32 @@ public class SignUp_Presenter implements IValidateAccount.Presenter {
     public void modifyUser(String usertype) {
         switch (usertype) {
             case "user":
-                mUser.setName(AccountPreferences.accountPreference.getKeyUserName());
-                mUser.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
-                mUser.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
-                mUser.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
-                mUser.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
+                AccountPreferences.userPojo.setName(AccountPreferences.accountPreference.getKeyUserName());
+                AccountPreferences.userPojo.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
+                AccountPreferences.userPojo.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
+                AccountPreferences.userPojo.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
+                AccountPreferences.userPojo.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
                 break;
             case "professional":
-                mUser.setName(AccountPreferences.accountPreference.getKeyUserName());
-                mUser.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
-                mUser.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
-                mUser.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
-                mUser.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
-                ((Professional) mUser).setProfession(AccountPreferences.accountPreference.getKeyUserProfession());
-                ((Professional) mUser).setZone(AccountPreferences.accountPreference.getKeyUserZone());
+                AccountPreferences.userPojo.setName(AccountPreferences.accountPreference.getKeyUserName());
+                AccountPreferences.userPojo.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
+                AccountPreferences.userPojo.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
+                AccountPreferences.userPojo.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
+                AccountPreferences.userPojo.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
+                ((Professional) AccountPreferences.userPojo).setProfession(AccountPreferences.accountPreference.getKeyUserProfession());
+                ((Professional) AccountPreferences.userPojo).setZone(AccountPreferences.accountPreference.getKeyUserZone());
                 break;
             case "business":
-                mUser.setName(AccountPreferences.accountPreference.getKeyUserName());
-                mUser.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
-                mUser.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
-                mUser.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
-                mUser.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
-                ((Business) mUser).setNameBusiness(AccountPreferences.accountPreference.getKeyUserName());
-                ((Business) mUser).setProfession(AccountPreferences.accountPreference.getKeyUserProfession());
-                ((Business) mUser).setAdress(AccountPreferences.accountPreference.getKeyBusinessAdress());
-                ((Business) mUser).setCif(AccountPreferences.accountPreference.getKeyBusinessCif());
-                ((Business) mUser).setZone(AccountPreferences.accountPreference.getKeyUserZone());
+                AccountPreferences.userPojo.setName(AccountPreferences.accountPreference.getKeyUserName());
+                AccountPreferences.userPojo.setSurname(AccountPreferences.accountPreference.getKeyUserSurname());
+                AccountPreferences.userPojo.setEmail(AccountPreferences.accountPreference.getKeyUserEmail());
+                AccountPreferences.userPojo.setPassword(AccountPreferences.accountPreference.getKeyUserPass());
+                AccountPreferences.userPojo.setPhone(AccountPreferences.accountPreference.getKeyUserPhone());
+                ((Business) AccountPreferences.userPojo).setNameBusiness(AccountPreferences.accountPreference.getKeyUserName());
+                ((Business) AccountPreferences.userPojo).setProfession(AccountPreferences.accountPreference.getKeyUserProfession());
+                ((Business) AccountPreferences.userPojo).setAdress(AccountPreferences.accountPreference.getKeyBusinessAdress());
+                ((Business) AccountPreferences.userPojo).setCif(AccountPreferences.accountPreference.getKeyBusinessCif());
+                ((Business) AccountPreferences.userPojo).setZone(AccountPreferences.accountPreference.getKeyUserZone());
                 break;
         }
     }
