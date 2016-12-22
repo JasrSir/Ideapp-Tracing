@@ -2,13 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:design="http://schema.android.com/apk/res/android.support.design"
     android:id="@+id/activity_wall"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
 
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
         <RelativeLayout
@@ -97,14 +98,18 @@
                 android:textSize="20sp" />
 
         </RelativeLayout>
+    </ScrollView>
+
+
     <android.support.design.widget.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="start"
-        design:menu="@menu/wall_actions"
-        design:itemIconTint="@color/colorAccent"
-        design:itemTextColor="@color/colorAccent"
+        app:menu="@menu/wall_actions"
+        app:itemBackground="@color/cardview_light_background"
+        app:itemIconTint="@color/colorAccent"
+        app:itemTextColor="@color/colorAccent"
         android:id="@+id/bnvMenuWall">
 
     </android.support.design.widget.BottomNavigationView>
@@ -113,7 +118,6 @@
         android:id="@+id/fabWallMenu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         app:menu_animationDelayPerItem="55"
         app:menu_buttonSpacing="0dp"

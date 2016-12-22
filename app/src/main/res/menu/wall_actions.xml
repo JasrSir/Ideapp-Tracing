@@ -6,12 +6,12 @@
         android:title="Citas"/>
     <item android:id="@+id/bnvWallAction"
         android:icon="@drawable/ic_create_white_36dp"
-        android:title="Acciones"/>
+        android:title="Acción"/>
     <item android:id="@+id/bnvWallLink"
         android:icon="@drawable/ic_link_white_36dp"
-        android:title="Enlaces"/>
+        android:title="Link"/>
     <item android:id="@+id/bnvWallAnotation"
         android:icon="@drawable/ic_content_paste_white_36dp"
-        android:title="Anotaciones"/>
+        android:title="Notas"/>
 
 </menu>
