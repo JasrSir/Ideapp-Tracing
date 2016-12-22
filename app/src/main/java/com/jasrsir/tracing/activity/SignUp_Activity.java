@@ -1,10 +1,14 @@
 package com.jasrsir.tracing.activity;
 
+import android.content.Context;
+import android.content.Intent;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -49,6 +53,14 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
     private ImageView mImgProfession;
 
     private FloatingActionButton mBtnSaveChanges;
+
+
+
+    private static final int PERCENTAGE_TO_ANIMATE_AVATAR = 20;
+    private boolean mIsAvatarShown = true;
+
+    private ImageView mProfileImage;
+    private int mMaxScrollSize;
     //endregion
 
     //region Functions
@@ -61,7 +73,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
         getWidgets();
         if (AccountPreferences.accountPreference == null)
             AccountPreferences.accountPreference = AccountPreferences.getInstance(getApplicationContext());
-        else if (AccountPreferences.userPojo != null)
+        else
             loadUserData();
 
         putSpecialData();
@@ -73,18 +85,18 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
     private void loadUserData() {
 
         mBtnSaveChanges = (FloatingActionButton) findViewById(R.id.fabSignUp);
-        mEdtName.setText(AccountPreferences.userPojo.getName());
-        mEdtSurname.setText(AccountPreferences.userPojo.getSurname());
-        mEdtEmail.setText(AccountPreferences.userPojo.getEmail());
-        mEdtPhone.setText(AccountPreferences.userPojo.getPhone());
-        mEdtPass.setText(AccountPreferences.userPojo.getPassword());
-        if (SelectorUser_Activity.bundleAccount.getString("ACCOUNT").equals("business")) {
-            mEdtCif.setText(((Business) AccountPreferences.userPojo).getCif());
-            mEdtAdress.setText(((Business) AccountPreferences.userPojo).getAdress());
-            mEdtProfession.setText(((Business) AccountPreferences.userPojo).getProfession());
+        mEdtName.setText(AccountPreferences.accountPreference.getKeyUserName());
+        mEdtSurname.setText(AccountPreferences.accountPreference.getKeyUserSurname());
+        mEdtEmail.setText(AccountPreferences.accountPreference.getKeyUserEmail());
+        mEdtPhone.setText(AccountPreferences.accountPreference.getKeyUserPhone());
+        mEdtPass.setText(AccountPreferences.accountPreference.getKeyUserPass());
+        if (AccountPreferences.accountPreference.getKeyUserType().equals("business")) {
+            mEdtCif.setText(AccountPreferences.accountPreference.getKeyBusinessCif());
+            mEdtAdress.setText(AccountPreferences.accountPreference.getKeyBusinessAdress());
+            mEdtProfession.setText( AccountPreferences.accountPreference.getKeyUserProfession());
             //Falta zona
-        } else if (SelectorUser_Activity.bundleAccount.getString("ACCOUNT").equals("professional")) {
-            mEdtProfession.setText(((Professional) AccountPreferences.userPojo).getProfession());
+        } else if (AccountPreferences.accountPreference.getKeyUserType().equals("professional")) {
+            mEdtProfession.setText( AccountPreferences.accountPreference.getKeyUserProfession());
             //Falta zona
         }
     }
@@ -114,14 +126,53 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
         mImgCif = (ImageView) findViewById(R.id.imgSignUpCif);
 
 
+
+        AppBarLayout appbarLayout = (AppBarLayout) findViewById(R.id.materialup_appbar);
+        mProfileImage = (ImageView) findViewById(R.id.materialup_profile_image);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.materialup_toolbar);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+        appbarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                if (mMaxScrollSize == 0)
+                    mMaxScrollSize = appBarLayout.getTotalScrollRange();
+
+                int percentage = (Math.abs(verticalOffset)) * 100 / mMaxScrollSize;
+
+                if (percentage >= PERCENTAGE_TO_ANIMATE_AVATAR && mIsAvatarShown) {
+                    mIsAvatarShown = false;
+                    mProfileImage.animate().scaleY(0).scaleX(0).setDuration(200).start();
+                }
+
+                if (percentage <= PERCENTAGE_TO_ANIMATE_AVATAR && !mIsAvatarShown) {
+                    mIsAvatarShown = true;
+
+                    mProfileImage.animate()
+                            .scaleY(1).scaleX(1)
+                            .start();
+                }
+            }
+        });
+        mMaxScrollSize = appbarLayout.getTotalScrollRange();
+
+
     }
 
+    public static void start(Context c) {
+        c.startActivity(new Intent(c, SignUp_Activity.class));
+    }
     /**
      * Method to show different data in different users
      */
     private void putSpecialData() {
 
-        if (SelectorUser_Activity.bundleAccount.getString("ACCOUNT") == "business") {
+        if (AccountPreferences.accountPreference.getKeyUserType().equals("business")) {
             mImgProfession.setVisibility(View.VISIBLE);
             mTilProfession.setVisibility(View.VISIBLE);
             mImgAdress.setVisibility(View.VISIBLE);
@@ -129,7 +180,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
             mTilCif.setVisibility(View.VISIBLE);
             mImgCif.setVisibility(View.VISIBLE);
             //Falta area prof
-        } else if (SelectorUser_Activity.bundleAccount.getString("ACCOUNT") == "professional") {
+        } else if (AccountPreferences.accountPreference.getKeyUserType().equals("professional")) {
             mImgProfession.setVisibility(View.VISIBLE);
             mTilProfession.setVisibility(View.VISIBLE);
             //fata area prof
@@ -143,9 +194,9 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
      */
     public void onClickSignUp(View view) {
         restartTils();
-        if (setAccountPreferences(SelectorUser_Activity.bundleAccount.getString("ACCOUNT")) == Error.OK) {
+        if (setAccountPreferences(AccountPreferences.accountPreference.getKeyUserType()) == Error.OK) {
             if (AccountPreferences.userPojo != null)
-                mPresenter.modifyUser(SelectorUser_Activity.bundleAccount.getString("ACCOUNT"));
+                mPresenter.modifyUser(AccountPreferences.accountPreference.getKeyUserType());
 
             finish();
         } else
@@ -188,6 +239,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
             AccountPreferences.accountPreference.setKeyUserUniquecode("CODEPRUEBA");
             AccountPreferences.accountPreference.setKeyUserRemember(false);
             AccountPreferences.setUser(usertype);
+            AccountPreferences.accountPreference.setKeyUserType(usertype);
             switch (usertype) {
 
                 case "business":

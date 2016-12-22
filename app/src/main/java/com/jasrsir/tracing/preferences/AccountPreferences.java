@@ -32,6 +32,7 @@ public class AccountPreferences {
     private static final String KEY_USER_PASS = "user_pass";
     private static final String KEY_USER_PHONE = "user_phone";
     private static final String KEY_USER_REMEMBER = "user_remember";
+    private static final String KEY_USER_TYPE = "user_type";
 
     //KEY-VALUE for Sign up Business
     private static final String KEY_BUSINESS_CIF = "user_cif";
@@ -182,6 +183,14 @@ public class AccountPreferences {
 
     public String getKeyUserZone() {
         return sharedPreferences.getString(KEY_USER_ZONE, "");
+    }
+
+    public void setKeyUserType(String userType) {
+        getEditor().putString(KEY_USER_TYPE, userType).apply();
+    }
+
+    public String getKeyUserType() {
+        return sharedPreferences.getString(KEY_USER_TYPE, "");
     }
 
     //endregion

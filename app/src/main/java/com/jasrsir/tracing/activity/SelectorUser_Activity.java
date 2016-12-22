@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.preferences.AccountPreferences;
 
 public class SelectorUser_Activity extends AppCompatActivity {
 
-    static Bundle bundleAccount = new Bundle();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,19 +23,15 @@ public class SelectorUser_Activity extends AppCompatActivity {
      * @param view CardView clicked
      */
     public void onClickSelectAccount (View view) {
-        Intent intent;
-
 
         if (view.getId() == R.id.cardAccountBusiness)
-            bundleAccount.putString("ACCOUNT", "business");
+            AccountPreferences.accountPreference.setKeyUserType("business");
         else if (view.getId() == R.id.cardAccountProfessional)
-            bundleAccount.putString("ACCOUNT", "professional");
+            AccountPreferences.accountPreference.setKeyUserType("professional");
         else //if (view.getId() == R.id.cardAccountUser)
-            bundleAccount.putString("ACCOUNT", "user");
+            AccountPreferences.accountPreference.setKeyUserType("user");
 
-        intent = new Intent(SelectorUser_Activity.this, SignUp_Activity.class);
-        intent.putExtras(bundleAccount);
-        startActivity(intent);
+        startActivity(new Intent(SelectorUser_Activity.this, SignUp_Activity.class));
         finish();
     }
 }

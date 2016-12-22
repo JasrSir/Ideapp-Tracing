@@ -1,22 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_enter_account"
+    android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ece9e9"
     tools:context="com.jasrsir.tracing.activity.SignUp_Activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/materialup.appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp"
+            app:layout_scrollFlags="scroll|snap"
+            >
+            ​
+            <ImageView
+                android:id="@+id/materialup.profile_backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/material_flat"
+                app:layout_collapseMode="parallax"
+                />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/materialup.profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="-48dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/user_avatar"
+            android:elevation="8dp"
+            app:border_width="2dp"
+            app:border_color="#FFF"
+            app:layout_scrollFlags="scroll"
+            />
+        ​
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/materialup.toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?colorPrimary"
+            android:layout_marginTop="-48dp"
+            app:theme="@style/AppTheme"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            />
+        ​
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardNewEvent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:contentPadding="@dimen/fab_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true">
+
+                <!-- Name label & icon -->
+                <ImageView
+                    android:id="@+id/imgSignUpName"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpName"
+                    android:focusableInTouchMode="true"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    app:srcCompat="@drawable/ic_perm_identity_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgSignUpName"
+                    android:focusableInTouchMode="true"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+                    <EditText
+                        android:id="@+id/edtUSignUpName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/edtSignUpName"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Surname label -->
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpSurname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tilSignUpName"
+                    android:layout_below="@+id/tilSignUpName"
+                    app:counterMaxLength="20"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpSurname"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/edtSignUpSurname"
+                        android:inputType="textPersonName" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!-- Email label & icon -->
+                <ImageView
+                    android:id="@+id/imgSignUpMail"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpMail"
+                    android:layout_below="@+id/tilSignUpSurname"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    app:srcCompat="@drawable/ic_mail_outline_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpMail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilSignUpSurname"
+                    android:layout_toEndOf="@id/imgSignUpMail"
+                    android:layout_toRightOf="@+id/imgSignUpMail"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpMail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/edtSignUpMail"
+                        android:inputType="textEmailAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Layout Password -->
+                <ImageView
+                    android:id="@+id/imgSignUpPass"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpPass"
+                    android:layout_below="@+id/tilSignUpMail"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    app:srcCompat="@drawable/ic_vpn_key_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tilSignUpMail"
+                    android:layout_below="@+id/tilSignUpMail"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="20"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpPass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/edtSignInPass"
+                        android:inputType="textPassword" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!-- Phone label & icon-->
+                <ImageView
+                    android:id="@+id/imgSignUpPhone"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpPhone"
+                    android:layout_below="@+id/tilSignUpPass"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    app:srcCompat="@drawable/ic_phone_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilSignUpPass"
+                    android:layout_toRightOf="@+id/imgSignUpMail"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/edtSignUpPhone"
+                        android:inputType="phone" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Work label & icon -->
+                <ImageView
+                    android:id="@+id/imgSignUpWork"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpWork"
+                    android:layout_below="@+id/tilSignUpPhone"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_work_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilSignUpPhone"
+                    android:layout_toRightOf="@+id/imgSignUpWork"
+                    android:visibility="gone"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpWork"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/edtSignUpWork"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Cif label & icon-->
+                <ImageView
+                    android:id="@+id/imgSignUpCif"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpCif"
+                    android:layout_below="@+id/tilSignUpWork"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_account_balance_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpCif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilSignUpWork"
+                    android:layout_toRightOf="@+id/imgSignUpCif"
+                    android:visibility="gone"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpCif"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="@string/edtSignUpCif"
+                        android:inputType="text" />
+                </android.support.design.widget.TextInputLayout>
+
+                <!-- Adress label & icon -->
+                <ImageView
+                    android:id="@+id/imgSignUpAdress"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tilSignUpAdress"
+                    android:layout_below="@+id/tilSignUpCif"
+                    android:paddingRight="5dp"
+                    android:tint="@color/colorTextBlack"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/ic_place_black_48dp" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tilSignUpAdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilSignUpCif"
+                    android:layout_toRightOf="@+id/imgSignUpAdress"
+                    android:visibility="gone"
+                    app:errorEnabled="true"
+                    app:errorTextAppearance="@style/error">
+
+                    <EditText
+                        android:id="@+id/edtSignUpAdress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:hint="Dirección"
+                        android:inputType="textPostalAddress" />
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </android.support.v4.widget.NestedScrollView>
+
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end|right"
         android:layout_margin="@dimen/activity_vertical_margin"
         android:clickable="true"
+        android:elevation="8dp"
         android:onClick="onClickSignUp"
         app:fabSize="normal"
         app:fab_colorDisabled="@color/colorLightPrimary"
@@ -24,267 +338,4 @@
         app:fab_colorRipple="@color/colorPrimary"
         app:srcCompat="@drawable/ic_check_white_48dp" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardNewEvent"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="21dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:focusableInTouchMode="true"
-                    android:layout_height="match_parent"
-                    android:padding="@dimen/activity_horizontal_margin">
-
-                    <!-- Name label & icon -->
-                    <ImageView
-                        android:id="@+id/imgSignUpName"
-                        android:layout_width="36dp"
-                        android:focusableInTouchMode="true"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpName"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        app:srcCompat="@drawable/ic_perm_identity_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpName"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_toRightOf="@+id/imgSignUpName"
-                        android:focusableInTouchMode="true"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtUSignUpName"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="@string/edtSignUpName"
-                            android:inputType="textPersonName" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Surname label -->
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpSurname"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_alignLeft="@+id/tilSignUpName"
-                        android:layout_below="@+id/tilSignUpName"
-                        app:counterMaxLength="20"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpSurname"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="@string/edtSignUpSurname"
-                            android:inputType="textPersonName" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Email label & icon -->
-                    <ImageView
-                        android:id="@+id/imgSignUpMail"
-                        android:layout_width="36dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpMail"
-                        android:layout_below="@+id/tilSignUpSurname"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        app:srcCompat="@drawable/ic_mail_outline_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpMail"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/tilSignUpSurname"
-                        android:layout_toEndOf="@id/imgSignUpMail"
-                        android:layout_toRightOf="@+id/imgSignUpMail"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpMail"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="@string/edtSignUpMail"
-                            android:inputType="textEmailAddress" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Layout Password -->
-                    <ImageView
-                        android:id="@+id/imgSignUpPass"
-                        android:layout_width="36dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpPass"
-                        android:layout_below="@+id/tilSignUpMail"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        app:srcCompat="@drawable/ic_vpn_key_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpPass"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/tilSignUpMail"
-                        android:layout_below="@+id/tilSignUpMail"
-                        app:counterEnabled="true"
-                        app:counterMaxLength="20"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpPass"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:ems="10"
-                            android:hint="@string/edtSignInPass"
-                            android:inputType="textPassword" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Phone label & icon-->
-                    <ImageView
-                        android:id="@+id/imgSignUpPhone"
-                        android:layout_width="36dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpPhone"
-                        android:layout_below="@+id/tilSignUpPass"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        app:srcCompat="@drawable/ic_phone_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpPhone"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/tilSignUpPass"
-                        android:layout_toRightOf="@+id/imgSignUpMail"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpPhone"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="@string/edtSignUpPhone"
-                            android:inputType="phone" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Work label & icon -->
-                    <ImageView
-                        android:id="@+id/imgSignUpWork"
-                        android:layout_width="36dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpWork"
-                        android:layout_below="@+id/tilSignUpPhone"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        android:visibility="gone"
-                        app:srcCompat="@drawable/ic_work_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpWork"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/tilSignUpPhone"
-                        android:layout_toRightOf="@+id/imgSignUpWork"
-                        android:visibility="gone"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpWork"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="@string/edtSignUpWork"
-                            android:inputType="text" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Cif label & icon-->
-                    <ImageView
-                        android:id="@+id/imgSignUpCif"
-                        android:layout_width="36dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpCif"
-                        android:layout_below="@+id/tilSignUpWork"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        android:visibility="gone"
-                        app:srcCompat="@drawable/ic_account_balance_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpCif"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/tilSignUpWork"
-                        android:layout_toRightOf="@+id/imgSignUpCif"
-                        android:visibility="gone"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpCif"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="@string/edtSignUpCif"
-                            android:inputType="text" />
-                    </android.support.design.widget.TextInputLayout>
-
-                    <!-- Adress label & icon -->
-                    <ImageView
-                        android:id="@+id/imgSignUpAdress"
-                        android:layout_width="36dp"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tilSignUpAdress"
-                        android:layout_below="@+id/tilSignUpCif"
-                        android:paddingRight="5dp"
-                        android:tint="@color/colorTextBlack"
-                        android:visibility="gone"
-                        app:srcCompat="@drawable/ic_place_black_48dp" />
-
-                    <android.support.design.widget.TextInputLayout
-                        android:id="@+id/tilSignUpAdress"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/tilSignUpCif"
-                        android:layout_toRightOf="@+id/imgSignUpAdress"
-                        android:visibility="gone"
-                        app:errorEnabled="true"
-                        app:errorTextAppearance="@style/error">
-
-                        <EditText
-                            android:id="@+id/edtSignUpAdress"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:ems="10"
-                            android:hint="Dirección"
-                            android:inputType="textPostalAddress" />
-                    </android.support.design.widget.TextInputLayout>
-
-                </RelativeLayout>
-            </android.support.v7.widget.CardView>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@+id/cardNewEvent"/>
-        </RelativeLayout>
-
-
-    </ScrollView>
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
