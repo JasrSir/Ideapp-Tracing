@@ -74,7 +74,7 @@ public class SignIn_Presenter implements IValidateUser.Presenter {
     public int validateSignIn(String email, String password) {
         int idError;
 
-        if (email.equals( AccountPreferences.userPojo.getEmail()) && password.equals(AccountPreferences.userPojo.getPassword()))
+        if (email.equals( AccountPreferences.getInstance(context).getKeyUserEmail()) && password.equals(AccountPreferences.getInstance(context).getKeyUserPass()))
             idError = Error.OK;
         else
             idError = Error.SIGNIN;

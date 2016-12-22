@@ -6,8 +6,10 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.interfaces.IValidateUser;
@@ -25,6 +27,8 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
     private EditText mEdtPass;
     private CheckBox mCkbRemember;
     private SignIn_Presenter mPresenter;
+    private Button mBtnLogIn;
+    private TextView mTxvLostUC;
     //endregion
 
     //region Functions
@@ -48,6 +52,42 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         mEdtMail = (EditText) findViewById(R.id.edtEmail);
         mEdtPass = (EditText) findViewById(R.id.edtPassword);
         mCkbRemember = (CheckBox) findViewById(R.id.ckbRemember);
+        mBtnLogIn = (Button) findViewById(R.id.btnLogin);
+        mBtnLogIn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Method that Log in the user or launch (Lost Unique Code)
+             *
+             * @param v Widget clicked
+             */
+            @Override
+            public void onClick(View v) {
+                Intent intent;
+                    //Validar los datos
+                    if (AccountPreferences.accountPreference != null ) {
+                        AccountPreferences.accountPreference.setKeyUserRemember(mCkbRemember.isChecked());
+
+                        if (mPresenter.validateCredentialsEmail(mEdtMail.getText().toString()) == Error.OK &&
+                                mPresenter.validateCredentialsPassword(mEdtPass.getText().toString()) == Error.OK) {
+
+                            if (mPresenter.validateSignIn(mEdtMail.getText().toString(), mEdtPass.getText().toString()) == Error.OK) {
+                                intent = new Intent(SignIn_Activity.this, Wall_Activity.class);
+
+                                startActivity(intent);
+                            } else
+                                Snackbar.make(findViewById(R.id.tilPass), R.string.noEquals, Snackbar.LENGTH_LONG).show();
+                        }
+                    } else
+                        Snackbar.make(findViewById(R.id.tilPass), R.string.makeAccountFirst, Snackbar.LENGTH_LONG).show();
+            }
+
+        });
+        mTxvLostUC = (TextView) findViewById(R.id.txvLostUC);
+        mTxvLostUC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignIn_Activity.this, SignLost_Activity.class));
+            }
+        });
     }
 
     /**
@@ -61,37 +101,7 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         }
     }
 
-    /**
-     * Method that Log in the user or launch (Lost Unique Code)
-     *
-     * @param view Widget clicked
-     */
-    public void onClickLogin_LostUC(View view) {
-        Intent intent;
-        if (view.getId() == R.id.btnLogin) {
 
-            //Validar los datos
-            if (AccountPreferences.accountPreference != null && AccountPreferences.getUser() != null) {
-                AccountPreferences.accountPreference.setKeyUserRemember(mCkbRemember.isChecked());
-
-                if (mPresenter.validateCredentialsEmail(mEdtMail.getText().toString()) == Error.OK &&
-                        mPresenter.validateCredentialsPassword(mEdtPass.getText().toString()) == Error.OK) {
-
-                    if (mPresenter.validateSignIn(mEdtMail.getText().toString(), mEdtPass.getText().toString()) == Error.OK) {
-                        intent = new Intent(SignIn_Activity.this, Wall_Activity.class);
-
-                        startActivity(intent);
-                    } else
-                        Snackbar.make(findViewById(R.id.tilPass), R.string.noEquals, Snackbar.LENGTH_LONG).show();
-                }
-            } else
-                Snackbar.make(findViewById(R.id.tilPass), R.string.makeAccountFirst, Snackbar.LENGTH_LONG).show();
-
-        } else {//if (view.getId() == R.id.txvLostUC){
-            intent = new Intent(SignIn_Activity.this, SignLost_Activity.class);
-            startActivity(intent);
-        }
-    }
 
     @Override
     public void setMessageError(String messageError, int idView) {
