@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item android:id="@+id/bnvWallDate"
+        android:enabled="true"
         android:icon="@drawable/ic_event_white_36dp"
+        app:showAsAction="ifRoom"
         android:title="@string/wall_menu_date"/>
     <item android:id="@+id/bnvWallAction"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
         android:icon="@drawable/ic_create_white_36dp"
         android:title="@string/wall_menu_action"/>
     <item android:id="@+id/bnvWallLink"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
         android:icon="@drawable/ic_link_white_36dp"
         android:title="@string/wall_menu_link"/>
     <item android:id="@+id/bnvWallAnotation"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
         android:icon="@drawable/ic_content_paste_white_36dp"
         android:title="@string/wall_menu_anotation"/>
 

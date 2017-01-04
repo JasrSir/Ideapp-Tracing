@@ -146,4 +146,7 @@
     <string name="setting_info_title">Acerca de. . .</string>
     <string name="setting_info_summary">Más información sobre la aplicación</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
