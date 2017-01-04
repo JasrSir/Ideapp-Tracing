@@ -25,7 +25,10 @@
         <activity android:name=".activity.About_Activity" />
         <activity android:name=".viewlistRecicler.ListView_Activity" />
         <activity android:name=".viewlistRecicler.RecyclerView_Activity" />
-        <activity android:name=".activity.NewEvent_Activity"></activity>
+        <activity android:name=".activity.NewEvent_Activity" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
     </application>
 
 </manifest>

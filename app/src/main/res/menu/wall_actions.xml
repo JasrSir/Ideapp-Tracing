@@ -3,15 +3,15 @@
 
     <item android:id="@+id/bnvWallDate"
         android:icon="@drawable/ic_event_white_36dp"
-        android:title="Citas"/>
+        android:title="@string/wall_menu_date"/>
     <item android:id="@+id/bnvWallAction"
         android:icon="@drawable/ic_create_white_36dp"
-        android:title="Acción"/>
+        android:title="@string/wall_menu_action"/>
     <item android:id="@+id/bnvWallLink"
         android:icon="@drawable/ic_link_white_36dp"
-        android:title="Link"/>
+        android:title="@string/wall_menu_link"/>
     <item android:id="@+id/bnvWallAnotation"
         android:icon="@drawable/ic_content_paste_white_36dp"
-        android:title="Notas"/>
+        android:title="@string/wall_menu_anotation"/>
 
 </menu>

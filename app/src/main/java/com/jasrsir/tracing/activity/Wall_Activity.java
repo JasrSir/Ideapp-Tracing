@@ -6,7 +6,10 @@ import android.support.design.internal.BottomNavigationMenu;
 import android.support.design.widget.Snackbar;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toolbar;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.viewlistRecicler.ListView_Activity;
@@ -15,35 +18,48 @@ import com.jasrsir.tracing.viewlistRecicler.RecyclerView_Activity;
 public class Wall_Activity extends Activity {
 
     static Bundle bundleEvent;
+    private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wall);
+        toolbar = (Toolbar) findViewById(R.id.toolBarWall);
+        toolbar.setTitleTextColor(getResources().getColor(R.color.cardview_light_background));
+        setActionBar(toolbar);
+
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.settings_navigation_drawer,menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
-    //Metodo de prueba a eliminar posteriormente
-    public void onClickPrueba(View view){
-        Intent intent = null;
-        switch (view.getId()){
-            case R.id.btnPruebaListView:
-                intent = new Intent(Wall_Activity.this, ListView_Activity.class);
+    @Override
+    public boolean onMenuItemSelected(int featureId, MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.ndAbout:
+                startActivity(new Intent(Wall_Activity.this, About_Activity.class));
                 break;
-            case R.id.btnPruebaRecyclerView:
-                intent = new Intent(Wall_Activity.this, RecyclerView_Activity.class);
+            case R.id.ndProfile:
+                startActivity(new Intent(Wall_Activity.this, SignUp_Activity.class));
                 break;
-            case R.id.btnPruebaSettings:
-                Snackbar.make(view,"Caraterística NO disponible",Snackbar.LENGTH_SHORT).show();
+            case R.id.ndSettings:
+                startActivity(new Intent(Wall_Activity.this, SettingsActivity.class));
                 break;
-            case R.id.btnPruebaAbout:
+            default:
+
+            /*case R.id.:
                 intent = new Intent(Wall_Activity.this, About_Activity.class);
                 break;
             case R.id.btnPruebaPrefModPerf:
-                intent = new Intent(Wall_Activity.this, SignUp_Activity.class);
-                break;
+                intent = new Intent(Wall_Activity.this, RecyclerView_Activity.class);
+                break;*/
         }
-        startActivity(intent);
+        return super.onMenuItemSelected(featureId, item);
     }
+
 
 
     /**

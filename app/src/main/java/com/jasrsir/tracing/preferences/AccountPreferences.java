@@ -41,6 +41,10 @@ public class AccountPreferences {
     //KEY-VALUE for Sign up Professional & Business
     private static final String KEY_USER_PROFESSION = "user_profession";
     private static final String KEY_USER_ZONE = "user_zone";
+
+    //KEY-VALUE FOR SETTINGS
+    private static final String KEY_THEME_APP = "key_theme_app";
+    private static final String KEY_HISTORY_APP = "key_history_app";
     //endregion
 
     //region constructor, get instance and get editor

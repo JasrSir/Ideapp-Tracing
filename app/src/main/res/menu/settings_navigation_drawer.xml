@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/ndAbout"
+        android:icon="@drawable/ic_info_black_24dp"
+        app:showAsAction="always"
+        android:title="@string/ndAbout"/>
+    <item android:id="@+id/ndSettings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        app:showAsAction="always"
+        android:title="@string/ndSettings"/>
+    <item android:id="@+id/ndProfile"
+        app:showAsAction="always"
+        android:title="@string/ndProfile"/>
+    <!-- android:icon="@drawable/ic_link_white_36dp"-->
+</menu>

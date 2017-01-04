@@ -23,7 +23,7 @@
             android:paddingTop="10dp"
             android:text="@string/txvAboutTitle"
             android:textSize="16dp"
-            android:textColor="@color/colorAccentText" />
+            android:textColor="@color/colorAccent" />
 
         <!-- Version Title -->
         <TextView

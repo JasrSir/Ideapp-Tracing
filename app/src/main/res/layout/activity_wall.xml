@@ -7,7 +7,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jasrsir.tracing.activity.Wall_Activity">
-  <ScrollView
+
+    <android.widget.Toolbar
+        android:id="@+id/toolBarWall"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="200sp"
       android:id="@+id/scrollWall">
@@ -20,20 +30,12 @@
             android:paddingRight="@dimen/activity_vertical_margin"
             android:paddingTop="@dimen/activity_vertical_margin">
 
-            <TextView
-                android:id="@+id/introPreNaviDraw"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Ejemplo del menú pero va dentro de un navigation drawer que ya envía a otras activityes y lo hace todo very good, pero ahora solo te puedo enseñar esto...
-            esto es el perfil principal, por ahora solo se ven los botones de las distintas opciones del NAVIGATION DRAWER.
-            Acerca de y las preferencias SI son medio definitivas, logicamente el perdil que es esto..no..." />
 
             <!-- Ejemp ListView -->
             <Button
                 android:id="@+id/btnPruebaListView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/introPreNaviDraw"
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:background="@drawable/btn_login"
                 android:onClick="onClickPrueba"

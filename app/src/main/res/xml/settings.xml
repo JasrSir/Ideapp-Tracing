@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory android:title="@string/settings_Profile">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:title="@string/setting_Sw_title"
+            android:summary="@string/setting_Sw_summary"
+            android:icon="@drawable/ic_vpn_key_black_24dp"
+            android:key="user_remember" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_Custom">
+
+        <EditTextPreference
+            android:editable="false"
+            android:clickable="true"
+            android:icon="@drawable/ic_color_lens_black_24dp"
+            android:title="@string/setting_theme_title"
+            android:summary="@string/setting_theme_summary"
+            android:key="key_theme_app" />
+        <EditTextPreference
+            android:icon="@drawable/ic_history_black_24dp"
+            android:editable="false"
+            android:clickable="true"
+            android:title="@string/setting_history_title"
+            android:summary="@string/setting_history_summary" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/settings_Info">
+
+        <EditTextPreference
+            android:editable="false"
+            android:clickable="true"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/setting_info_title"
+            android:summary="@string/setting_info_summary" />
+        <EditTextPreference
+            android:icon="@drawable/ic_email_black_24dp"
+            android:editable="false"
+            android:clickable="true"
+            android:title="Comentarios y mejoras"
+            android:summary="Envía un email al autor"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

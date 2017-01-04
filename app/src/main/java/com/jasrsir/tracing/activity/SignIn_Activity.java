@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
@@ -25,7 +26,7 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
     private TextInputLayout mTilPass;
     private EditText mEdtMail;
     private EditText mEdtPass;
-    private CheckBox mCkbRemember;
+    private Switch mCkbRemember;
     private SignIn_Presenter mPresenter;
     private Button mBtnLogIn;
     private TextView mTxvLostUC;
@@ -51,7 +52,7 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         mTilPass = (TextInputLayout) findViewById(R.id.tilPass);
         mEdtMail = (EditText) findViewById(R.id.edtEmail);
         mEdtPass = (EditText) findViewById(R.id.edtPassword);
-        mCkbRemember = (CheckBox) findViewById(R.id.ckbRemember);
+        mCkbRemember = (Switch) findViewById(R.id.ckbRemember);
         mBtnLogIn = (Button) findViewById(R.id.btnLogin);
         mBtnLogIn.setOnClickListener(new View.OnClickListener() {
             /**
