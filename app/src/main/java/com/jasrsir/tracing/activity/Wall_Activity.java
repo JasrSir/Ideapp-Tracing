@@ -1,16 +1,18 @@
 package com.jasrsir.tracing.activity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.support.design.internal.BottomNavigationMenu;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.viewlistRecicler.ListView_Activity;
 import com.jasrsir.tracing.viewlistRecicler.RecyclerView_Activity;
 
-public class Wall_Activity extends AppCompatActivity {
+public class Wall_Activity extends Activity {
 
     static Bundle bundleEvent;
     @Override
@@ -18,6 +20,7 @@ public class Wall_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wall);
     }
+
 
     //Metodo de prueba a eliminar posteriormente
     public void onClickPrueba(View view){
@@ -42,10 +45,11 @@ public class Wall_Activity extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     /**
      * Method that iniciate a new event
      * @param view
-     */
+
     public void OnClickWall(View view) {
         Intent intent;
         bundleEvent = new Bundle();
@@ -67,5 +71,5 @@ public class Wall_Activity extends AppCompatActivity {
         intent.putExtras(bundleEvent);
         startActivity(intent);
 
-    }
+    }     */
 }

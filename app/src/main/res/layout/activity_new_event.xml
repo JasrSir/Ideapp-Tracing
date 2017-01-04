@@ -18,9 +18,8 @@
         android:clickable="true"
         android:onClick="onClickAddEvent"
         app:fabSize="normal"
-        app:fab_colorDisabled="@color/colorLightPrimary"
-        app:fab_colorPressed="@color/colorPrimary"
-        app:fab_colorRipple="@color/colorPrimary"
+        app:rippleColor="@color/colorPrimary"
+
         app:srcCompat="@drawable/ic_check_white_48dp" />
 
     <ScrollView
