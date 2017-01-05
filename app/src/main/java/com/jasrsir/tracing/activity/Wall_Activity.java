@@ -82,9 +82,7 @@ public class Wall_Activity extends Activity {
                     default:
                         break;
                 }
-
                 startActivity(new Intent(Wall_Activity.this, NewEvent_Activity.class).putExtras(bundleEvent));
-
             }
         });
 
@@ -98,7 +96,7 @@ public class Wall_Activity extends Activity {
 
     @Override
     public boolean onMenuItemSelected(int featureId, MenuItem item) {
-
+        super.onMenuItemSelected(featureId, item);
         switch (item.getItemId()) {
             case R.id.ndAbout:
                 startActivity(new Intent(Wall_Activity.this, About_Activity.class));
@@ -120,7 +118,7 @@ public class Wall_Activity extends Activity {
                 break;*/
         }
 
-        return super.onMenuItemSelected(featureId, item);
+        return true;
     }
 
 }

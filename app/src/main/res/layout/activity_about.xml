@@ -1,150 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:layout="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/activity_about"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jasrsir.tracing.activity.About_Activity">
 
-    <RelativeLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin">
-
-        <!-- Title About -->
-        <TextView
-            android:id="@+id/txvAboutTitle"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:contentPadding="4dp">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            android:paddingTop="10dp"
-            android:text="@string/txvAboutTitle"
-            android:textSize="16dp"
-            android:textColor="@color/colorAccent" />
+            android:layout_height="match_parent">
 
-        <!-- Version Title -->
-        <TextView
-            android:id="@+id/txvAboutVersionTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutTitle"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingTop="10dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="@string/txvAboutVersionTitle" />
+            <!-- Title About -->
+            <TextView
+                android:id="@+id/txvAboutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/txvAboutTitle"
+                android:textSize="16dp"
+                android:textColor="@color/colorAccent" />
 
-        <!-- Version Summary -->
-        <TextView
-            android:id="@+id/txvAboutVersionSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutVersionTitle"
-            android:layout_alignLeft="@+id/txvAboutVersionTitle"
-            android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
-            android:paddingTop="5dp"
-            android:text="@string/txvAboutVersionSummary" />
+            <!-- Version Title -->
+            <TextView
+                android:id="@+id/txvAboutVersionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutTitle"
+                android:paddingLeft="@dimen/cardview_text_padding"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:textSize="20dp"
+                android:textColor="@color/colorTextBlack"
+                android:text="@string/txvAboutVersionTitle" />
 
-        <!-- Author Title -->
-        <TextView
-            android:id="@+id/txvAboutAuthorTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutVersionSummary"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingTop="10dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="@string/txvAboutAuthorTitle" />
+            <!-- Version Summary -->
+            <TextView
+                android:id="@+id/txvAboutVersionSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutVersionTitle"
+                android:layout_alignLeft="@+id/txvAboutVersionTitle"
+                android:paddingBottom="@dimen/cardview_text_padding"
+                android:paddingLeft="40sp"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:text="@string/txvAboutVersionSummary" />
 
-        <!-- Author Summary -->
-        <TextView
-            android:id="@+id/txvAboutAuthorSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutAuthorTitle"
-            android:layout_alignLeft="@+id/txvAboutAuthorTitle"
-            android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
-            android:paddingTop="5dp"
-            android:text="@string/txvAboutAuthorSummary" />
+            <!-- Author Title -->
+            <TextView
+                android:id="@+id/txvAboutAuthorTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutVersionSummary"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:textSize="20dp"
+                android:textColor="@color/colorTextBlack"
+                android:text="@string/txvAboutAuthorTitle" />
 
-        <!-- Licence Title -->
-        <TextView
-            android:id="@+id/txvAboutLicenceTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutAuthorSummary"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingTop="10dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="@string/txvAboutLicenceTitle" />
+            <!-- Author Summary -->
+            <TextView
+                android:id="@+id/txvAboutAuthorSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutAuthorTitle"
+                android:layout_alignLeft="@+id/txvAboutAuthorTitle"
+                android:paddingBottom="@dimen/cardview_text_padding"
+                android:paddingLeft="40sp"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:text="@string/txvAboutAuthorSummary" />
 
-        <!-- Licence Summary -->
-        <TextView
-            android:id="@+id/txvAboutLicenceSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutLicenceTitle"
-            android:layout_alignLeft="@+id/txvAboutLicenceTitle"
-            android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
-            android:paddingTop="5dp"
-            android:text="@string/txvAboutLicenceSummary" />
+            <!-- Licence Title -->
+            <TextView
+                android:id="@+id/txvAboutLicenceTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutAuthorSummary"
+                android:paddingLeft="@dimen/cardview_text_padding"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:textSize="20dp"
+                android:textColor="@color/colorTextBlack"
+                android:text="@string/txvAboutLicenceTitle" />
 
-        <!-- Contact Title -->
-        <TextView
-            android:id="@+id/txvAboutContactTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutLicenceSummary"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingTop="10dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="@string/txvAboutContactTitle" />
+            <!-- Licence Summary -->
+            <TextView
+                android:id="@+id/txvAboutLicenceSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutLicenceTitle"
+                android:layout_alignLeft="@+id/txvAboutLicenceTitle"
+                android:paddingBottom="@dimen/cardview_text_padding"
+                android:paddingLeft="40sp"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:text="@string/txvAboutLicenceSummary" />
 
-        <!-- Contact Summary -->
-        <TextView
-            android:id="@+id/txvAboutContactSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutContactTitle"
-            android:layout_alignLeft="@+id/txvAboutContactTitle"
-            android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
-            android:paddingTop="5dp"
-            android:text="@string/txvAboutContactSummary" />
+            <!-- Contact Title -->
+            <TextView
+                android:id="@+id/txvAboutContactTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutLicenceSummary"
+                android:paddingLeft="@dimen/cardview_text_padding"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:textSize="20dp"
+                android:textColor="@color/colorTextBlack"
+                android:text="@string/txvAboutContactTitle" />
 
-        <!-- Terms Title -->
-        <TextView
-            android:id="@+id/txvAboutTermsTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutContactSummary"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingTop="10dp"
-            android:textSize="20dp"
-            android:textColor="@color/colorTextBlack"
-            android:text="@string/txvAboutTermsTitle" />
+            <!-- Contact Summary -->
+            <TextView
+                android:id="@+id/txvAboutContactSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutContactTitle"
+                android:layout_alignLeft="@+id/txvAboutContactTitle"
+                android:paddingBottom="@dimen/cardview_text_padding"
+                android:paddingLeft="40sp"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:text="@string/txvAboutContactSummary" />
 
-        <!-- Terms Summary -->
-        <TextView
-            android:id="@+id/txvAboutTermsSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txvAboutTermsTitle"
-            android:layout_alignLeft="@+id/txvAboutContactTitle"
-            android:paddingBottom="20dp"
-            android:paddingLeft="40sp"
-            android:paddingTop="5dp"
-            android:text="@string/txvAboutTermsSummary" />
-    </RelativeLayout>
+            <!-- Terms Title -->
+            <TextView
+                android:id="@+id/txvAboutTermsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutContactSummary"
+                android:paddingLeft="@dimen/cardview_text_padding"
+                android:paddingTop="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorTextBlack"
+                android:text="@string/txvAboutTermsTitle" />
+
+            <!-- Terms Summary -->
+            <TextView
+                android:id="@+id/txvAboutTermsSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvAboutTermsTitle"
+                android:layout_alignLeft="@+id/txvAboutContactTitle"
+                android:paddingBottom="@dimen/cardview_text_padding"
+                android:paddingLeft="40sp"
+                android:paddingTop="@dimen/cardview_text_padding"
+                android:text="@string/txvAboutTermsSummary" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
 
 </ScrollView>

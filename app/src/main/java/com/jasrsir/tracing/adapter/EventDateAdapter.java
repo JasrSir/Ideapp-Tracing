@@ -20,7 +20,6 @@ import java.util.ArrayList;
 public class EventDateAdapter extends ArrayAdapter<Date> {
 
     private Context  context;
-    static ArrayList<Date> mListDate;
 
     /**
      * Constructor to Date Adapter

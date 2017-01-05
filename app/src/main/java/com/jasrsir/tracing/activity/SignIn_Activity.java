@@ -102,8 +102,6 @@ public class SignIn_Activity extends AppCompatActivity implements IValidateUser.
         }
     }
 
-
-
     @Override
     public void setMessageError(String messageError, int idView) {
         String message = getResources().getString(getResources().getIdentifier(messageError, "string", getPackageName()));
