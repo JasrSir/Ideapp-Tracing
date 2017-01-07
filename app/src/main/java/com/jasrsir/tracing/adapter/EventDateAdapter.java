@@ -10,8 +10,9 @@ import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.pojo.pojoevent.Date;
+import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Adapter to Date event
@@ -24,11 +25,13 @@ public class EventDateAdapter extends ArrayAdapter<Date> {
     /**
      * Constructor to Date Adapter
      * @param context the aplicattion context
+     * @param mList
      */
-    public EventDateAdapter(Context context) {
-        super(context, R.layout.event_date_card );
+    public EventDateAdapter(Context context, List<Date> mList) {
+        super(context, R.layout.event_date_card,  mList);
         this.context = context;
     }
+
 
     /**
      * Class to Holder that contains a date event.

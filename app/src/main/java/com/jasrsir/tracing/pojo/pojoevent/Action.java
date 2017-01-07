@@ -34,7 +34,6 @@ public class Action extends EventPojo {
     /**
      * Link constructor
      *
-     * @param codeEvent    unique code of event
      * @param codeSender   sender unique code
      * @param codeReceiver receiver unique code
      * @param title        action's title
@@ -42,8 +41,8 @@ public class Action extends EventPojo {
      * @param repetition   repetitions per day, week, month
      * @param duration     duration in minutes, hours, days
      */
-    public Action(String codeEvent, String codeSender, String codeReceiver, String title, String summary, String repetition, String duration) {
-        super(codeEvent, codeSender, codeReceiver, title, summary);
+    public Action( String codeSender, String codeReceiver, String title, String summary, String repetition, String duration) {
+        super( codeSender, codeReceiver, title, summary);
         this.repetition = repetition;
         this.duration = duration;
     }

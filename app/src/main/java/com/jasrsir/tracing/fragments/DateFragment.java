@@ -8,15 +8,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.Toolbar;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.adapter.EventDateAdapter;
+import com.jasrsir.tracing.interfaces.EventPojoPresenter;
+import com.jasrsir.tracing.pojo.pojoevent.Date;
+import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
+import com.jasrsir.tracing.repository.DateRepositoryImpl;
+
+import java.util.List;
 
 
-public class DateFragment extends Fragment {
+public class DateFragment extends Fragment implements EventPojoPresenter.View {
 
     private ListView mListDate;
-    private Toolbar mToolbar;
+    private EventDateAdapter mAdapter;
+    static Context mConext;
 
 
     private OnFragmentInteractionListener mListener;
@@ -26,18 +33,18 @@ public class DateFragment extends Fragment {
     }
 
 
-    public static DateFragment newInstance(String param1, String param2) {
+    public static DateFragment newInstance(Bundle args, Context context) {
         DateFragment fragment = new DateFragment();
-        Bundle args = new Bundle();
         fragment.setArguments(args);
+        mConext = context;
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        mListDate = (ListView) getActivity().findViewById(R.id.listVDate);
+        setRetainInstance(true);
+        setHasOptionsMenu(true);
         //deberiamos leer el archivo y hacer que se realice
         if (getArguments() != null) {
 
@@ -49,7 +56,12 @@ public class DateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_date, container, false);
+        View view = inflater.inflate(R.layout.fragment_date, container, false);
+        mListDate = (ListView) view.findViewById(R.id.listVDate);
+        mAdapter = new EventDateAdapter(mConext, DateRepositoryImpl.getInstance().getEvents());
+        mListDate.setAdapter(mAdapter);
+        getActivity().getActionBar().setTitle("Citas");
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -74,6 +86,11 @@ public class DateFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void showMessage(String message) {
+
     }
 
 

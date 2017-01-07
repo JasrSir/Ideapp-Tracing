@@ -42,7 +42,6 @@ public class Date extends EventPojo {
 
     /**
      * Date event constructor
-     * @param codeEvent     unique code of event
      * @param codeSender    sender unique code
      * @param codeReceiver  receiver unique code
      * @param title         date's title
@@ -51,8 +50,8 @@ public class Date extends EventPojo {
      * @param hourStart     the date start at...
      * @param hourEnd       the date end at...
      */
-    public Date(String codeEvent, String codeSender, String codeReceiver, String title, String summary, String date, String hourStart, String hourEnd) {
-        super(codeEvent, codeSender, codeReceiver, title, summary);
+    public Date(String codeSender, String codeReceiver, String title, String summary, String date, String hourStart, String hourEnd) {
+        super( codeSender, codeReceiver, title, summary);
         this.date = date;
         this.hourStart = hourStart;
         this.hourEnd = hourEnd;

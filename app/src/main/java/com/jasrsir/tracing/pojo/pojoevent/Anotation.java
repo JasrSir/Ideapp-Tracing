@@ -16,14 +16,13 @@ public class Anotation extends EventPojo {
     /**
      * Anotation constructor (equals super class)
      *
-     * @param codeEvent    unique code of event
      * @param codeSender   sender unique code
      * @param codeReceiver receiver unique code
      * @param title        anotation title
      * @param summary      anotation summary
      */
-    public Anotation(String codeEvent, String codeSender, String codeReceiver, String title, String summary) {
-        super(codeEvent, codeSender, codeReceiver, title, summary);
+    public Anotation( String codeSender, String codeReceiver, String title, String summary) {
+        super( codeSender, codeReceiver, title, summary);
     }
     //endregion
 }

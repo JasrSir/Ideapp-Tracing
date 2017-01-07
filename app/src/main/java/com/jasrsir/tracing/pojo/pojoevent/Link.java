@@ -26,15 +26,14 @@ public class Link extends EventPojo {
     /**
      * Link constructor
      *
-     * @param codeEvent    unique code of event
      * @param codeSender   sender unique code
      * @param codeReceiver receiver unique code
      * @param title        link's title
      * @param summary      link's summary
      * @param link         url
      */
-    public Link(String codeEvent, String codeSender, String codeReceiver, String title, String summary, String link) {
-        super(codeEvent, codeSender, codeReceiver, title, summary);
+    public Link( String codeSender, String codeReceiver, String title, String summary, String link) {
+        super( codeSender, codeReceiver, title, summary);
         this.link = link;
     }
     //endregion

@@ -15,6 +15,7 @@ public interface EventPojoPresenter {
     interface Presenter {
         void addEvent(EventPojo event);
         void updateEvent(EventPojo event);
+        void deleteEvent(EventPojo event);
         void onDestroy();
     }
 

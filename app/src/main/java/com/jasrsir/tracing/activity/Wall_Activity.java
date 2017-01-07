@@ -1,6 +1,7 @@
 package com.jasrsir.tracing.activity;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -15,6 +16,7 @@ import android.widget.FrameLayout;
 import android.widget.Toolbar;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.fragments.DateFragment;
 import com.jasrsir.tracing.viewlistRecicler.ListView_Activity;
 import com.jasrsir.tracing.viewlistRecicler.RecyclerView_Activity;
 
@@ -26,6 +28,11 @@ public class Wall_Activity extends Activity {
     private BottomNavigationView mBNVmenu;
     private FloatingActionButton mFabAdd;
     private CoordinatorLayout mCoordLay;
+    private MenuItem itemSelected;
+
+    //fragments
+    private DateFragment mDateFragment;
+    private Fragment mFragmentBefore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +41,8 @@ public class Wall_Activity extends Activity {
 
         toolbar = (Toolbar) findViewById(R.id.toolBarWall);
         setActionBar(toolbar);
+        mDateFragment = DateFragment.newInstance(null, Wall_Activity.this);
+        mFragmentBefore = mDateFragment;
         parentWall = (FrameLayout) findViewById(R.id.frameLayoutWall);
         mCoordLay = (CoordinatorLayout) findViewById(R.id.activity_wall);
         mFabAdd = (FloatingActionButton) findViewById(R.id.fabAddWall);
@@ -42,18 +51,24 @@ public class Wall_Activity extends Activity {
        mBNVmenu.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                itemSelected = item;
+                toolbar.setTitle(itemSelected.getTitle());
+                Fragment fragmentAfter = null;
                 switch (item.getItemId()) {
                     case R.id.bnvWallAction:
                         break;
                     case R.id.bnvWallAnotation:
                         break;
                     case R.id.bnvWallDate:
+                        fragmentAfter = mDateFragment;
                         break;
                     case R.id.bnvWallLink:
                         break;
                     default:
                         break;
                 }
+                //getFragmentManager().beginTransaction().replace(mFragmentBefore.getId(),fragmentAfter).commit();
+                mFragmentBefore = fragmentAfter;
                 return true;
             }
         });
@@ -66,7 +81,7 @@ public class Wall_Activity extends Activity {
             @Override
             public void onClick(View view) {
                 bundleEvent = new Bundle();
-                switch (mBNVmenu.findFocus().getId()) {
+                switch (itemSelected.getItemId()) {
                     case R.id.bnvWallAction:
                         bundleEvent.putString("EVENT", "action");
                         break;
@@ -85,6 +100,8 @@ public class Wall_Activity extends Activity {
                 startActivity(new Intent(Wall_Activity.this, NewEvent_Activity.class).putExtras(bundleEvent));
             }
         });
+
+        getFragmentManager().beginTransaction().replace(parentWall.getId(),mDateFragment).commit();
 
     }
 
