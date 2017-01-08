@@ -83,4 +83,19 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
         repositoryAnotation = null;
         repositoryLink = null;
     }
+
+    @Override
+    public void onAddToCardButtonClicked() {
+
+    }
+
+    @Override
+    public EventPojo getEventPojo(long id) {
+        return null;
+    }
+
+    @Override
+    public void onDeleteEventButtonClicked(EventPojo event) {
+        deleteEvent(event);
+    }
 }

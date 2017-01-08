@@ -1,11 +1,9 @@
 package com.jasrsir.tracing.fragments;
 
-import android.content.Context;
-import android.net.Uri;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.content.Context;
+import android.os.Bundle;
 import android.support.design.widget.Snackbar;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,34 +16,33 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.jasrsir.tracing.R;
-import com.jasrsir.tracing.adapter.EventDateAdapter;
+import com.jasrsir.tracing.adapter.EventLinkAdapter;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
 import com.jasrsir.tracing.listeners.SimpleMultiCloiceModeListener;
 import com.jasrsir.tracing.pojo.pojoevent.Date;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
+import com.jasrsir.tracing.pojo.pojoevent.Link;
 import com.jasrsir.tracing.presenter.EventPojoPresenterImpl;
 import com.jasrsir.tracing.presenter.MultiChoicePresenter;
-import com.jasrsir.tracing.repository.DateRepositoryImpl;
-
-import java.util.List;
+import com.jasrsir.tracing.repository.LinkRepositoryImpl;
 
 
-public class DateFragment extends Fragment implements EventPojoPresenter.View {
+public class LinkFragment extends Fragment implements EventPojoPresenter.View {
 
-    private ListView mListDate;
+    private ListView mListLink;
     private ImageView mImageEmpty;
-    private EventDateAdapter mAdapter;
+    private EventLinkAdapter mAdapter;
     private EventPojoPresenterImpl mPresenter;
     static Context mConext;
 
 
     private OnFragmentInteractionListener mListener;
 
-    public DateFragment() {
+    public LinkFragment() {
         // Required empty public constructor
     }
-    public static DateFragment newInstance(Bundle args, Context context) {
-        DateFragment fragment = new DateFragment();
+    public static LinkFragment newInstance(Bundle args, Context context) {
+        LinkFragment fragment = new LinkFragment();
         fragment.setArguments(args);
         mConext = context;
         return fragment;
@@ -54,7 +51,7 @@ public class DateFragment extends Fragment implements EventPojoPresenter.View {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mAdapter = new EventDateAdapter(mConext, DateRepositoryImpl.getInstance().getEvents());
+        mAdapter = new EventLinkAdapter(mConext, LinkRepositoryImpl.getInstance().getEvents());
         mPresenter = new EventPojoPresenterImpl(this);
         setRetainInstance(true);
         setHasOptionsMenu(true);
@@ -68,36 +65,35 @@ public class DateFragment extends Fragment implements EventPojoPresenter.View {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater,container,savedInstanceState);
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_date, container, false);
-        mListDate = (ListView) view.findViewById(R.id.listVDate);
-        mImageEmpty = (ImageView) view.findViewById(R.id.imageEmpty);
+        View view = inflater.inflate(R.layout.fragment_link, container, false);
+        mListLink = (ListView) view.findViewById(R.id.listVLink);
+        mImageEmpty = (ImageView) view.findViewById(R.id.imageEmptyLink);
         return view;
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
-        mListDate.setAdapter(mAdapter);
+        mListLink.setAdapter(mAdapter);
 
-        mListDate.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        mListLink.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
             }
         });
 
-        mListDate.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
-        SimpleMultiCloiceModeListener simpleMultiCloiceModeListener = new SimpleMultiCloiceModeListener(mConext,mListDate.getTouchables(),getActivity().getActionBar(), new MultiChoicePresenter(mPresenter));
-        mListDate.setMultiChoiceModeListener(simpleMultiCloiceModeListener);
-        mListDate.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        mListLink.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
+        SimpleMultiCloiceModeListener simpleMultiCloiceModeListener = new SimpleMultiCloiceModeListener(mConext, mListLink.getTouchables(),getActivity().getActionBar(), new MultiChoicePresenter(mPresenter));
+        mListLink.setMultiChoiceModeListener(simpleMultiCloiceModeListener);
+        mListLink.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                int posSelected = mListDate.getCheckedItemPosition();
-                mListDate.setItemChecked(i,posSelected == i);
+                int posSelected = mListLink.getCheckedItemPosition();
+                mListLink.setItemChecked(i,posSelected == i);
                 return true;
             }
         });
-        getActivity().getActionBar().setTitle("Citas");
-        if (mListDate.getCount() == 0)
+        if (mListLink.getCount() == 0)
             showEmptyState(true);
         super.onViewCreated(view, savedInstanceState);
     }
@@ -148,7 +144,6 @@ public class DateFragment extends Fragment implements EventPojoPresenter.View {
     @Override
     public void onDestroy() {
         super.onDestroy();
-
     }
 
     @Override
@@ -169,7 +164,7 @@ public class DateFragment extends Fragment implements EventPojoPresenter.View {
     }
 
     private  void hideList(boolean hide){
-        mListDate.setVisibility(hide ? View.GONE : View.VISIBLE);
+        mListLink.setVisibility(hide ? View.GONE : View.VISIBLE);
         mImageEmpty.setVisibility(hide ? View.VISIBLE : View.GONE);
     }
 
@@ -183,7 +178,7 @@ public class DateFragment extends Fragment implements EventPojoPresenter.View {
         Snackbar.make(getView(),"deshacer borrado ",Snackbar.LENGTH_LONG).setAction(R.string.action_undo, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAdapter.add((Date)event);
+                mAdapter.add((Link) event);
 
             }
         }).show();

@@ -53,7 +53,7 @@
     <string name="noEquals">Email o password NO coinciden</string>
     <string name="txvDateFHourEnd">A</string>
     <string name="txvDateFHourStart">De</string>
-    <string name="txvDateFDaySelect">Dia de la cita</string>
+    <string name="txvDateFDaySelect">Dia</string>
     <string name="wall_menu_link">Link</string>
     <string name="wall_menu_anotation">Notas</string>
     <string name="wall_menu_action">Acción</string>
@@ -82,5 +82,8 @@
     <string name="ActionBarNewEventLink">Crea un nuevo link</string>
     <string name="ActionBarNewEventPost">Crea una anotación</string>
     <string name="newEventErrorEmpty">No puede haber ningún campo vacío</string>
+    <string name="modifyProfile">Modifica tu perfil</string>
+    <string name="delete_meu">Borrar</string>
+    <string name="action_undo">DESHACER</string>
 
 </resources>

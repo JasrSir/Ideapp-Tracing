@@ -170,11 +170,27 @@ public class NewEvent_Activity extends AppCompatActivity implements EventPojoPre
         }
         presenter.addEvent(newEvent);
         finish();
+
     }
 
     @Override
     public void showMessage(String message) {
         Snackbar.make(findViewById(R.id.activity_new_event),message,Snackbar.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showEvent() {
+
+    }
+
+    @Override
+    public void showEmptyState(boolean show) {
+
+    }
+
+    @Override
+    public void showMessageDelete(EventPojo event) {
+
     }
 
     //endregion

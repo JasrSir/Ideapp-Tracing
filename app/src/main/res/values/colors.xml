@@ -9,4 +9,5 @@
     <color name="colorTextBlack">#383333</color>
     <color name="colorError">#e2080c</color>
     <color name="colorHint">#da760b</color>
+    <color name="background_statusbar">#999999</color>
 </resources>

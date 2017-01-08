@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.pojo.pojoevent.Anotation;
 
+import java.util.List;
+
 /**
  * Adapter to Anotation event
  */
@@ -23,8 +25,8 @@ public class EventAnotationAdapter extends ArrayAdapter<Anotation> {
      * Constructor to Anotation Adapter
      * @param context the aplicattion context
      */
-    public EventAnotationAdapter(Context context) {
-        super(context, R.layout.event_anotation_card );
+    public EventAnotationAdapter(Context context, List<Anotation> mList) {
+        super(context, R.layout.event_anotation_card ,mList);
         this.context = context;
     }
 

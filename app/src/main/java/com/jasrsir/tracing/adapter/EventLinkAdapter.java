@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.pojo.pojoevent.Link;
 
+import java.util.List;
+
 
 /**
  * Adapter to Link event
@@ -24,8 +26,8 @@ public class EventLinkAdapter extends ArrayAdapter<Link> {
      * Constructor to Link Adapter
      * @param context the aplicattion context
      */
-    public EventLinkAdapter(Context context) {
-        super(context, R.layout.event_link_card );
+    public EventLinkAdapter(Context context,List<Link> mList) {
+        super(context, R.layout.event_link_card,mList );
         this.context = context;
     }
 

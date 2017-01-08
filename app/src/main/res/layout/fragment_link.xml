@@ -1,8 +1,8 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/fragmentDate"
     android:layout_width="match_parent"
+    android:id="@+id/fragmentLink"
     android:layout_height="wrap_content"
     tools:context="com.jasrsir.tracing.fragments.DateFragment">
 
@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/penandink"
-        android:id="@+id/imageEmpty"
+        android:id="@+id/imageEmptyLink"
         android:layout_gravity="center"
         />
 
@@ -19,6 +19,6 @@
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
         android:layout_marginBottom="56dp"
-        android:id="@+id/listVDate"/>
+        android:id="@+id/listVLink"/>
 
 </FrameLayout>

@@ -131,6 +131,7 @@ public class SignUp_Activity extends AppCompatActivity implements IValidateAccou
         mProfileImage = (ImageView) findViewById(R.id.materialup_profile_image);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.materialup_toolbar);
+        toolbar.setTitle(R.string.modifyProfile);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override public void onClick(View v) {
                 onBackPressed();

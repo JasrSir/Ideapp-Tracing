@@ -17,6 +17,7 @@ import android.widget.Toolbar;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.fragments.DateFragment;
+import com.jasrsir.tracing.fragments.LinkFragment;
 import com.jasrsir.tracing.viewlistRecicler.ListView_Activity;
 import com.jasrsir.tracing.viewlistRecicler.RecyclerView_Activity;
 
@@ -32,6 +33,9 @@ public class Wall_Activity extends Activity {
 
     //fragments
     private DateFragment mDateFragment;
+    private LinkFragment mLinkFragment;
+   // private AnotationFragment mAnotationFragment;
+  //  private ActionFragment mActionFragment;
     private Fragment mFragmentBefore;
 
     @Override
@@ -42,6 +46,9 @@ public class Wall_Activity extends Activity {
         toolbar = (Toolbar) findViewById(R.id.toolBarWall);
         setActionBar(toolbar);
         mDateFragment = DateFragment.newInstance(null, Wall_Activity.this);
+       // mAnotationFragment = AnotationFragment.newInstance(null, Wall_Activity.this);
+        //mActionFragment = ActionFragment.newInstance(null, Wall_Activity.this);
+        mLinkFragment = LinkFragment.newInstance(null, Wall_Activity.this);
         mFragmentBefore = mDateFragment;
         parentWall = (FrameLayout) findViewById(R.id.frameLayoutWall);
         mCoordLay = (CoordinatorLayout) findViewById(R.id.activity_wall);
@@ -56,18 +63,23 @@ public class Wall_Activity extends Activity {
                 Fragment fragmentAfter = null;
                 switch (item.getItemId()) {
                     case R.id.bnvWallAction:
+                        //fragmentAfter = mActionFragment;
                         break;
                     case R.id.bnvWallAnotation:
+                        //fragmentAfter = mAnotationFragment;
                         break;
                     case R.id.bnvWallDate:
                         fragmentAfter = mDateFragment;
+                        mDateFragment.showEvent();
                         break;
                     case R.id.bnvWallLink:
+                        fragmentAfter = mLinkFragment;
+                        //mLinkFragment.showEvent();
                         break;
                     default:
                         break;
                 }
-                //getFragmentManager().beginTransaction().replace(mFragmentBefore.getId(),fragmentAfter).commit();
+                getFragmentManager().beginTransaction().replace(mFragmentBefore.getId(),fragmentAfter).commit();
                 mFragmentBefore = fragmentAfter;
                 return true;
             }
@@ -97,11 +109,29 @@ public class Wall_Activity extends Activity {
                     default:
                         break;
                 }
+                //for resuLT
                 startActivity(new Intent(Wall_Activity.this, NewEvent_Activity.class).putExtras(bundleEvent));
+                switch (mFragmentBefore.getId()) {
+                    case R.id.fragmentDate:
+                        mDateFragment.showEvent();
+                        break;
+                    case R.id.bnvWallAnotation:
+                        bundleEvent.putString("EVENT", "post");
+                        break;
+                    case R.id.bnvWallDate:
+                        bundleEvent.putString("EVENT", "date");
+                        break;
+                    case R.id.fragmentLink:
+                        mLinkFragment.showEvent();
+                        break;
+                    default:
+                        break;
+                }
+
             }
         });
-
         getFragmentManager().beginTransaction().replace(parentWall.getId(),mDateFragment).commit();
+
 
     }
 
@@ -112,8 +142,8 @@ public class Wall_Activity extends Activity {
     }
 
     @Override
-    public boolean onMenuItemSelected(int featureId, MenuItem item) {
-        super.onMenuItemSelected(featureId, item);
+    public boolean onOptionsItemSelected(MenuItem item) {
+        super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
             case R.id.ndAbout:
                 startActivity(new Intent(Wall_Activity.this, About_Activity.class));
