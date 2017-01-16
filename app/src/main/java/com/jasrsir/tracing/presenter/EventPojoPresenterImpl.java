@@ -1,5 +1,10 @@
 package com.jasrsir.tracing.presenter;
 
+import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.adapter.EventDateAdapter;
+import com.jasrsir.tracing.fragments.AnotationFragment;
+import com.jasrsir.tracing.fragments.DateFragment;
+import com.jasrsir.tracing.fragments.LinkFragment;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
 import com.jasrsir.tracing.pojo.pojoevent.Action;
 import com.jasrsir.tracing.pojo.pojoevent.Anotation;
@@ -22,16 +27,19 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
     private ActionRepositoryImpl repositoryAction;
     private LinkRepositoryImpl repositoryLink;
     private AnotationRepositoryImpl repositoryAnotation;
+    private EventDateAdapter mAdapterDate;
 
     //private Repositorio repository;
     public EventPojoPresenterImpl(EventPojoPresenter.View view) {
         this.view = view;
-        this.repositoryDate = DateRepositoryImpl.getInstance();
-        this.repositoryAction = ActionRepositoryImpl.getInstance();
-        this.repositoryAnotation = AnotationRepositoryImpl.getInstance();
-        this.repositoryLink = LinkRepositoryImpl.getInstance();
 
+            this.repositoryDate = DateRepositoryImpl.getInstance();
+            this.repositoryLink = LinkRepositoryImpl.getInstance();
+            this.repositoryAnotation = AnotationRepositoryImpl.getInstance();
 
+         /*else if (view instanceof Action) {
+             this.repositoryAction = ActionRepositoryImpl.getInstance();
+        }*/
     }
 
     @Override
@@ -39,6 +47,7 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
 
         if (event instanceof Date) {
             repositoryDate.addDate((Date) event);
+            mAdapterDate.notifyDataSetChanged();
         } else if (event instanceof Anotation) {
             repositoryAnotation.addAnotation((Anotation) event);
         } else if (event instanceof Link) {
@@ -46,6 +55,7 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
         } else if (event instanceof Action) {
             repositoryAction.addAction((Action) event);
         }
+        view.showMessage("Añadido nuevo Evento");
 
     }
 

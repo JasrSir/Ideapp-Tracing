@@ -1,0 +1,24 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentAnotation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.jasrsir.tracing.fragments.DateFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/penandink"
+        android:id="@+id/imageEmptyAnotation"
+        android:layout_gravity="center"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="56dp"
+        android:id="@+id/listVAnotation"/>
+
+</FrameLayout>

@@ -44,6 +44,7 @@ public class ActionRepositoryImpl implements ActionRepository {
         int index = events.indexOf(getActionById(event.getId()));
         events.remove(index);
         events.add(index, event);
+
     }
 
     @Override

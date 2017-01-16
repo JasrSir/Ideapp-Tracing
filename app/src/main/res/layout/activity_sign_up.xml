@@ -5,6 +5,7 @@
     android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:theme="@style/ThemeInfo"
     tools:context="com.jasrsir.tracing.activity.SignUp_Activity">
 
     <android.support.design.widget.AppBarLayout
@@ -39,8 +40,8 @@
             android:layout_marginTop="-48dp"
             android:elevation="8dp"
             android:src="@drawable/user_avatar"
-            app:border_color="#FFF"
-            app:border_width="2dp"
+            app:civ_border_color="#FFF"
+            app:civ_border_width="2dp"
             app:layout_scrollFlags="scroll" />
 
         <android.support.v7.widget.Toolbar

@@ -19,7 +19,6 @@ import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.adapter.EventLinkAdapter;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
 import com.jasrsir.tracing.listeners.SimpleMultiCloiceModeListener;
-import com.jasrsir.tracing.pojo.pojoevent.Date;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 import com.jasrsir.tracing.pojo.pojoevent.Link;
 import com.jasrsir.tracing.presenter.EventPojoPresenterImpl;

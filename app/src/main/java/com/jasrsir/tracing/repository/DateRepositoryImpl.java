@@ -41,6 +41,7 @@ public class DateRepositoryImpl implements DateRepository {
     @Override
     public void deleteDate(Date event) {
         events.remove(event);
+
     }
 
     @Override

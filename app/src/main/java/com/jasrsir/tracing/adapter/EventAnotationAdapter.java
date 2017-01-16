@@ -28,6 +28,7 @@ public class EventAnotationAdapter extends ArrayAdapter<Anotation> {
     public EventAnotationAdapter(Context context, List<Anotation> mList) {
         super(context, R.layout.event_anotation_card ,mList);
         this.context = context;
+        this.addAll(mList);
     }
 
     /**

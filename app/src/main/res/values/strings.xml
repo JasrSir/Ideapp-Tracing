@@ -85,5 +85,11 @@
     <string name="modifyProfile">Modifica tu perfil</string>
     <string name="delete_meu">Borrar</string>
     <string name="action_undo">DESHACER</string>
+    <string name="ndCalendar">Calendario</string>
+    <string name="nv_configuration">Configuración</string>
+    <string name="ndUser">Usuarios(P,E)</string>
+    <string name="nd_professional">Profesionales(E,U)</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 
 </resources>

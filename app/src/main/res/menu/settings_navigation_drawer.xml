@@ -2,16 +2,38 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/ndAbout"
-        android:icon="@drawable/ic_info_black_24dp"
-        app:showAsAction="always"
-        android:title="@string/ndAbout"/>
-    <item android:id="@+id/ndSettings"
-        android:icon="@drawable/ic_settings_black_24dp"
-        app:showAsAction="always"
-        android:title="@string/ndSettings"/>
-    <item android:id="@+id/ndProfile"
-        app:showAsAction="always"
-        android:title="@string/ndProfile"/>
-    <!-- android:icon="@drawable/ic_link_white_36dp"-->
-</menu>
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/ndProfile"
+            android:checked="true"
+            android:icon="@drawable/ic_profile_navview"
+            android:title="@string/ndProfile"/>
+
+        <item android:id="@+id/ndProfessional"
+            android:icon="@drawable/ic_professional_nv"
+            android:title="@string/nd_professional"/>
+
+        <item android:id="@+id/ndUser"
+            android:icon="@drawable/ic_users_nv"
+            android:title="@string/ndUser"/>
+
+        <item android:id="@+id/ndCalendar"
+            android:icon="@drawable/ic_calendar_nv"
+            android:title="@string/ndCalendar"/>
+
+    </group>
+        <item
+            android:id="@+id/navigationSetting"
+            android:title="@string/nv_configuration">
+            <menu>
+                <item android:id="@+id/ndSettings"
+                    android:icon="@drawable/ic_setting_nv"
+                    android:title="@string/ndSettings"/>
+                <item android:id="@+id/ndAbout"
+                    android:icon="@drawable/ic_about_nv"
+                    android:title="@string/ndAbout"/>
+
+            </menu>
+
+        </item>
+    </menu>

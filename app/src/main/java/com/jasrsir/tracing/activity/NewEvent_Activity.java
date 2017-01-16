@@ -13,6 +13,7 @@ import android.widget.NumberPicker;
 import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
+import com.jasrsir.tracing.adapter.EventAnotationAdapter;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
 import com.jasrsir.tracing.pojo.pojoevent.Action;
 import com.jasrsir.tracing.pojo.pojoevent.Anotation;
@@ -47,6 +48,7 @@ public class NewEvent_Activity extends AppCompatActivity implements EventPojoPre
     private NumberPicker mNumPickEndMin;
 
     private EventPojoPresenterImpl presenter;
+    private EventAnotationAdapter mAnotAdapter;
     //endregion
 
     //region Functions
@@ -169,6 +171,7 @@ public class NewEvent_Activity extends AppCompatActivity implements EventPojoPre
                 break;
         }
         presenter.addEvent(newEvent);
+
         finish();
 
     }

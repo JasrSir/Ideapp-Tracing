@@ -29,6 +29,7 @@ public class EventLinkAdapter extends ArrayAdapter<Link> {
     public EventLinkAdapter(Context context,List<Link> mList) {
         super(context, R.layout.event_link_card,mList );
         this.context = context;
+        this.addAll(mList);
     }
 
     /**
@@ -71,4 +72,6 @@ public class EventLinkAdapter extends ArrayAdapter<Link> {
 
         return item;
     }
+
+
 }

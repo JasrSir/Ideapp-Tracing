@@ -6,6 +6,7 @@
     android:id="@+id/activity_new_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:theme="@style/ThemeInfo"
     tools:context="com.jasrsir.tracing.activity.NewEvent_Activity">
 
     <android.support.design.widget.FloatingActionButton

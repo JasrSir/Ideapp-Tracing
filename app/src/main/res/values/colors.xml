@@ -10,4 +10,5 @@
     <color name="colorError">#e2080c</color>
     <color name="colorHint">#da760b</color>
     <color name="background_statusbar">#999999</color>
+    <color name="backgroun_action_mode">#9dc99d</color>
 </resources>

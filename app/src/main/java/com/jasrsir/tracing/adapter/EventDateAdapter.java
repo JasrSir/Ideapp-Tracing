@@ -30,6 +30,7 @@ public class EventDateAdapter extends ArrayAdapter<Date> {
     public EventDateAdapter(Context context, List<Date> mList) {
         super(context, R.layout.event_date_card,  mList);
         this.context = context;
+        this.addAll(mList);
     }
 
 
@@ -78,4 +79,10 @@ public class EventDateAdapter extends ArrayAdapter<Date> {
 
         return item;
     }
+
+    public void deleteDate(Date date) {
+        notifyDataSetChanged();
+    }
+
+
 }
