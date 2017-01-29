@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     //region Objects
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "Tracing.db";
 
     private volatile static DatabaseHelper mInstance; //synronized
@@ -62,6 +62,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (mOpenCounter.decrementAndGet() == 0)
             mDatabase.close();
     }
+
+    public SQLiteDatabase open(){
+        return getWritableDatabase();
+    }
     //endregion
 
     //region Override Functions
@@ -75,7 +79,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqldb.beginTransaction();
 
         try {
-
+            sqldb.execSQL(TracingContract.BusinessEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.ProfessionalEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.UserEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.Business_ProfessionalEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.Professional_UserEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.ZonesEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.NotesEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.ActionsEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.LinksEntry.SQL_CREATE_ENTRIES);
+            sqldb.execSQL(TracingContract.DatesEntry.SQL_CREATE_ENTRIES);
+            sqldb.setTransactionSuccessful();
         } catch (SQLException e){
             Log.e("tracingdatabase","Error to create DATABASE-> " + e.getMessage());
         } finally {
@@ -88,7 +102,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         sqldb.beginTransaction();
 
         try {
-
+            sqldb.execSQL(TracingContract.BusinessEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.ProfessionalEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.UserEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.Business_ProfessionalEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.Professional_UserEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.ZonesEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.NotesEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.ActionsEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.LinksEntry.SQL_DELETE_ENTRIES);
+            sqldb.execSQL(TracingContract.DatesEntry.SQL_DELETE_ENTRIES);
+            onCreate(sqldb);
+            sqldb.setTransactionSuccessful();
         } catch (SQLException e){
             Log.e("tracingdatabase","Error to create DATABASE-> " + e.getMessage());
         } finally {

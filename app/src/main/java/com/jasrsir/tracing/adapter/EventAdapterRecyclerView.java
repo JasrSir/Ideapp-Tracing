@@ -26,7 +26,7 @@ public class EventAdapterRecyclerView extends RecyclerView.Adapter<EventAdapterR
 
     public EventAdapterRecyclerView(Context context) {
         this.context = context;
-        mEvents = new ArrayList<EventPojo>(((TracingApplication)context.getApplicationContext()).getListEvent());
+        mEvents = new ArrayList<EventPojo>();
     }
 
     @Override
@@ -68,8 +68,6 @@ public class EventAdapterRecyclerView extends RecyclerView.Adapter<EventAdapterR
     }
 
     public void getAllProduct() {
-        mEvents.clear();
-        mEvents.addAll(((TracingApplication)context.getApplicationContext()).getListEvent());
         notifyDataSetChanged();
 
     }

@@ -26,7 +26,7 @@ public class TracingApplication extends Application {
     public void onCreate() {
         super.onCreate();
         TracingApplication.mContext = getApplicationContext();
-
+        DatabaseHelper.getInstance().open();
     }
 
    // private void saveEvent(EventPojo eventPojo) {

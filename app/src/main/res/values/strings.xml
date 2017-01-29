@@ -22,7 +22,7 @@
     <string name="txvLostUC">No recuerdo la contraseña</string>
     <string name="edtSignUpPhone">Teléfono de contacto</string>
     <string name="btnSignUpRegister">Registrarse</string>
-    <string name="title_activity_wall">Wall</string>
+    <string name="title_activity_wall">Muro</string>
 
     <string name="action_settings">Ajustes</string>
     <string name="txvSignLostPassword">¿Has olvidado la contraseña? \n Envíate la contraseña a tu correo para volver a iniciar sesión en Tracing</string>
@@ -54,14 +54,14 @@
     <string name="txvDateFHourEnd">A</string>
     <string name="txvDateFHourStart">De</string>
     <string name="txvDateFDaySelect">Dia</string>
-    <string name="wall_menu_link">Link</string>
+    <string name="wall_menu_link">Enlaces</string>
     <string name="wall_menu_anotation">Notas</string>
-    <string name="wall_menu_action">Acción</string>
+    <string name="wall_menu_action">Acciones</string>
     <string name="wall_menu_date">Citas</string>
     <string name="ndAbout">Acerca de...</string>
     <string name="ndSettings">Configuración</string>
     <string name="ndProfile">Perfil</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_settings">Configuración</string>
 
     <string name="settings_Profile">Perfil</string>
     <string name="setting_Sw_title">¿Recordar usuario?</string>
@@ -80,7 +80,7 @@
     <string name="ActionBarNewEventDate">Crea una nueva cita</string>
     <string name="ActionBarNewEventAction">Crea una nueva acción</string>
     <string name="ActionBarNewEventLink">Crea un nuevo link</string>
-    <string name="ActionBarNewEventPost">Crea una anotación</string>
+    <string name="ActionBarNewEventPost">Crea una nota</string>
     <string name="newEventErrorEmpty">No puede haber ningún campo vacío</string>
     <string name="modifyProfile">Modifica tu perfil</string>
     <string name="delete_meu">Borrar</string>

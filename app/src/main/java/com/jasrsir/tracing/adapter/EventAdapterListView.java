@@ -64,7 +64,7 @@ public class EventAdapterListView extends ArrayAdapter<EventPojo>{
     }
 
     public EventAdapterListView(Context context) {
-        super(context, R.layout.card_event, ((TracingApplication)context.getApplicationContext()).getListEvent());
+        super(context, R.layout.card_event);
         this.mcontext = context;
     }
 
