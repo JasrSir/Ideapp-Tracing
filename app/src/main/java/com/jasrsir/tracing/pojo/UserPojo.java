@@ -13,7 +13,7 @@ import java.util.UUID;
 public class UserPojo {
 
     //region variables
-    private UUID codeUnique;
+    private String codeUnique;
     private String name;
     private String surname;
     private String email;
@@ -24,11 +24,11 @@ public class UserPojo {
     //endregion
 
     //region getter & setter
-    public UUID getCodeUnique() {
+    public String getCodeUnique() {
         return codeUnique;
     }
 
-    public void setCodeUnique(UUID codeUnique) {
+    public void setCodeUnique(String codeUnique) {
         this.codeUnique = codeUnique;
     }
 
@@ -100,7 +100,7 @@ public class UserPojo {
      * @param phone User phone number
      */
     public UserPojo( String name, String surname, String email, String pass, String phone) {
-        this.codeUnique = UUID.randomUUID();
+        this.codeUnique = UUID.randomUUID().toString();
         this.name = name;
         this.surname = surname;
         this.email = email;

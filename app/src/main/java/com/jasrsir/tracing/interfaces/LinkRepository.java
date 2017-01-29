@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Interface Repository
+ * Interface TracingApplication
  */
 
 public interface LinkRepository {

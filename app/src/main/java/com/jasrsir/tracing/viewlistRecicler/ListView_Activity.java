@@ -6,7 +6,6 @@ import android.widget.ArrayAdapter;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.adapter.EventAdapterListView;
-import com.jasrsir.tracing.adapter.Repository;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 
 public class ListView_Activity extends ListActivity {

@@ -19,12 +19,11 @@ import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.adapter.EventAnotationAdapter;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
 import com.jasrsir.tracing.listeners.SimpleMultiCloiceModeListener;
-import com.jasrsir.tracing.pojo.pojoevent.Anotation;
+import com.jasrsir.tracing.pojo.pojoevent.Note;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
-import com.jasrsir.tracing.pojo.pojoevent.Link;
 import com.jasrsir.tracing.presenter.EventPojoPresenterImpl;
 import com.jasrsir.tracing.presenter.MultiChoicePresenter;
-import com.jasrsir.tracing.repository.AnotationRepositoryImpl;
+import com.jasrsir.tracing.database.AnotationRepositoryImpl;
 
 
 public class AnotationFragment extends Fragment implements EventPojoPresenter.View {
@@ -179,7 +178,7 @@ public class AnotationFragment extends Fragment implements EventPojoPresenter.Vi
         Snackbar.make(getView(),"deshacer borrado ",Snackbar.LENGTH_LONG).setAction(R.string.action_undo, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mAdapter.add((Anotation) event);
+                mAdapter.add((Note) event);
 
             }
         }).show();

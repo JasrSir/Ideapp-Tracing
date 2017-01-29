@@ -23,7 +23,7 @@ import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 import com.jasrsir.tracing.pojo.pojoevent.Link;
 import com.jasrsir.tracing.presenter.EventPojoPresenterImpl;
 import com.jasrsir.tracing.presenter.MultiChoicePresenter;
-import com.jasrsir.tracing.repository.LinkRepositoryImpl;
+import com.jasrsir.tracing.database.LinkRepositoryImpl;
 
 
 public class LinkFragment extends Fragment implements EventPojoPresenter.View {

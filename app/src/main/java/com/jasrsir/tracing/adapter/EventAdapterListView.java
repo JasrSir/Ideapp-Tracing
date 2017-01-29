@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
+import com.jasrsir.tracing.database.TracingApplication;
 
 /**
  * ADAPTER to ListView
@@ -63,7 +64,7 @@ public class EventAdapterListView extends ArrayAdapter<EventPojo>{
     }
 
     public EventAdapterListView(Context context) {
-        super(context, R.layout.card_event, ((Repository)context.getApplicationContext()).getListEvent());
+        super(context, R.layout.card_event, ((TracingApplication)context.getApplicationContext()).getListEvent());
         this.mcontext = context;
     }
 

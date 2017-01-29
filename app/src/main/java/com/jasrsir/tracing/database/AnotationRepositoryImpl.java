@@ -1,9 +1,7 @@
-package com.jasrsir.tracing.repository;
+package com.jasrsir.tracing.database;
 
 import com.jasrsir.tracing.interfaces.AnotationRepository;
-import com.jasrsir.tracing.interfaces.LinkRepository;
-import com.jasrsir.tracing.pojo.pojoevent.Anotation;
-import com.jasrsir.tracing.pojo.pojoevent.Link;
+import com.jasrsir.tracing.pojo.pojoevent.Note;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +12,7 @@ import java.util.List;
 
 public class AnotationRepositoryImpl implements AnotationRepository {
 
-    private ArrayList<Anotation> events;
+    private ArrayList<Note> events;
     private static AnotationRepositoryImpl repository;
 
     private AnotationRepositoryImpl() {
@@ -27,30 +25,30 @@ public class AnotationRepositoryImpl implements AnotationRepository {
 
         return repository;
     }
-    public List<Anotation> getEvents() {
+    public List<Note> getEvents() {
         return events;
     }
 
     @Override
-    public void addAnotation(Anotation event) {
+    public void addAnotation(Note event) {
         events.add(event);
     }
 
     @Override
-    public void deleteAnotation(Anotation event) {
+    public void deleteAnotation(Note event) {
         events.remove(event);
     }
 
     @Override
-    public void updateAnotation(Anotation event) {
+    public void updateAnotation(Note event) {
         int index = events.indexOf(getAnotationById(event.getId()));
         events.remove(index);
         events.add(index, event);
     }
 
     @Override
-    public Anotation getAnotationById(String id) {
-        for(Anotation tmp: events){
+    public Note getAnotationById(String id) {
+        for(Note tmp: events){
             if(tmp.getId().equals(id))
                 return tmp;
         }

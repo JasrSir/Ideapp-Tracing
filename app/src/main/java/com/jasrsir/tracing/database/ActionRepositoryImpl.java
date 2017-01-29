@@ -1,4 +1,4 @@
-package com.jasrsir.tracing.repository;
+package com.jasrsir.tracing.database;
 
 import com.jasrsir.tracing.interfaces.ActionRepository;
 import com.jasrsir.tracing.pojo.pojoevent.Action;

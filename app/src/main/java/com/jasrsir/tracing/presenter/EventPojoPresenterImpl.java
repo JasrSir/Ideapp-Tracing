@@ -1,20 +1,16 @@
 package com.jasrsir.tracing.presenter;
 
-import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.adapter.EventDateAdapter;
-import com.jasrsir.tracing.fragments.AnotationFragment;
-import com.jasrsir.tracing.fragments.DateFragment;
-import com.jasrsir.tracing.fragments.LinkFragment;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
 import com.jasrsir.tracing.pojo.pojoevent.Action;
-import com.jasrsir.tracing.pojo.pojoevent.Anotation;
+import com.jasrsir.tracing.pojo.pojoevent.Note;
 import com.jasrsir.tracing.pojo.pojoevent.Date;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 import com.jasrsir.tracing.pojo.pojoevent.Link;
-import com.jasrsir.tracing.repository.ActionRepositoryImpl;
-import com.jasrsir.tracing.repository.AnotationRepositoryImpl;
-import com.jasrsir.tracing.repository.DateRepositoryImpl;
-import com.jasrsir.tracing.repository.LinkRepositoryImpl;
+import com.jasrsir.tracing.database.ActionRepositoryImpl;
+import com.jasrsir.tracing.database.AnotationRepositoryImpl;
+import com.jasrsir.tracing.database.DateRepositoryImpl;
+import com.jasrsir.tracing.database.LinkRepositoryImpl;
 
 /**
  * Created by jasrsir on 6/01/17.
@@ -48,8 +44,8 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
         if (event instanceof Date) {
             repositoryDate.addDate((Date) event);
             mAdapterDate.notifyDataSetChanged();
-        } else if (event instanceof Anotation) {
-            repositoryAnotation.addAnotation((Anotation) event);
+        } else if (event instanceof Note) {
+            repositoryAnotation.addAnotation((Note) event);
         } else if (event instanceof Link) {
             repositoryLink.addLink((Link) event);
         } else if (event instanceof Action) {
@@ -63,8 +59,8 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
     public void updateEvent(EventPojo event) {
         if (event instanceof Date) {
             repositoryDate.updateDate((Date) event);
-        } else if (event instanceof Anotation) {
-            repositoryAnotation.updateAnotation((Anotation) event);
+        } else if (event instanceof Note) {
+            repositoryAnotation.updateAnotation((Note) event);
         } else if (event instanceof Link) {
             repositoryLink.updateLink((Link) event);
         } else if (event instanceof Action) {
@@ -76,8 +72,8 @@ public class EventPojoPresenterImpl implements EventPojoPresenter.Presenter {
     public void deleteEvent(EventPojo event) {
         if (event instanceof Date) {
             repositoryDate.deleteDate((Date) event);
-        } else if (event instanceof Anotation) {
-            repositoryAnotation.deleteAnotation((Anotation) event);
+        } else if (event instanceof Note) {
+            repositoryAnotation.deleteAnotation((Note) event);
         } else if (event instanceof Link) {
             repositoryLink.deleteLink((Link) event);
         } else if (event instanceof Action) {

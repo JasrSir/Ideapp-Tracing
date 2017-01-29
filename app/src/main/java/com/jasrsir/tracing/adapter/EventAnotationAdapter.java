@@ -9,23 +9,23 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
-import com.jasrsir.tracing.pojo.pojoevent.Anotation;
+import com.jasrsir.tracing.pojo.pojoevent.Note;
 
 import java.util.List;
 
 /**
- * Adapter to Anotation event
+ * Adapter to Note event
  */
 
-public class EventAnotationAdapter extends ArrayAdapter<Anotation> {
+public class EventAnotationAdapter extends ArrayAdapter<Note> {
 
     private Context context;
 
     /**
-     * Constructor to Anotation Adapter
+     * Constructor to Note Adapter
      * @param context the aplicattion context
      */
-    public EventAnotationAdapter(Context context, List<Anotation> mList) {
+    public EventAnotationAdapter(Context context, List<Note> mList) {
         super(context, R.layout.event_anotation_card ,mList);
         this.context = context;
         this.addAll(mList);

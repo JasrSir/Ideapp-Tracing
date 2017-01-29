@@ -1,23 +1,23 @@
 package com.jasrsir.tracing.interfaces;
 
-import com.jasrsir.tracing.pojo.pojoevent.Anotation;
+import com.jasrsir.tracing.pojo.pojoevent.Note;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Interface Repository
+ * Interface TracingApplication
  */
 
 public interface AnotationRepository {
 
-    List<Anotation> allAnotations = new ArrayList<Anotation>();
+    List<Note> allNotes = new ArrayList<Note>();
 
-    void addAnotation(Anotation event);
+    void addAnotation(Note event);
 
-    void deleteAnotation(Anotation event);
+    void deleteAnotation(Note event);
 
-    void updateAnotation(Anotation event);
+    void updateAnotation(Note event);
 
-    Anotation getAnotationById(String id);
+    Note getAnotationById(String id);
 }

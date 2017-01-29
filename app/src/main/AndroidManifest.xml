@@ -3,7 +3,7 @@
     package="com.jasrsir.tracing">
 
     <application
-        android:name=".adapter.Repository"
+        android:name=".database.TracingApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"

@@ -15,8 +15,7 @@ import android.widget.TextView;
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.adapter.EventAnotationAdapter;
 import com.jasrsir.tracing.interfaces.EventPojoPresenter;
-import com.jasrsir.tracing.pojo.pojoevent.Action;
-import com.jasrsir.tracing.pojo.pojoevent.Anotation;
+import com.jasrsir.tracing.pojo.pojoevent.Note;
 import com.jasrsir.tracing.pojo.pojoevent.Date;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 import com.jasrsir.tracing.pojo.pojoevent.Link;
@@ -165,7 +164,7 @@ public class NewEvent_Activity extends AppCompatActivity implements EventPojoPre
                         medtNewEventLink.getText().toString());
                 break;
             case "post":
-                newEvent = new Anotation("sender","receiver",
+                newEvent = new Note("sender","receiver",
                         medtNewEventTitle.getText().toString(),
                         medtNewEventSummary.getText().toString());
                 break;

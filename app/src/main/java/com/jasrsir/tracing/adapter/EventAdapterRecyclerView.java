@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.jasrsir.tracing.R;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
+import com.jasrsir.tracing.database.TracingApplication;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class EventAdapterRecyclerView extends RecyclerView.Adapter<EventAdapterR
 
     public EventAdapterRecyclerView(Context context) {
         this.context = context;
-        mEvents = new ArrayList<EventPojo>(((Repository)context.getApplicationContext()).getListEvent());
+        mEvents = new ArrayList<EventPojo>(((TracingApplication)context.getApplicationContext()).getListEvent());
     }
 
     @Override
@@ -68,7 +69,7 @@ public class EventAdapterRecyclerView extends RecyclerView.Adapter<EventAdapterR
 
     public void getAllProduct() {
         mEvents.clear();
-        mEvents.addAll(((Repository)context.getApplicationContext()).getListEvent());
+        mEvents.addAll(((TracingApplication)context.getApplicationContext()).getListEvent());
         notifyDataSetChanged();
 
     }

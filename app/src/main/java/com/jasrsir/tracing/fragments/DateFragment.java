@@ -1,11 +1,9 @@
 package com.jasrsir.tracing.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.design.widget.Snackbar;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -25,9 +23,7 @@ import com.jasrsir.tracing.pojo.pojoevent.Date;
 import com.jasrsir.tracing.pojo.pojoevent.EventPojo;
 import com.jasrsir.tracing.presenter.EventPojoPresenterImpl;
 import com.jasrsir.tracing.presenter.MultiChoicePresenter;
-import com.jasrsir.tracing.repository.DateRepositoryImpl;
-
-import java.util.List;
+import com.jasrsir.tracing.database.DateRepositoryImpl;
 
 
 public class DateFragment extends Fragment implements EventPojoPresenter.View {
