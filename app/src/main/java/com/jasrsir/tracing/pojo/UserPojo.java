@@ -5,6 +5,7 @@ import android.media.Image;
 import com.jasrsir.tracing.preferences.AccountPreferences;
 
 import java.util.Date;
+import java.util.UUID;
 
 /**
  * POJO CLASS USER (super)
@@ -12,7 +13,7 @@ import java.util.Date;
 public class UserPojo {
 
     //region variables
-    private String codeUnique;
+    private UUID codeUnique;
     private String name;
     private String surname;
     private String email;
@@ -23,11 +24,11 @@ public class UserPojo {
     //endregion
 
     //region getter & setter
-    public String getCodeUnique() {
+    public UUID getCodeUnique() {
         return codeUnique;
     }
 
-    public void setCodeUnique(String codeUnique) {
+    public void setCodeUnique(UUID codeUnique) {
         this.codeUnique = codeUnique;
     }
 
@@ -92,15 +93,14 @@ public class UserPojo {
     //region constructor
     /**
      * Constructor super to create an user
-     * @param codeUnique Auto code unique for user id
      * @param name User name
      * @param surname User surname
      * @param email User email
      * @param pass User password
      * @param phone User phone number
      */
-    public UserPojo(String codeUnique, String name, String surname, String email, String pass, String phone) {
-        this.codeUnique = codeUnique;
+    public UserPojo( String name, String surname, String email, String pass, String phone) {
+        this.codeUnique = UUID.randomUUID();
         this.name = name;
         this.surname = surname;
         this.email = email;

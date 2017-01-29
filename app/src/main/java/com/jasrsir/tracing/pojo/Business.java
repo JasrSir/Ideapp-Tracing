@@ -60,7 +60,6 @@ public class Business extends User {
     //region constructor
     /**
      * Constructor super to create a business user
-     * @param codeUnique Auto code unique for business id
      * @param name business CEO name
      * @param surname business CEO surname
      * @param email business email
@@ -72,8 +71,8 @@ public class Business extends User {
      * @param cif business cif number
      * @param zone business area services
      */
-    public Business(String codeUnique, String name, String surname, String email,String pass, String phone, String nameBusiness, String profession, String adress, String cif, String zone) {
-        super(codeUnique, name, surname, email, pass, phone);
+    public Business( String name, String surname, String email,String pass, String phone, String nameBusiness, String profession, String adress, String cif, String zone) {
+        super( name, surname, email, pass, phone);
         this.nameBusiness = nameBusiness;
         this.profession = profession;
         this.adress = adress;
