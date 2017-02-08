@@ -14,6 +14,7 @@ import android.support.annotation.Nullable;
 
 public class TracingProvider extends ContentProvider {
 
+    //region CONSTANTS
     private static final int BUSINESS = 1;
     private static final int BUSINESS_ID = 2;
     private static final int PROFESSIONAL = 3;
@@ -65,7 +66,7 @@ public class TracingProvider extends ContentProvider {
         uriMatcher.addURI(TracingContract.AUTHORITY,TracingContract.Dates.CONTENT_PATH,DATES);
         uriMatcher.addURI(TracingContract.AUTHORITY,TracingContract.Dates.CONTENT_PATH+"/#",DATES_ID);
     }
-
+    //endregion
     //region Content Provider Override Methods 
     @Override
     public boolean onCreate() {
@@ -99,4 +100,5 @@ public class TracingProvider extends ContentProvider {
     public int update(Uri uri, ContentValues contentValues, String s, String[] strings) {
         return 0;
     }
+    //endregion
 }
