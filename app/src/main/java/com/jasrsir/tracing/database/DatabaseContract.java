@@ -7,9 +7,9 @@ import android.provider.BaseColumns;
  * This class keep the SCHEMA of data i DATABASE
  */
 
-public class TracingContract {
+public class DatabaseContract {
 
-    private TracingContract(){
+    private DatabaseContract(){
 
     }
 
@@ -25,7 +25,7 @@ public class TracingContract {
         public static final String COLUMN_ADDRESS = "address";
         public static final String COLUMN_EMAIL = "email";
         public static final String COLUMN_PHONE = "phone";
-        public static final String COLUMN_ID_ZONE = "idzone";
+        public static final String COLUMN_ID_ZONE = "zone_id";
         public static final String COLUMN_PROFILEBACK = "profileb";
         public static final String COLUMN_PROFILEPRE = "profilep";
 
@@ -62,7 +62,7 @@ public class TracingContract {
         public static final String COLUMN_SURNAME = "surname";
         public static final String COLUMN_EMAIL = "email";
         public static final String COLUMN_PHONE = "phone";
-        public static final String COLUMN_ID_ZONE = "idzone";
+        public static final String COLUMN_ID_ZONE = "zone_id";
         public static final String COLUMN_PROFILEBACK = "profileb";
         public static final String COLUMN_PROFILEPRE = "profilep";
 
@@ -91,7 +91,7 @@ public class TracingContract {
     /**
      * Class to define User Table
      */
-    public static class UserEntry implements BaseColumns {
+    public static class UsersEntry implements BaseColumns {
         //region COLUMNS
         public static final String TABLE_NAME = "users";
         public static final String COLUMN_UCU = "ucu";
@@ -175,14 +175,14 @@ public class TracingContract {
     /**
      * Class to define Professional-users Relationship Table
      */
-    public static class Professional_UserEntry implements BaseColumns {
+    public static class Professional_UsersEntry implements BaseColumns {
         //region COLUMNS
         public static final String TABLE_NAME = "professional_user";
         public static final String COLUMN_UCP = "ucp";
         public static final String COLUMN_UCU = "ucu";
 
         public static final String REFERENCE_UCP = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT,", ProfessionalEntry.TABLE_NAME,ProfessionalEntry.COLUMN_UCP);
-        public static final String REFERENCE_UCU = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT", UserEntry.TABLE_NAME,UserEntry.COLUMN_UCU);
+        public static final String REFERENCE_UCU = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT", UsersEntry.TABLE_NAME, UsersEntry.COLUMN_UCU);
 
         public static final String[] ALL_COLUMNS = new String[]{ COLUMN_UCP,COLUMN_UCU};
         //endregion
