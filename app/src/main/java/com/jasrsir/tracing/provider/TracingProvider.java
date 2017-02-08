@@ -67,6 +67,7 @@ public class TracingProvider extends ContentProvider {
         uriMatcher.addURI(TracingContract.AUTHORITY,TracingContract.Dates.CONTENT_PATH+"/#",DATES_ID);
     }
     //endregion
+
     //region Content Provider Override Methods 
     @Override
     public boolean onCreate() {

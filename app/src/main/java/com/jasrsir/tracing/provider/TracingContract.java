@@ -34,7 +34,7 @@ public class TracingContract {
         public static final String PROFILEBACK = "profileb";
         public static final String PROFILEPRE = "profilep";
 
-        public static final String[] PROYECTION = new String[]{ UCB,SOCIALNAME,ADDRESS, EMAIL, PHONE, ZONE_ID, PROFILEBACK, PROFILEPRE};
+        public static final String[] PROYECTION = new String[]{ BaseColumns._ID ,UCB,SOCIALNAME,ADDRESS, EMAIL, PHONE, ZONE_ID, PROFILEBACK, PROFILEPRE};
 
         //endregion
     }
@@ -55,7 +55,7 @@ public class TracingContract {
         public static final String PROFILEBACK = "profileb";
         public static final String PROFILEPRE = "profilep";
 
-        public static final String[] PROYECTION = new String[]{ UCP,NAME,SURNAME, EMAIL, PHONE, ZONE_ID, PROFILEBACK, PROFILEPRE};
+        public static final String[] PROYECTION = new String[]{BaseColumns._ID , UCP,NAME,SURNAME, EMAIL, PHONE, ZONE_ID, PROFILEBACK, PROFILEPRE};
         //endregion
 
     }
@@ -75,7 +75,7 @@ public class TracingContract {
         public static final String PROFILEBACK = "profileb";
         public static final String PROFILEPRE = "profilep";
 
-        public static final String[] PROYECTION = new String[]{ UCU,NAME,SURNAME, EMAIL, PHONE, PROFILEBACK, PROFILEPRE};
+        public static final String[] PROYECTION = new String[]{BaseColumns._ID , UCU,NAME,SURNAME, EMAIL, PHONE, PROFILEBACK, PROFILEPRE};
         //endregion
 
     }
@@ -107,7 +107,7 @@ public class TracingContract {
         public static final String UCB = "ucb";
         public static final String UCP = "ucp";
 
-        public static final String[] PROYECTION = new String[]{ UCB,UCP};
+        public static final String[] PROYECTION = new String[]{ BaseColumns._ID ,UCB,UCP};
         //endregion
 
     }
@@ -123,7 +123,7 @@ public class TracingContract {
         public static final String UCP = "ucp";
         public static final String UCU = "ucu";
 
-        public static final String[] PROYECTION = new String[]{ UCP,UCU};
+        public static final String[] PROYECTION = new String[]{ BaseColumns._ID ,UCP,UCU};
         //endregion
 
     }
@@ -144,7 +144,7 @@ public class TracingContract {
         public static final String TITLE = "title";
         public static final String NOTE = "note";
 
-        public static final String[] PROYECTION = new String[]{ NOTECODE,SENDER,RECEIVER, TITLE,NOTE};
+        public static final String[] PROYECTION = new String[]{ BaseColumns._ID ,NOTECODE,SENDER,RECEIVER, TITLE,NOTE};
         //endregion
 
     }
@@ -164,7 +164,7 @@ public class TracingContract {
         public static final String REPETITION = "repetition";
         public static final String DURATION = "duration";
 
-        public static final String[] PROYECTION = new String[]{ ACTIONCODE,SENDER,RECEIVER, TITLE,SUMMARY, REPETITION, DURATION};
+        public static final String[] PROYECTION = new String[]{BaseColumns._ID , ACTIONCODE,SENDER,RECEIVER, TITLE,SUMMARY, REPETITION, DURATION};
         //endregion
     }
 
@@ -181,7 +181,7 @@ public class TracingContract {
         public static final String TITLE = "title";
         public static final String LINK = "link";
 
-        public static final String[] PROYECTION = new String[]{ LINKCODE,SENDER,RECEIVER, TITLE, LINK};
+        public static final String[] PROYECTION = new String[]{ BaseColumns._ID ,LINKCODE,SENDER,RECEIVER, TITLE, LINK};
         //endregion
     }
 
@@ -202,7 +202,7 @@ public class TracingContract {
         public static final String SUMMARY = "summary";
 
 
-        public static final String[] PROYECTION = new String[]{ DATECODE,SENDER,RECEIVER, TITLE,CITEDATE,HOURSTART, HOUREND, SUMMARY};
+        public static final String[] PROYECTION = new String[]{ BaseColumns._ID ,DATECODE,SENDER,RECEIVER, TITLE,CITEDATE,HOURSTART, HOUREND, SUMMARY};
         //endregion
     }
 

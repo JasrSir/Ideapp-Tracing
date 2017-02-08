@@ -10,6 +10,10 @@
         android:logo="@id/imgLogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <provider
+            android:authorities="com.jasrsir.tracing"
+            android:name=".provider.TracingProvider"/>
+
         <activity android:name=".activity.LoginMain_Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

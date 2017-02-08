@@ -30,7 +30,7 @@ public class DatabaseContract {
         public static final String COLUMN_PROFILEPRE = "profilep";
 
         public static final String REFERENCE_ID_ZONE = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT,", ZonesEntry.TABLE_NAME,BaseColumns._ID);
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_UCB,COLUMN_SOCIALNAME,COLUMN_ADDRESS, COLUMN_EMAIL, COLUMN_PHONE, COLUMN_ID_ZONE, COLUMN_PROFILEBACK, COLUMN_PROFILEPRE};
+        public static final String[] ALL_COLUMNS = new String[]{BaseColumns._ID ,COLUMN_UCB,COLUMN_SOCIALNAME,COLUMN_ADDRESS, COLUMN_EMAIL, COLUMN_PHONE, COLUMN_ID_ZONE, COLUMN_PROFILEBACK, COLUMN_PROFILEPRE};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -67,7 +67,7 @@ public class DatabaseContract {
         public static final String COLUMN_PROFILEPRE = "profilep";
 
         public static final String REFERENCE_ID_ZONE = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT,", ZonesEntry.TABLE_NAME,BaseColumns._ID);
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_UCP,COLUMN_NAME,COLUMN_SURNAME, COLUMN_EMAIL, COLUMN_PHONE, COLUMN_ID_ZONE, COLUMN_PROFILEBACK, COLUMN_PROFILEPRE};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_UCP,COLUMN_NAME,COLUMN_SURNAME, COLUMN_EMAIL, COLUMN_PHONE, COLUMN_ID_ZONE, COLUMN_PROFILEBACK, COLUMN_PROFILEPRE};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -102,7 +102,7 @@ public class DatabaseContract {
         public static final String COLUMN_PROFILEBACK = "profileb";
         public static final String COLUMN_PROFILEPRE = "profilep";
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_UCU,COLUMN_NAME,COLUMN_SURNAME, COLUMN_EMAIL, COLUMN_PHONE, COLUMN_PROFILEBACK, COLUMN_PROFILEPRE};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_UCU,COLUMN_NAME,COLUMN_SURNAME, COLUMN_EMAIL, COLUMN_PHONE, COLUMN_PROFILEBACK, COLUMN_PROFILEPRE};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -158,7 +158,7 @@ public class DatabaseContract {
         public static final String REFERENCE_UCB = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT,", BusinessEntry.TABLE_NAME,BusinessEntry.COLUMN_UCB);
         public static final String REFERENCE_UCP = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT", ProfessionalEntry.TABLE_NAME,ProfessionalEntry.COLUMN_UCP);
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_UCB,COLUMN_UCP};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_UCB,COLUMN_UCP};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -184,7 +184,7 @@ public class DatabaseContract {
         public static final String REFERENCE_UCP = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT,", ProfessionalEntry.TABLE_NAME,ProfessionalEntry.COLUMN_UCP);
         public static final String REFERENCE_UCU = String.format("REFERENCES %s (%s) ON UPDATE CASCADE ON DELETE RESTRICT", UsersEntry.TABLE_NAME, UsersEntry.COLUMN_UCU);
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_UCP,COLUMN_UCU};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_UCP,COLUMN_UCU};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -213,7 +213,7 @@ public class DatabaseContract {
         public static final String COLUMN_TITLE = "title";
         public static final String COLUMN_NOTE = "note";
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_NOTECODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_NOTE};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_NOTECODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_NOTE};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -244,7 +244,7 @@ public class DatabaseContract {
         public static final String COLUMN_REPETITION = "repetition";
         public static final String COLUMN_DURATION = "duration";
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_ACTIONCODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_SUMMARY, COLUMN_REPETITION, COLUMN_DURATION};
+        public static final String[] ALL_COLUMNS = new String[]{BaseColumns._ID , COLUMN_ACTIONCODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_SUMMARY, COLUMN_REPETITION, COLUMN_DURATION};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -275,7 +275,7 @@ public class DatabaseContract {
         public static final String COLUMN_TITLE = "title";
         public static final String COLUMN_LINK = "link";
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_LINKCODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE, COLUMN_LINK};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_LINKCODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE, COLUMN_LINK};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
@@ -308,7 +308,7 @@ public class DatabaseContract {
         public static final String COLUMN_SUMMARY = "summary";
 
 
-        public static final String[] ALL_COLUMNS = new String[]{ COLUMN_DATECODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_CITEDATE,COLUMN_HOURSTART, COLUMN_HOUREND, COLUMN_SUMMARY};
+        public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_DATECODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_CITEDATE,COLUMN_HOURSTART, COLUMN_HOUREND, COLUMN_SUMMARY};
         //endregion
         //region SQLquery
         public static final String SQL_CREATE_ENTRIES = String.format(
