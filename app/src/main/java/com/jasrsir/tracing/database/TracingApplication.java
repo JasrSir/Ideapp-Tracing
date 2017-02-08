@@ -4,16 +4,13 @@ import android.app.Application;
 import android.content.Context;
 
 /**
- * DATABASE APPLICATIONFOR TRACING APP
- *
+ * DATABASE APPLICATION FOR TRACING APP
+ * Created by Juan Antonio Suárez Rosa (JasrSir)
  */
 
 public class TracingApplication extends Application {
 
     //region Object
-    private DatabaseHelper mDatabase; //Database instance
-
-    private static TracingApplication mInstance; //Instancia del repositorio
     private static Context mContext;
 
     //endregion

@@ -22,6 +22,7 @@ public class DatabaseContract {
         public static final String TABLE_NAME = "business";
         public static final String COLUMN_UCB = "ucb";
         public static final String COLUMN_SOCIALNAME = "name";
+        public static final String DEFAULT_SORT= COLUMN_SOCIALNAME;
         public static final String COLUMN_ADDRESS = "address";
         public static final String COLUMN_EMAIL = "email";
         public static final String COLUMN_PHONE = "phone";
@@ -59,6 +60,7 @@ public class DatabaseContract {
         public static final String TABLE_NAME = "professional";
         public static final String COLUMN_UCP = "ucp";
         public static final String COLUMN_NAME = "name";
+        public static final String DEFAULT_SORT= COLUMN_NAME;
         public static final String COLUMN_SURNAME = "surname";
         public static final String COLUMN_EMAIL = "email";
         public static final String COLUMN_PHONE = "phone";
@@ -96,6 +98,7 @@ public class DatabaseContract {
         public static final String TABLE_NAME = "users";
         public static final String COLUMN_UCU = "ucu";
         public static final String COLUMN_NAME = "name";
+        public static final String DEFAULT_SORT= COLUMN_NAME;
         public static final String COLUMN_SURNAME = "surname";
         public static final String COLUMN_EMAIL = "email";
         public static final String COLUMN_PHONE = "phone";
@@ -131,6 +134,7 @@ public class DatabaseContract {
         //region COLUMNS
         public static final String TABLE_NAME = "zones";
         public static final String COLUMN_NAME = "name";
+        public static final String DEFAULT_SORT= COLUMN_NAME;
 
         public static final String[] ALL_COLUMNS = new String[]{BaseColumns._ID, COLUMN_NAME};
         //endregion
@@ -211,6 +215,7 @@ public class DatabaseContract {
         public static final String COLUMN_SENDER = "sender";
         public static final String COLUMN_RECEIVER = "receiver";
         public static final String COLUMN_TITLE = "title";
+        public static final String DEFAULT_SORT= COLUMN_TITLE;
         public static final String COLUMN_NOTE = "note";
 
         public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_NOTECODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE,COLUMN_NOTE};
@@ -240,6 +245,7 @@ public class DatabaseContract {
         public static final String COLUMN_SENDER = "sender";
         public static final String COLUMN_RECEIVER = "receiver";
         public static final String COLUMN_TITLE = "title";
+        public static final String DEFAULT_SORT= COLUMN_TITLE;
         public static final String COLUMN_SUMMARY = "summary";
         public static final String COLUMN_REPETITION = "repetition";
         public static final String COLUMN_DURATION = "duration";
@@ -273,6 +279,7 @@ public class DatabaseContract {
         public static final String COLUMN_SENDER = "sender";
         public static final String COLUMN_RECEIVER = "receiver";
         public static final String COLUMN_TITLE = "title";
+        public static final String DEFAULT_SORT= COLUMN_TITLE;
         public static final String COLUMN_LINK = "link";
 
         public static final String[] ALL_COLUMNS = new String[]{ BaseColumns._ID ,COLUMN_LINKCODE,COLUMN_SENDER,COLUMN_RECEIVER, COLUMN_TITLE, COLUMN_LINK};
@@ -302,6 +309,7 @@ public class DatabaseContract {
         public static final String COLUMN_SENDER = "sender";
         public static final String COLUMN_RECEIVER = "receiver";
         public static final String COLUMN_TITLE = "title";
+        public static final String DEFAULT_SORT= COLUMN_TITLE;
         public static final String COLUMN_CITEDATE = "citedate";
         public static final String COLUMN_HOURSTART = "hourstart";
         public static final String COLUMN_HOUREND = "hourend";
