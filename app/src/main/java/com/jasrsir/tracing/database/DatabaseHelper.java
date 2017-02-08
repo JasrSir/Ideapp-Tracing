@@ -29,7 +29,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * Constrctor
      */
     public DatabaseHelper() {
-        super(TracingApplication.getAppContext(),DATABASE_NAME, null, DATABASE_VERSION);
+        super(TracingApplication.getContext(),DATABASE_NAME, null, DATABASE_VERSION);
         mOpenCounter = new AtomicInteger();
     }
 
